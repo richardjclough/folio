@@ -1,0 +1,474 @@
+/*  website style overides  */
+
+
+
+body.widepage .homeListType1 {
+    list-style: none;
+    width: 103%;
+    padding: 0 0 0 0;
+            margin: 0 0 0 -0.8%;
+             -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: 100%;
+}
+
+.heroImg {
+    width:960px;
+}
+
+
+.heroImgMobile {
+    display: none;
+}
+
+@media screen and (max-width: 580px) {
+    .heroImgMobile {
+        display: block;
+        width: 100%;
+
+    }
+
+    .heroImg {
+        display: none;
+    }
+
+    body.widepage #content {
+        width: 100%;
+    }
+
+}
+
+.homePromoContainer {
+    width: 99%;
+}
+
+.videoLink {
+    display: block;
+}
+
+.main a, a:active, a:focus {
+outline: 0;
+  outline: 0 !important;
+  outline-style:none;
+    text-decoration: none;
+}
+
+a, a:active, a:focus {
+outline: 0;
+  outline: 0 !important;
+  outline-style:none;
+
+}
+
+.CP_contentWrapper a:focus {
+    border: 0px dotted #131738;
+}
+
+#video_container {
+    text-align: center;
+}
+
+.homePromoContainer ul.homeListType1 li{
+    margin: 0% 1% 1% 1%;
+    width: 31%;
+-webkit-box-shadow: 0px 0px 7px 4px rgba(229,229,229,1);
+-moz-box-shadow: 0px 0px 7px 4px rgba(229,229,229,1);
+box-shadow: 0px 0px 7px 4px rgba(229,229,229,1);
+}
+
+@media screen and (max-width: 580px) {
+
+    body.widepage .homeListType1 {
+        margin: 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .homePromoContainer ul.homeListType1 li {
+        width: 90%;
+
+        margin: 0px auto;
+        margin-bottom: 5%;
+        display: inline-block;
+        float: none;
+    }
+}
+
+.homePromoContainer ul.homeListType1 li a:hover{
+
+    /*margin-left: 0.5%;*/
+    outline: 0;
+  outline: 0 !important;
+  outline-style:none;
+
+}
+
+.homeListType1>li {
+padding-top: 0;
+margin-right: 0px;
+padding-bottom: 0;
+padding-left: 0px;
+overflow: hidden;
+float: left;
+width: 30%;
+min-height: 290px;
+}
+
+
+
+.homeListType1 .thumbfullColumn img {
+margin: 0 0 2% 0;
+    width: 100%;
+    max-height: 16.8rem !important;
+
+}
+
+.homeListType1 .thumbfullColumn img a:focus {
+outline: none !important;
+
+}
+
+.contentWrapper, #footerWrapper {
+background-color: #f6f6f6;
+}
+
+.home-page-type #content {
+    padding-top: 40px;
+}
+
+
+.blogContent h5 {
+font-size: 2.8em !important;
+text-transform: uppercase;
+letter-spacing: -.03em;
+line-height: 1.2em;
+color: #008c00;
+font-family: 'FuturaStdBoldCondensed','Arial Narrow',Helvetica,sans-serif;
+}
+
+.thumbfullColumn h6 {
+font-size: 1.3em;
+    padding: 0 2%;
+line-height: 1.2em;
+color: #252d6c;
+font-family: 'FuturaStdBoldCondensed','Arial Narrow',Helvetica,sans-serif;
+font-weight: 800;
+min-height: 3.4rem;
+}
+
+h6 a:hover {
+text-decoration: underline !important;
+color:green !important;
+border-bottom: 1px solid green;
+}
+
+
+.blogContent  h7 {
+font-size: 1.6em;
+text-transform: uppercase;
+line-height: 1.2em;
+color: #008c00;
+font-family: 'FuturaStdBoldCondensed','Arial Narrow',Helvetica,sans-serif;
+}
+
+.blogContent p {
+font-size: 1.2em;
+line-height: 1.8em;
+font-family: 'Arial', sans-serif;
+}
+
+.main ul {
+    /*list-style: disc outside;
+    margin: 0 0 0 2%;
+    float: left;*/
+
+    list-style: none;
+    width: 103%;
+    padding: 0 0 0 0;
+    /*margin: 0 0 0 -0.8%;*/
+
+}
+
+.blogContent ul li {
+    list-style: disc outside;
+    font-size: 1.2em;
+    line-height: 2em;
+   width: 93%;
+   font-family: 'Arial', sans-serif;
+margin-left: 1rem;
+}
+
+.blogContent h5, h7 {
+  display: block;
+  margin: 5% 0 1% 0;
+}
+
+/* end website style overides */
+
+
+/* custom styles for Prepper pages */
+
+.prepperSingleColumnBanner {
+
+text-align: center;
+width:100%;
+}
+
+.blogPageHeaderImage {
+padding: 3% 0;
+text-align: center;
+background-color: #008c00;
+background-color: #f6f6f6;
+}
+
+.blogWrapper {
+background-color: white;
+display: inline-block;
+width: 100%;
+margin: 0 0 3% 0;
+padding:0 0 3% 0;
+-webkit-box-shadow: 0px 2px 9px 0px rgba(229,229,229,1);
+-moz-box-shadow: 0px 2px 9px 0px rgba(229,229,229,1);
+box-shadow: 0px 2px 9px 0px rgba(229,229,229,1);
+}
+
+.blogContent {
+width: 60%;
+margin: 0 auto;
+}
+@media screen and (max-width: 580px) {
+    .blogContent {
+        width: 80%;
+    }
+}
+
+.blogContent img {
+width: 98%;
+}
+
+.prepperCentred{
+margin: 0 auto;
+}
+
+.backToMainTop {
+position:absolute !important;
+margin:3% 0 0 3%;
+display: inherit;
+font-size:1.2em;
+letter-spacing: -.03em;
+text-transform: uppercase;
+font-family: 'FuturaStdBoldCondensed','Arial Narrow',Helvetica,sans-serif;
+font-weight: bold;
+}
+
+.backToMainTop a {
+color: white !important;
+text-decoration: none;
+    min-width: 200px;
+}
+
+.backToMainTop a:hover {
+text-decoration: underline;
+}
+
+.backToMainBottom {
+margin:5% 0 0 0;
+display: block;
+font-size:1.2em;
+letter-spacing: -.03em;
+text-transform: uppercase;
+color: #252d6c;
+font-family: 'FuturaStdBoldCondensed','Arial Narrow',Helvetica,sans-serif;
+font-weight: bold;
+}
+
+.backToMainBottom a {
+color: #252d6c !important;
+text-decoration: none;
+float: left;
+min-width: 300px;
+}
+
+.backToMainBottom a:hover {
+text-decoration: underline;
+}
+
+.triangleLeftWhite {
+    border-top: .4em solid transparent;
+    border-right: .7em solid white;
+    border-bottom: .4em solid transparent;
+    display: block;
+    float: left;
+    margin: 3.45% 5px 0 0;
+}
+
+.triangleLeftRed {
+    width: 0;
+    height: 0;
+    border-top: .4em solid transparent;
+    border-right: .7em solid red;
+    border-bottom: .4em solid transparent;
+    display: block;
+    float: left;
+      margin: 1.85% 6px 0 0;
+}
+
+/* end custom styles for Prepper pages */
+
+/* media queries */
+
+@media only screen and (max-device-width: 767px) {
+
+.homePromoContainer ul.homeListType1 li {
+  width:98%;
+min-height: 500px;
+margin: 0% 1% 6% 1%;
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(229,229,229,1);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(229,229,229,1);
+    box-shadow: 0px 0px 7px 4px rgba(229,229,229,1);
+}
+
+body {
+    width: 105%;
+}
+
+body.widepage .homeListType1 {
+    list-style: none;
+}
+
+#content {
+        padding: 0 0 0 0;
+    }
+
+
+
+.homeListType1 .thumbfullColumn {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+
+.blogContent {
+    width: 96%;
+    margin: 0 auto;
+}
+
+
+.blogContent p {
+    font-size: 3em;
+}
+
+.blogContent ul li {
+
+    font-size: 2.8em;
+    margin:0 0 0 2%;
+}
+
+
+.backToMainTop, .backToMainBottom {
+font-size:1.6em;
+}
+
+.homeListType1 .thumbfullColumn img {
+width:100%;
+max-height: 100%!important;
+
+}
+
+h6 {
+font-size: 2.8em !important;
+    padding: 0 0 2% 2% !important;
+
+}
+
+h7 {
+    font-size: 2.6em !important;
+}
+
+sub, sup{
+
+    font-size: 75% !important;
+}
+
+.welcomeMsg {
+    display: none !important;
+    left:100000px !important;
+    position: relative;
+    margin: 1000000px;
+    }
+#header .headerLinks {
+    display: none !important;
+}
+
+.backToMainTop a, .backToMainBottom a {
+    font-size: 1.4em;
+}
+
+/*
+
+#headerWrapper, .footerLinksWrapper, .footerContentWrapper {
+    width: 100%;
+}
+
+
+.homePromoContainer ul.homeListType1 li {
+     float: left;
+    position: relative;
+   clear: left;
+   width: 80%;
+    margin: 0 0 40px 0px;
+    min-height: 407px;
+
+}
+
+.homeListType1 .thumbfullColumn img {
+    width: 340%;
+}
+
+.backToMainTop {
+
+    font-size: 1.8em;
+
+}
+
+h6 {
+    font-size: 2.4em;
+    width: 114%;
+    float: left;
+    text-transform: uppercase;
+    margin: 0px 0 0 -120px;
+    line-height: 1.2em;
+    color: #252d6c;
+    font-family: 'FuturaStdBoldCondensed','Arial Narrow',Helvetica,sans-serif;
+}
+
+.blogContent {
+width: 100%;
+
+}
+*/
+
+}
+/*------ CUSTOM STYLE FIX --*/
+.clear-floats {
+  clear: both;
+}
+
+.responsive-embed,
+.img-responsive {
+  max-width: 100%;
+}
+
+.responsive-iframe {
+  height: 380px;
+  width: 50%;
+}
+
+.footerLinks h6 {
+    margin: 5px 0 10px 0;
+    font-size: 1.429rem !important;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'FuturaStdBoldCondensed', 'Arial Narrow', Helvetica, sans-serif;
+}

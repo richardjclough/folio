@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>300x250 | HTML5 Standard Banner</title>
+<link rel="stylesheet" href="style.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+$( '.button' ).mouseover(function() {
+  $('.button').css('cursor', 'pointer');
+});
+	start();
+});
+
+var clickTag = "http://innovation.gov.au";
+
+function start() {
+  // Ad visible, start ad/animation.
+
+
+	//loop
+  counter=0;
+  $('.copyOne').css('opacity', '0');
+  $('.icon').css('opacity', '0');
+  $('.copyTwo').css('opacity', '0');
+  $('.copyThree').css('opacity', '0');
+  $('.logoandbg').css('opacity', '0');
+  $('.cta').css('opacity', '0');
+
+
+    go();
+    function play(){
+  	  clearTimeout(play);
+    go();
+  }
+  setTimeout(play, 10000);
+
+  }
+
+  function go() {
+
+  counter+=1;
+
+
+
+  $('.logoandbg').delay(0200).animate({top: '0px', left: '0px', opacity:'1' }, { duration: 0800, easing:'easeOutQuart' });
+  //$('.logoandbg').delay(2000).animate({top: '0px', left: '-150px', opacity:'1' }, { duration: 0900, easing:'easeOutQuart' });
+  $('.icon').delay(0200).animate({top: '0px', opacity:'1' }, { duration: 0800, easing:'easeOutQuart' });
+  $('.icon').delay(4300).animate({top: '0px', opacity:'0' }, { duration: 0800, easing:'easeOutQuart' });
+  $('.copyOne').delay(0200).animate({top: '0px', opacity:'1' }, { duration: 0800, easing:'easeOutQuart' });
+  $('.copyOne').delay(1000).animate({top: '0px', opacity:'0' }, { duration: 0800, easing:'easeInQuart' });
+  //$('.logoandbg').delay(4100).animate({top: '0px', left: '-150px', opacity:'0' }, { duration: 0800, easing:'easeInQuart' });
+  //$('.logoandbg').delay(4100).animate({top: '-210px', left: '-150px', opacity:'0' }, { duration: 0700, easing:'easeOutQuart' });
+  $('.copyTwo').delay(2900).animate({top: '0px', opacity:'1' }, { duration: 0800, easing:'easeOutQuart' });
+  $('.copyTwo').delay(1000).animate({top: '0px', opacity:'0' }, { duration: 0800, easing:'easeInQuart' });
+  $('.copyThree').delay(5800).animate({top: '0px', opacity:'1' }, { duration: 1200, easing:'easeOutQuart' });
+  //$('.copyThree').delay(2000).animate({top: '0px', opacity:'0' }, { duration: 0600, easing:'easeInQuart' });
+  $('.cta').delay(6200).animate({top: '0px', opacity:'1' }, { duration: 800, easing:'easeOutQuart' });
+
+  if (counter==1) {
+
+  //reset loop
+  $('.copyThree').delay(1500).animate({top: '0px', opacity:'0' }, { duration: 0600, easing:'easeInQuart' });
+  $('.cta').delay(1500).animate({top: '0px', opacity:'0' }, { duration: 0600, easing:'easeInQuart' });
+
+} else {
+
+}
+
+}
+
+</script>
+
+</head>
+<body>
+
+	<div id="ad">
+		<div id="banner">
+
+	        <a href="javascript:window.open(window.clickTag)">
+				<div class="button"></div>
+	        </a>
+	        <a href="javascript:window.open(window.clickTag)">
+				<div class="cta"></div>
+		    </a>
+
+	        <div class="copyOne"></div>
+          <div class="copyTwo"></div>
+          <div class="copyThree"></div>
+          <div class="icon"></div>
+	        <div class="logoandbg"></div>
+
+	        <div class="background"></div>
+		</div>
+	</div>
+
+</body>
+</html>

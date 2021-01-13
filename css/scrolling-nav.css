@@ -1,0 +1,386 @@
+/*!
+* Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 16px;
+  background-color: #eee;
+
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+
+.logo{
+  background-image: url('../img/pattern.png');
+  background-repeat: no-repeat;
+  background-position: 0px 50px;
+  background-repeat: no-repeat;
+  -o-background-size: 90% auto;
+  /* -webkit-background-size: 20% auto; */
+  -moz-background-size: 90% auto;
+  background-size: 90% auto;
+  position: fixed;
+  margin-top: 0px;
+  height: 300px;
+  width: 200px;
+  display: inline-block;
+}
+
+
+
+p, .text {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: none;
+  margin-top: 4px;
+}
+
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-top: 9rem;
+}
+
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 300;
+  text-transform: none;
+  font-size: 1.2em;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -1.6em;
+  font-family: 'Lato', sans-serif;
+  margin-top: 6px;
+  font-weight: 300;
+  color:black;
+}
+
+ul > li:before {
+  content: "-"; /* en dash */
+  position: absolute;
+  margin-left: -.9em;
+}
+
+a {
+  color:black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.photo {
+  max-width:180px;
+  float:left;
+  margin-bottom: 20px;
+  clear:both;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+  height: 100%;
+  padding: 6% 0% 8%;
+  text-align: left;
+  overflow-y: scroll;
+  /* background-color:#44B3C2; */
+  font-size: 1.4em;
+}
+
+.align-center .element {
+  scroll-snap-align: center;
+}
+
+.web-section, .multimedia-section, .design-section, .contact-section  {
+  height: 100%;
+  /* margin-top: 12rem; */
+      /* padding: 10rem 0 0rem 0; */
+  text-align: left;
+  /* background: #ee7d19; */
+  overflow-y: scroll;
+  /* background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(200,200,200,1) 0%, rgba(238,238,238,1) 6%, rgba(255,255,255,1) 12%);
+  background-size: 94% 1em;
+  background-position: 50% 0;
+  background-repeat: no-repeat; */
+}
+
+.web-section > .container, .multimedia-section > .container, .design-section > .container, .contact-section > .container {
+  /* padding-top: 4rem!important;
+  padding-bottom: 4rem !important; */
+  /* margin: 8rem 0; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+/* .multimedia-section {
+height: 100%;
+padding: 30px 0 30px 0;
+text-align: left;
+background-color: #E45641;
+overflow-y: scroll;
+} */
+
+/* .design-section {
+height: 100%;
+padding: 30px 0 30px 0;
+text-align: left;
+background-color: #F2EDD8;
+overflow-y: scroll;
+margin:0 0 0px 0;
+} */
+
+/* .contact-section {
+height: 100%;
+padding: 30px 0 30px 0;
+text-align: left;
+background-color: #cd7df7;
+overflow-y: scroll;
+padding-bottom: 100%;
+} */
+
+.descriptionOuter {
+
+  margin: 10px 0 25px 0px;
+  position: relative;
+
+  max-width:500px;
+  /* opacity: 50%; */
+  border: 0px solid #ccc;
+  /*     max-height: 120px; */
+
+}
+
+.description {
+  width: 62%;
+  float: left;
+  background-color: #e5e5e5;
+  margin: 0 0px 0 0px;
+  padding: 2px 10px 10px 6px;
+  height: 120px;
+  position: relative;
+}
+
+.descriptionOuter img {
+  height: 120px;
+  border-left:0px solid #eee;
+  top: 0px;
+}
+
+.web-section ul li {
+  margin:0px 0 0px 0px;
+}
+
+
+/*.container {
+min-height: 100%;
+/* equal to footer height
+margin-bottom: -44px;
+}
+.container:after {
+content: "";
+display: block;
+}*/
+
+
+.site-footer {
+  background: #697585;
+  z-index: 1000;
+  position: fixed;
+  text-align: right;
+  width:100%;
+  bottom: -7rem;
+  height: 9rem;
+}
+
+.socmedIcons {
+  margin-left:-6px;
+  width:229px;
+  border:0px;
+}
+
+.zoom_img > img{
+
+  -moz-transition:-moz-transform 0.3s ease-in;
+  -webkit-transition:-webkit-transform .1s ease-in;
+  -o-transition:-o-transform 0.3s ease-in;
+
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin:0 0;
+  transform-origin:0 0;
+
+  position: relative!important;
+  max-width:100%!important;
+  filter: drop-shadow(0 3px 8px rgb(136, 136, 136, .5));
+}
+.zoom_img img:hover{
+  -moz-transform:scale(1.6);
+  -webkit-transform:scale(1.6);
+  -o-transform:scale(1.6);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin:0 0;
+  transform-origin:0 0;
+  -moz-transition:-moz-transform 0.3s ease-in;
+  -webkit-transition:-webkit-transform 0.3s ease-in;
+  -o-transition:-o-transform 0.3s ease-in;
+  position: relative!important;
+  cursor:pointer!important;
+  margin-bottom: 40%;
+}
+
+
+
+/*  bootstrap overides */
+
+.navbar-default {
+  background-color: #111;
+  border-color: #e7e7e7;
+  font-size: 1.3em;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #eee;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.navbar-default .navbar-brand {
+  color: #eee;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+
+}
+
+.navbar-default ul > li:before {
+  content: none;
+  position: absolute;
+  margin-left: -.9em;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #111;
+  background-color: #eee;
+}
+
+.navbar-default {
+  background-color: #49c90a;
+  border-color: #eee;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #e7e7e7;
+  width:100%;
+}
+
+
+.btn-primary {
+  color: #fff;
+  /*background-color: #337ab7;*/
+  border-color: #2e6da4;
+}
+.btn {
+  /*display: inline-block;
+  padding: 6px 12px;*/
+  margin-bottom: 0;
+  /*font-size: 14px;*/
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+
+
+@media(min-width:767px) {
+  .navbar {
+    padding: 20px 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+
+  .top-nav-collapse {
+    padding: 0;
+  }
+
+  .row {
+    margin-right: 16%;
+    margin-left: 16%;
+    width: 68%;
+
+  }
+}
+
+@media (max-width:720px){
+
+  .logo {
+    -o-background-size: 30% auto;
+    /* -webkit-background-size: 20% auto; */
+    -moz-background-size: 30% auto;
+    background-size: 30% auto;
+    z-index: 0;
+  }
+
+
+  .container {
+    z-index: 1000;
+
+  }
+
+  .descriptionOuter {
+
+    margin: 10px 0 25px 0px;
+    position: relative;
+    max-width:90%;
+
+  }
+
+  .descriptionOuter img {
+    height: 120px!important;
+    margin: 0 0 0 0!important;
+
+  }
+
+  h1 {
+    padding-top: 3rem;
+  }
+
+  .intro-section {
+    /* padding-top:8em!important;
+    padding-bottom: 1em!important; */
+  }
+
+  .web-section, .multimedia-section, .design-section, .contact-section  {
+    margin-top: 2rem!important;
+    padding: 2rem 0 2rem 0!important;
+  }
+
+}

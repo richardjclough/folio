@@ -1,0 +1,200 @@
+/* === Remove input autofocus webkit === */
+*:focus {outline: none;}
+
+/* === Form Typography === */
+.asterix {color: red;vertical-align: top;
+	/*float: right;*/
+	padding: 0 10px 0px 0px;}
+
+.form h2, .form label {font-family:'Arvo', Arial sans-serif;}
+.form_hint, .required_notification {font-size: 11px;}
+
+/* === List Styles === */
+.form ul {
+width:96%;
+list-style-type:none;
+list-style-position:outside;
+margin:0px;
+padding:0px;
+}
+.form li{
+padding: 12px 0px;
+position:relative;
+}
+
+
+/* === Form Header === */
+.form h2 {
+margin:0;
+display: inline;
+}
+
+
+/* === Form Elements === */
+.form label{
+width:100%;
+margin-top: 3px;
+display:inline-block;
+float:left;
+/*	padding:3px;*/
+}
+.form input {
+padding:5px 8px;
+height:30px;
+}
+
+.form input.submit {
+height: 36px;
+width: 110px;
+padding: 5px 8px;
+background-color: #8F191C !important;
+color:white;
+border:none;
+    margin-top: 50px;
+
+}
+
+.form input.submit:hover {
+opacity:.85;
+cursor: pointer;
+}
+
+.form input.submit:active {
+background-color: #B72B25 !important;
+border:0px solid #B72B25;
+}
+
+.form input.submit:focus {border:0px solid #8F191C !important;}
+
+
+.form textarea {padding:8px; width:252px;}
+.form button {margin-left:156px;}
+
+/* form element visual styles */
+.form input, .form textarea, .form select{
+border:3px solid #000;
+border-radius:0px !important;
+-webkit-border-radius: 0px;
+padding: 19px 5px;
+-moz-transition: padding .25s;
+-webkit-transition: padding .25s;
+-o-transition: padding .25s;
+transition: padding .25s;
+font-family: 'Arvo', Arial, sans-serif;
+font-size: 18px;
+  width: 74%;
+vertical-align: -webkit-baseline-middle;
+float:none;
+}
+
+@media and (min-width:52em) {
+	.form input, .form textarea, .form select{
+		width:62%;
+	}
+}
+
+
+.form select {
+-webkit-appearance: none;
+-moz-appearance: none;
+background-position: right 50%;
+background-repeat: no-repeat;
+background-image: url(/img/selectArrow.png);
+padding: .5em;
+padding-right: 1.5em;
+width:280px;
+}
+
+
+/* Prevent Chrome from applying yellow background to completed fields */
+input:-webkit-autofill {
+-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.form input:focus, .form textarea:focus, .form select:focus {
+background: #fff;
+border:3px solid #B72B25;
+}
+
+/** checkbox styling **/
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+.checkbox {
+    width: 40px;
+    height: 40px;
+    margin: 15px 0 0px 0;
+	position: absolute;
+	border: 3px solid black;
+	float: right;
+}
+
+/* Create the checkbox button */
+
+.checkbox label {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 0px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: inherit;
+	margin: 2px 0px 0 2px;
+	z-index: 1;
+	background: #bbb;
+}
+
+.checkbox input[type=checkbox]:checked + label {
+	background: #B72B25;
+}
+
+#reCaptchaAdvertiser {
+	top: 20px;
+position: relative;
+}
+
+
+/* === Button Style === */
+a.submit{
+background-color: #8F191C;
+border: 0px solid #8F191C;
+border-radius: 0px;
+color: #FFF !important;
+padding: 6px 20px;
+font-family: 'Arvo', Arail, sans-serif;
+font-size: 18px;
+height: 36px;
+width: 14em;
+text-decoration: none;
+}
+
+/* push the checkbox axterix down slightly as it can't get rendered natively in the same position as the other asterixes. */
+
+#checkboxAsterix {
+    margin: 0px 0px 0px 2.7em;
+float: left;
+}
+
+
+a.submit:hover {
+opacity:.85;
+cursor: pointer;
+}
+
+.fv_msg {color:red;position: relative;}
+
+.fv_msgSuccess {color:#5EEA13;line-height: 1.6em;position: relative;}
+
+/* overwriting reCaptcha styles and making width of reCaptcha box the same as form fields */
+.recaptchaContainerContact, .recaptchaContainerAffiliate, .recaptchaContainerAdvertiser {
+	transform:scale(0.93)!important;
+	transform-origin:0 0;
+	margin: 20px 0 0 0px;
+
+}

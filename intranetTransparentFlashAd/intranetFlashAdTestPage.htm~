@@ -1,0 +1,2389 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0016)http://intranet/ -->
+<HTML><HEAD><TITLE>VACC Intranet -</TITLE>
+<META content="Visual Basic 7.0" name=CODE_LANGUAGE>
+<META content=JavaScript name=vs_defaultClientScript>
+<META content=http://schemas.microsoft.com/intellisense/ie5 
+name=vs_targetSchema><LINK href="intranetFlashAdTestPage_files/style.htm" 
+type=text/css rel=stylesheet>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8"><!-- <script event="onkeypress" for="document" type="text/javascript">if(event.keyCode == 13) return false;</script> -->
+<META content="MSHTML 6.00.2900.2802" name=GENERATOR></HEAD>
+<BODY>
+<FORM id=Form1 name=Form1 action=default.aspx method=post><INPUT type=hidden 
+value=dDwxMzI2NDU1NzQ4O3Q8O2w8aTwwPjtpPDI+Oz47bDx0PHA8bDxUZXh0Oz47bDxWQUNDIEludHJhbmV0ICAtIDs+Pjs7Pjt0PDtsPGk8MT47PjtsPHQ8O2w8aTwwPjs+O2w8dDw7bDxpPDA+O2k8MT47aTwyPjs+O2w8dDw7bDxpPDA+Oz47bDx0PDtsPGk8MD47PjtsPHQ8O2w8aTwzPjs+O2w8dDw7bDxpPDE+O2k8Mj47aTwzPjtpPDQ+Oz47bDx0PHA8cDxsPE5hdmlnYXRlVXJsO1RleHQ7PjtsPGphdmFzY3JpcHQ6YWRkQm9va21hcmtGb3JCcm93c2VyKCdodHRwOi8vaW50cmFuZXQvJyAsICdJRCBIb21lJylcOyA7XDxpbWcgc3JjPSIvaW1hZ2VzL2ljb25zL2ljb25fZ2VuX2Zhdm91cml0ZXMuZ2lmIiBib3JkZXI9IjAiXD47Pj47Pjs7Pjt0PHA8cDxsPE5hdmlnYXRlVXJsO1RleHQ7PjtsPGphdmFzY3JpcHQ6YWRkQm9va21hcmtGb3JCcm93c2VyKCdodHRwOi8vaW50cmFuZXQvJyAsICdJRCBIb21lJylcOyA7QWRkIHRvIEZhdm9yaXRlczs+Pjs+Ozs+O3Q8cDxwPGw8VGV4dDs+O2w8XDxpbWcgc3JjPSIvaW1hZ2VzL2ljb25zL2ljb25fZ2VuX2NhbGVuZGFyLmdpZiIgYWx0PSJUb2RheSdzIERhdGUiIGJvcmRlcj0iMCJcPjs+Pjs+Ozs+O3Q8cDxwPGw8VGV4dDtOYXZpZ2F0ZVVybDs+O2w8TW9uZGF5LCAwMiBKdWx5Oy9ob21lL2NhbGVuZGFyL2VuL2NhbGVuZGFyRnVsbC5hc3B4Oz4+Oz47Oz47Pj47Pj47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8Mj47PjtsPHQ8O2w8aTwyPjs+O2w8dDw7bDxpPDA+O2k8Mj47PjtsPHQ8O2w8aTwwPjtpPDE+Oz47bDx0PEAwPHA8O3A8bDxzdHlsZTs+O2w8Ym9yZGVyOnNvbGlkIDBweCAjRThFOEU4XDs7Pj4+Ozs7Ozs7Ozs7Oz47Oz47dDxAMDxwPHA8bDxCb3JkZXJXaWR0aDtfIVNCOz47bDwxPDBweD47aTwzMj47Pj47cDxsPHN0eWxlOz47bDxib3JkZXI6c29saWQgMHB4ICNFOEU4RThcOzs+Pj47Ozs7Ozs7Ozs7Pjs7Pjs+Pjt0PHA8bDxWaXNpYmxlOz47bDxvPHQ+Oz4+O2w8aTwwPjtpPDE+O2k8Mj47PjtsPHQ8QDA8cDxwPGw8VmlzaWJsZTtBbGxvd1BhZ2luZztQYWdlQ291bnQ7XyFJdGVtQ291bnQ7XyFEYXRhU291cmNlSXRlbUNvdW50O0RhdGFLZXlzOz47bDxvPHQ+O288Zj47aTwxPjtpPDc+O2k8Nz47bDxpPDE+O2k8MjEzPjtpPDI0PjtpPDIxND47aTwyMDQ+O2k8MjE2PjtpPDIxNz47Pjs+PjtwPGw8c3R5bGU7PjtsPGJvcmRlcjpzb2xpZCAwcHggI0U4RThFOFw7Oz4+Pjs7Ozs7Ozs7Ozs+O2w8aTwwPjs+O2w8dDw7bDxpPDE+O2k8Mj47aTwzPjtpPDQ+O2k8NT47aTw2PjtpPDc+Oz47bDx0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9ob21lL0RvY3VtZW50TWFuYWdlci9lbi9kZWZhdWx0LmFzcHg7aWNvbl9hcHBfZG9jdW1lbnRtYW5hZ2VyLmdpZjsvaG9tZS9Eb2N1bWVudE1hbmFnZXIvZW4vZGVmYXVsdC5hc3B4O0RvY3VtZW50IE1hbmFnZXI7Pjs7Pjs+Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9ob21lL0ltYWdlTGlicmFyeS9lbi9kZWZhdWx0LmFzcHg7aWNvbl9hcHBfcG9zdGNhcmRzLmdpZjsvaG9tZS9JbWFnZUxpYnJhcnkvZW4vZGVmYXVsdC5hc3B4O0ltYWdlIExpYnJhcnk7Pjs7Pjs+Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9ob21lL2NhbGVuZGFyL2VuL2RlZmF1bHQuYXNweDtpY29uX2FwcF9jYWxlbmRhci5naWY7L2hvbWUvY2FsZW5kYXIvZW4vZGVmYXVsdC5hc3B4O1ZBQ0MgQ29ycG9yYXRlIENhbGVuZGFyOz47Oz47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8MD47PjtsPHQ8QDwvaG9tZS9GQVEvZW4vZGVmYXVsdC5hc3B4O2ljb25fYXBwX2ZhcS5naWY7L2hvbWUvRkFRL2VuL2RlZmF1bHQuYXNweDtGQVE7Pjs7Pjs+Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9ob21lL3Bvc3RjYXJkcy9lbi9kZWZhdWx0LmFzcHg7aWNvbl9hcHBfcG9zdGNhcmRzLmdpZjsvaG9tZS9wb3N0Y2FyZHMvZW4vZGVmYXVsdC5hc3B4O2UtUG9zdGNhcmRzOz47Oz47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8MD47PjtsPHQ8QDwvaG9tZS90aW1lem9uZS9lbi9kZWZhdWx0LmFzcHg7aWNvbl9hcHBfd29ybGR0aW1lLmdpZjsvaG9tZS90aW1lem9uZS9lbi9kZWZhdWx0LmFzcHg7V29ybGQgVGltZTs+Ozs+Oz4+Oz4+O3Q8O2w8aTwwPjs+O2w8dDw7bDxpPDA+Oz47bDx0PEA8L2hvbWUvc3RhZmZPZmZlcnMvZW4vZGVmYXVsdC5hc3B4O2ljb25fYXBwX3N0YWZmb2ZmZXJzLmdpZjsvaG9tZS9zdGFmZk9mZmVycy9lbi9kZWZhdWx0LmFzcHg7U3RhZmYgT2ZmZXJzOz47Oz47Pj47Pj47Pj47Pj47dDxAMDxwPHA8bDxWaXNpYmxlO18hU0I7QWxsb3dQYWdpbmc7Qm9yZGVyV2lkdGg7UGFnZUNvdW50O18hSXRlbUNvdW50O18hRGF0YVNvdXJjZUl0ZW1Db3VudDtEYXRhS2V5czs+O2w8bzxmPjtpPDMyPjtvPGY+OzE8MHB4PjtpPDE+O2k8Nz47aTw3PjtsPGk8MT47aTwyMTM+O2k8MjQ+O2k8MjE0PjtpPDIwND47aTwyMTY+O2k8MjE3Pjs+Oz4+O3A8bDxzdHlsZTs+O2w8Ym9yZGVyOnNvbGlkIDBweCAjRThFOEU4XDs7Pj4+Ozs7Ozs7Ozs7Oz47bDxpPDA+Oz47bDx0PDtsPGk8MT47aTwyPjtpPDM+O2k8ND47aTw1PjtpPDY+O2k8Nz47PjtsPHQ8O2w8aTwwPjs+O2w8dDw7bDxpPDA+Oz47bDx0PEA8L2hvbWUvRG9jdW1lbnRNYW5hZ2VyL2VuL2RlZmF1bHQuYXNweDtEb2N1bWVudCBNYW5hZ2VyOz47Oz47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8MD47PjtsPHQ8QDwvaG9tZS9JbWFnZUxpYnJhcnkvZW4vZGVmYXVsdC5hc3B4O0ltYWdlIExpYnJhcnk7Pjs7Pjs+Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9ob21lL2NhbGVuZGFyL2VuL2RlZmF1bHQuYXNweDtWQUNDIENvcnBvcmF0ZSBDYWxlbmRhcjs+Ozs+Oz4+Oz4+O3Q8O2w8aTwwPjs+O2w8dDw7bDxpPDA+Oz47bDx0PEA8L2hvbWUvRkFRL2VuL2RlZmF1bHQuYXNweDtGQVE7Pjs7Pjs+Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9ob21lL3Bvc3RjYXJkcy9lbi9kZWZhdWx0LmFzcHg7ZS1Qb3N0Y2FyZHM7Pjs7Pjs+Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9ob21lL3RpbWV6b25lL2VuL2RlZmF1bHQuYXNweDtXb3JsZCBUaW1lOz47Oz47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8MD47PjtsPHQ8QDwvaG9tZS9zdGFmZk9mZmVycy9lbi9kZWZhdWx0LmFzcHg7U3RhZmYgT2ZmZXJzOz47Oz47Pj47Pj47Pj47Pj47dDw7bDxpPDM+Oz47bDx0PHQ8cDw7cDxsPG9uY2hhbmdlOz47bDx0b3AubG9jYXRpb24gPSB0aGlzLnZhbHVlOz4+Pjt0PGk8MTI+O0A8U2VsZWN0IGEgVG9vbDtBY3JvbnltIE1hbmFnZXI7UHJvamVjdCBTcGFjZTtEaWdpdGFsIEFzc2V0cyBMaWJyYXJ5O0ZlZWRiYWNrIERpcmVjdG9yO0ZpbGUgRXhwcmVzcztQZW9wbGUgU2VhcmNoO1NlYXJjaDtQcm9jZXNzIFRvb2w7RW1wbG95ZWUgVHJhaW5pbmc7Rm9ydW07ZS1OZXdzbGV0dGVyOz47QDxcZTsvaG9tZS9BY3JvbnltTWdyL2VuL2RlZmF1bHQuYXNweDsvaG9tZS9Qcm9qZWN0U3BhY2UvZW4vZGVmYXVsdC5hc3B4Oy9ob21lL0RpZ2l0YWxBc3NldHMvZW4vZGVmYXVsdC5hc3B4Oy9ob21lL2ZlZWRiYWNrL2VuL2RlZmF1bHQuYXNweDsvaG9tZS9maWxlRmVycnkvZW4vZGVmYXVsdC5hc3B4Oy9ob21lL1Blb3BsZVNlYXJjaC9lbi9kZWZhdWx0LmFzcHg7L2hvbWUvc2VhcmNoL2VuL2RlZmF1bHQuYXNweDsvaG9tZS9Qcm9jZXNzVG9vbC9lbi9kZWZhdWx0LmFzcHg7L2hvbWUvRW1wbG95ZWVUcmFpbmluZy9lbi9kZWZhdWx0LmFzcHg7L2hvbWUvZm9ydW0vZW4vZGVmYXVsdC5hc3B4Oy9ob21lL25ld3NsZXR0ZXIvZW4vZGVmYXVsdC5hc3B4Oz4+Oz47Oz47Pj47Pj47Pj47Pj47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDw7bDxpPDA+Oz47bDx0PDtsPGk8MT47PjtsPHQ8cDxsPFRleHQ7PjtsPFw8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCJcPg0KZnVuY3Rpb24gb3BlblRlcm1zKCkNCnsNCndpbmRvdy5vcGVuKCIvY2ZyL3N5c3RlbS90ZXJtc2FuZGNvbmRpdGlvbnMuYXNweD9zaWQ9MCIsInRjIiwidG9vbGJhcj1ubyxzdGF0dXM9bm8sbWVudWJhcj1ubyxzY3JvbGxiYXJzPXllcyxyZXNpemFibGU9eWVzLHdpZHRoPTcwMCxoZWlnaHQ9NTAwIilcOw0KfQ0KZnVuY3Rpb24gb3BlblByaXZhY3koKQ0Kew0Kd2luZG93Lm9wZW4oIi9jZnIvc3lzdGVtL3ByaXZhY3lwb2xpY3kuYXNweD9zaWQ9MCIsInBwIiwidG9vbGJhcj1ubyxzdGF0dXM9bm8sbWVudWJhcj1ubyxzY3JvbGxiYXJzPXllcyxyZXNpemFibGU9eWVzLHdpZHRoPTcwMCxoZWlnaHQ9NTAwIilcOw0KfQ0KXDwvc2NyaXB0XD4NCjs+Pjs7Pjs+Pjs+Pjs+Pjs+Pjs+Pjs+Pjs+Pjs+Pjs+Pjs+Bn5mZalZOh8PiAyXY9RTAOtTNB8= 
+name=__VIEWSTATE> 
+<TABLE 
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 1px; BORDER-RIGHT-WIDTH: 0px" 
+cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=layoutHeadCell id=logoTop style="WIDTH: 100%" vAlign=top 
+    align=right colSpan=4>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=1>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD><A 
+                  style="FONT-SIZE: 16px; COLOR: white; FONT-FAMILY: Arial; TEXT-DECORATION: none" 
+                  onclick="if(document.getElementById('LayoutControl25_homeLink')) closeFullMenu();" 
+                  href="http://intranet/" target=_top><IMG alt="" 
+                  src="intranetFlashAdTestPage_files/logo.gif" border=0></A><A 
+                  onclick="if(document.getElementById('LayoutControl25_homeLink')) closeFullMenu();" 
+                  href="http://intranet/" target=_top><IMG id=shHeader alt="" 
+                  src="intranetFlashAdTestPage_files/header.png" 
+              border=0></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+      <SCRIPT language=javascript>
+	function addBookmarkForBrowser(href, title) 
+	{		
+		if(window.sidebar)
+		{
+			window.sidebar.addPanel(title, href,""); 
+		}
+		else if (document.all)
+		{
+			window.external.AddFavorite(href, title);
+		}
+		else if( window.opera && window.print ) 
+		{
+			return true;
+		}
+	}
+</SCRIPT>
+
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+      background=intranetFlashAdTestPage_files/bottom_header.gif border=0>
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=30 alt="" 
+            src="intranetFlashAdTestPage_files/spacer.gif" width=5></TD>
+          <TD width="99%"><A class=breadcrumb 
+            onclick="if(document.getElementById('LayoutControl25_homeLink')) closeFullMenu();" 
+            href="http://intranet/home">ID Home</A></TD>
+          <TD align=right width=19><A id=_ctl2_bookmarkIcon 
+            href="javascript:addBookmarkForBrowser('http://intranet/'%20,%20'ID%20Home');"><IMG 
+            src="intranetFlashAdTestPage_files/icon_gen_favourites.gif" 
+            border=0></A></TD>
+          <TD align=right width="1%"><NOBR>&nbsp;<A class=breadcrumb 
+            id=_ctl2_bookmarkHL 
+            href="javascript:addBookmarkForBrowser('http://intranet/'%20,%20'ID%20Home');">Add 
+            to Favorites</A>&nbsp;</NOBR></TD>
+          <TD vAlign=top width=19><SPAN id=_ctl2_dateIcon><IMG 
+            alt="Today's Date" 
+            src="intranetFlashAdTestPage_files/icon_gen_calendar.gif" 
+            border=0></SPAN></TD>
+          <TD align=right width="1%"><NOBR><A class=breadcrumb 
+            id=_ctl2_dateTitle 
+            href="http://intranet/home/calendar/en/calendarFull.aspx">Monday, 02 
+            July</A></NOBR></TD>
+          <TD width=5><IMG height=30 alt="" 
+            src="intranetFlashAdTestPage_files/spacer.gif" width=5></TD></TR>
+        <TR>
+          <TD class=bgMain colSpan=7><IMG height=6 alt="" 
+            src="intranetFlashAdTestPage_files/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=layoutLeftNav style="WIDTH: 148px" vAlign=top rowSpan=2>
+      <SCRIPT>
+	var currL1;
+	var currL2;
+	var holdBackground = "false";
+	var closeMenu;
+	
+	/*
+	function ExpandMenu(id, level)
+	{
+		x = document.getElementsByName('level' + level).length;
+		
+		for(i=0;i<x;i++){
+			document.getElementsByName('level' + level)(i).style.display='none';
+		}
+		
+		var childTable = document.getElementById('table' + id);
+		
+		childTable.style.display='';
+	}
+	*/
+	function closeFullMenu()
+	{
+		currL1 = GetCurr(2);
+		currL2 = GetCurr(3);
+		//alert(currL1 + " , " + currL2);
+		if(currL2 != '') 
+		{
+			document.getElementById(currL2).style.display = 'none';
+			document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif';
+			currL2 = '';
+		}	
+		if(currL1 != '') 
+		{
+			document.getElementById(currL1).style.display = 'none';
+			document.getElementById('icon_' + currL1).src = '/cfr/apps/Themes/Fuji/images/nav_level1_expand.gif';			
+			if(currL2 != '') 
+			{
+				document.getElementById(currL2).style.display = 'none';
+				document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif';	
+				currL2 = '';
+			}
+			currL1 = '';
+		}
+		//alert(currL1 + "111111" + currL2 + "222222");
+		closeMenu = "true";
+		SetClose("true");
+	}
+	function cancelBBL(evt)
+	{
+		var e = (window.event) ? window.event : evt;
+		e.cancelBubble = true;
+	}
+	function openMenuItem(code, level) 
+	{	
+		
+		// if level = 2
+		if(closeMenu == "true")
+		{
+			currL1 = '';
+			currL2 = '';
+		}
+		
+		if(level == 3) 
+		{
+			// if clicking on the same nav item a second time...
+			if(currL2 == 'table' + code) 
+			{
+				
+				document.getElementById(currL2).style.display = 'none';
+				document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif';
+				currL2 = '';
+			}
+			else 
+			{			
+				// collapse the currently expanded level 2 menu
+				if(currL2 != '') 
+				{
+					document.getElementById(currL2).style.display = 'none';
+					document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif';
+				}		
+					
+				currL2 = 'table' + code;
+			
+				document.getElementById(currL2).style.display = '';
+				document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_minimise.gif';	
+			}
+		}
+		// else if level = 1
+		else if(level == 2) 
+		{
+			// if clicking on the same nav item a second time...
+			if(currL1 == 'table' + code) 
+			{
+				document.getElementById(currL1).style.display = 'none';	
+				document.getElementById('icon_' + currL1).src = '/cfr/apps/Themes/Fuji/images/nav_level1_expand.gif';
+				currL1 = '';
+				
+				if(currL2 != '') 
+				{
+					document.getElementById(currL2).style.display = 'none';
+					document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif';
+					currL2 = '';
+				}
+			}
+			else 
+			{
+				// collapse the currently expanded level 1 menu
+				if(currL1 != '') 
+				{
+					document.getElementById(currL1).style.display = 'none';
+					document.getElementById('icon_' + currL1).src = '/cfr/apps/Themes/Fuji/images/nav_level1_expand.gif';			
+					if(currL2 != '') 
+					{
+						document.getElementById(currL2).style.display = 'none';
+						document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif';	
+						currL2 = '';
+					}
+				}
+					
+				currL1 = 'table' + code;
+			
+				document.getElementById(currL1).style.display = '';
+				document.getElementById('icon_' + currL1).src = '/cfr/apps/Themes/Fuji/images/nav_level1_minimise.gif';	
+			}
+		}
+		
+		if (holdBackground == "true")
+		{
+			if(level == 1)
+			{
+				if(currL1 != '')
+				{
+					document.getElementById(currL1).style.display = 'none';
+					document.getElementById('icon_' + currL1).src = '/cfr/apps/Themes/Fuji/images/nav_level1_expand.gif';		
+					if(currL2 != '')
+					{
+						document.getElementById(currL2).style.display = 'none';	
+						document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif';
+						currL2 = '';
+					}
+					currL1 = '';
+					
+				}
+			}
+		}
+		
+		SetCurr(2, currL1);
+		SetCurr(3, currL2);
+		closeMenu = "false";
+		SetClose("false");
+		//document.getElementById('textCookie').value = document.cookie;
+
+		//alert('MENU ITEM\n\nL1: ' + currL1 + '\nL2: ' + currL2);
+		//alert('MENU ITEM - GET CURR\n\nL1: ' + GetCurr(2) + '\nL2: ' + GetCurr(3));
+	}
+	
+	
+	function initNav() 
+	{
+		//document.getElementById('textCookie').value = document.cookie;
+
+		currL1 = GetCurr(2);
+		currL2 = GetCurr(3);
+		closeMenu = GetClose();
+		
+		if (holdBackground == "true")
+		{
+			currItem = GetCookie('pageid');
+			currLevel =GetCookie('linkLevel');
+			
+			obj = document.getElementById(currItem);
+			if (obj)
+			{
+				if(currItem!="" && currLevel!="") {
+					if (currLevel==1)
+					{
+						document.getElementById("innercell" + currItem).className='level1_selected';
+						document.getElementById("innercell" + currItem).onmouseover = document.getElementById("innercell" + currItem).className='level1_selected';
+						document.getElementById("innercell" + currItem).onmouseout = document.getElementById("innercell" + currItem).className='level1_selected';
+						document.getElementById("icon_cell" + currItem).className='level1_selectedText';
+						document.getElementById("icon_cell" + currItem).onmouseover = document.getElementById("icon_cell" + currItem).className='level1_selectedText';
+						document.getElementById("icon_cell" + currItem).onmouseout = document.getElementById("icon_cell" + currItem).className='level1_selectedText';
+					}
+					else if (currLevel==2)
+					{
+						document.getElementById("innercell" + currItem).className='level2_selected'
+						document.getElementById("innercell" + currItem).onmouseover = document.getElementById("innercell" + currItem).className='level2_selected';
+						document.getElementById("innercell" + currItem).onmouseout = document.getElementById("innercell" + currItem).className='level2_selected';
+						document.getElementById("icon_cell" + currItem).className='level2_selectedText';
+						document.getElementById("icon_cell" + currItem).onmouseover = document.getElementById("icon_cell" + currItem).className='level2_selectedText';
+						document.getElementById("icon_cell" + currItem).onmouseout = document.getElementById("icon_cell" + currItem).className='level2_selectedText';
+					}
+					else if(currLevel==3)
+					{
+						document.getElementById("innercell" + currItem).className='level3_selected'
+						document.getElementById("innercell" + currItem).onmouseover = document.getElementById("innercell" + currItem).className='level3_selected';
+						document.getElementById("innercell" + currItem).onmouseout = document.getElementById("innercell" + currItem).className='level3_selected';
+						document.getElementById("icon_cell" + currItem).className='level3_selectedText';
+						document.getElementById("icon_cell" + currItem).onmouseover = document.getElementById("icon_cell" + currItem).className='level3_selectedText';
+						document.getElementById("icon_cell" + currItem).onmouseout = document.getElementById("icon_cell" + currItem).className='level3_selectedText';
+					}					
+				}
+			}
+			SavePage('','');
+		}
+
+		//alert('INIT\n\nL1: ' + currL1 + '\nL2: ' + currL2);
+		//alert(closeMenu);
+		
+		if(!document.all(currL1)) {
+			currL1 = '';
+			SetCurr(2, currL1);
+		}
+		
+		if(!document.all(currL2)) {
+			currL2 = '';
+			SetCurr(3, currL2);
+		}		
+		
+		if(currL1.length > 0) {
+			if(closeMenu == "false")
+			{
+				document.getElementById(currL1).style.display = '';
+				document.getElementById('icon_' + currL1).src = '/cfr/apps/Themes/Fuji/images/nav_level1_minimise.gif';
+			}
+			else
+			{
+			}	
+		}
+		
+		if(currL2.length > 0) {
+			if(closeMenu == "false")
+			{
+				document.getElementById(currL2).style.display = '';
+				document.getElementById('icon_' + currL2).src = '/cfr/apps/Themes/Fuji/images/nav_level2_minimise.gif';
+			}
+			else
+			{
+			}	
+		}
+
+	}
+	
+	function GetCurr(level)
+	{
+		var cookieVal = GetCookie('_navCurrL' + level);
+		
+		//alert(level + ': ' + cookieVal);
+		
+		if(cookieVal && cookieVal != 'undefined')
+			return cookieVal;
+		else
+			return '';
+	}
+	
+	function GetClose()
+	{
+		var cookieVal = GetCookie('closeMenu');
+		
+		//alert(level + ': ' + cookieVal);
+		
+		if(cookieVal && cookieVal != 'undefined')
+			return cookieVal;
+		else
+			return '';
+	}
+	
+	
+	function SetCurr(level, value)
+	{
+		if(level == 2)
+			currL1 = value;
+		else
+			currL2 = value;
+
+		
+		SetCookie('_navCurrL' + level, value);
+	}
+	
+	function SetClose(value)
+	{
+		closeMenu = value;	
+		SetCookie('closeMenu', value);
+	}
+	
+	function SetCookie(sName, sValue)
+	{
+		//date = new Date();
+		document.cookie = sName + "=" + escape(sValue) + ";path=/;"; // expires=" + date.toGMTString();
+	}
+
+	
+	function GetCookie(sName)
+	{
+
+		// cookies are separated by semicolons
+		var aCookie = document.cookie.split("; ");
+		for (var i=0; i < aCookie.length; i++)
+		{
+			// a name/value pair (a crumb) is separated by an equal sign
+			var aCrumb = aCookie[i].split("=");
+			if (sName == aCrumb[0]) 
+				return unescape(aCrumb[1]);
+		}
+
+		// a cookie with the requested name does not exist
+		return null;
+	}
+	
+	function SavePage(level, pageID)
+	{
+		SetCookie('pageid',pageID);
+		SetCookie('linkLevel',level);
+	}
+
+</SCRIPT>
+
+      <SCRIPT language=javascript type=text/javascript>
+_level1_expand_p2 = new Image();
+_level1_expand_p4 = new Image();
+_homeImageUrl_p2 = new Image();
+_homeImageUrl_p4 = new Image();
+_level2_expand_p2 = new Image();
+_level2_expand_p4 = new Image();
+_level1_expand_p2.src = "/cfr/apps/Themes/Fuji/images/nav_level1_expand.gif";
+_homeImageUrl_p2.src = "/cfr/apps/Themes/Fuji/images/nav_home.gif";
+_level2_expand_p2.src = "/cfr/apps/Themes/Fuji/images/nav_level2_expand.gif";
+</SCRIPT>
+
+      <TABLE id=LayoutControl25_homeLink 
+      style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 cellPadding=0 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD id=LayoutControl25_homelinkBG 
+          style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+          background=intranetFlashAdTestPage_files/nav_home.gif><IMG 
+            id=LayoutControl25_ibtnHomeLink onmouseover="window.status = '/';" 
+            style="WIDTH: 148px; CURSOR: hand; HEIGHT: 23px" 
+            onclick="closeFullMenu();window.location.href = '/';" 
+            onmouseout="window.status = '';" alt=Home 
+            src="intranetFlashAdTestPage_files/spacer.gif" 
+        border=0></TD></TR></TBODY></TABLE>
+      <TABLE class=menuMain id=LayoutControl25_mainNav 
+      style="BORDER-TOP: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+      cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD 
+          style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+            <TABLE id=LayoutControl25_tblNav 
+            style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE id=table style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                  cellSpacing=0 cellPadding=0 border=0 name="level1">
+                    <TBODY>
+                    <TR height=20>
+                      <TD class=level1 id=15 style="BORDER-RIGHT: medium none" 
+                      vAlign=center>
+                        <TABLE onmouseover="window.status = '';" 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        onmouseout="window.status = '';" cellSpacing=0 
+                        cellPadding=0 border=0>
+                          <TBODY>
+                          <TR class=level1Out 
+                          onmouseover="this.className='level1Over'" 
+                          onmouseout="this.className='level1Out'">
+                            <TD 
+                            style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                            onclick="openMenuItem(15,2); cancelBBL(event);" 
+                            vAlign=center><IMG id=icon_table15 alt="" 
+                              src="intranetFlashAdTestPage_files/nav_level1_expand.gif" 
+                              align=left border=0></TD>
+                            <TD class=level1TextOut 
+                            onmouseover="this.className='level1TextOver'" 
+                            style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                            onclick="openMenuItem(15,2); cancelBBL(event);" 
+                            onmouseout="this.className='level1TextOut'">Departments</TD></TR></TBODY></TABLE>
+                        <TABLE id=table15 
+                        style="DISPLAY: none; WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=0 border=0 name="level2">
+                          <TBODY>
+                          <TR height=20>
+                            <TD class=level2 id=28 
+                            style="BORDER-RIGHT: medium none" vAlign=center>
+                              <TABLE 
+                              onmouseover="window.status = '/divisionsmembership';" 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              onmouseout="window.status = '';" cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR class=level2Out 
+                                onmouseover="this.className='level2Over'" 
+                                onmouseout="this.className='level2Out'">
+                                <TD 
+                                style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                                onclick="openMenuItem(28,1); cancelBBL(event);" 
+                                vAlign=center><IMG id=icon_table28 alt="" 
+                                src="intranetFlashAdTestPage_files/nav_level2.gif" 
+                                align=left border=0></TD>
+                                <TD class=level2TextOut 
+                                onmouseover="this.className='level2TextOver'" 
+                                style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                                onclick="openMenuItem(28,1); cancelBBL(event);window.location='/divisionsmembership';" 
+                                onmouseout="this.className='level2TextOut'">Operations</TD></TR></TBODY></TABLE></TD></TR>
+                          <TR height=20>
+                            <TD class=level2 id=32 
+                            style="BORDER-RIGHT: medium none" vAlign=center>
+                              <TABLE 
+                              onmouseover="window.status = '/governmentpublicaffairs';" 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              onmouseout="window.status = '';" cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR class=level2Out 
+                                onmouseover="this.className='level2Over'" 
+                                onmouseout="this.className='level2Out'">
+                                <TD 
+                                style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                                onclick="openMenuItem(32,1); cancelBBL(event);" 
+                                vAlign=center><IMG id=icon_table32 alt="" 
+                                src="intranetFlashAdTestPage_files/nav_level2.gif" 
+                                align=left border=0></TD>
+                                <TD class=level2TextOut 
+                                onmouseover="this.className='level2TextOver'" 
+                                style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                                onclick="openMenuItem(32,1); cancelBBL(event);window.location='/governmentpublicaffairs';" 
+                                onmouseout="this.className='level2TextOut'">Government 
+                                &amp; Public 
+                          Affairs</TD></TR></TBODY></TABLE></TD></TR>
+                          <TR height=20>
+                            <TD class=level2 id=29 
+                            style="BORDER-RIGHT: medium none" vAlign=center>
+                              <TABLE onmouseover="window.status = '/finance';" 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              onmouseout="window.status = '';" cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR class=level2Out 
+                                onmouseover="this.className='level2Over'" 
+                                onmouseout="this.className='level2Out'">
+                                <TD 
+                                style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                                onclick="openMenuItem(29,1); cancelBBL(event);" 
+                                vAlign=center><IMG id=icon_table29 alt="" 
+                                src="intranetFlashAdTestPage_files/nav_level2.gif" 
+                                align=left border=0></TD>
+                                <TD class=level2TextOut 
+                                onmouseover="this.className='level2TextOver'" 
+                                style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                                onclick="openMenuItem(29,1); cancelBBL(event);window.location='/finance';" 
+                                onmouseout="this.className='level2TextOut'">Finance, 
+                                Admin &amp; 
+                          Property</TD></TR></TBODY></TABLE></TD></TR>
+                          <TR height=20>
+                            <TD class=level2 id=27 
+                            style="BORDER-RIGHT: medium none" vAlign=center>
+                              <TABLE 
+                              onmouseover="window.status = '/industrialrelations';" 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              onmouseout="window.status = '';" cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR class=level2Out 
+                                onmouseover="this.className='level2Over'" 
+                                onmouseout="this.className='level2Out'">
+                                <TD 
+                                style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                                onclick="openMenuItem(27,1); cancelBBL(event);" 
+                                vAlign=center><IMG id=icon_table27 alt="" 
+                                src="intranetFlashAdTestPage_files/nav_level2.gif" 
+                                align=left border=0></TD>
+                                <TD class=level2TextOut 
+                                onmouseover="this.className='level2TextOver'" 
+                                style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                                onclick="openMenuItem(27,1); cancelBBL(event);window.location='/industrialrelations';" 
+                                onmouseout="this.className='level2TextOut'">Industrial 
+                                Relations, OHS &amp; 
+                              Training</TD></TR></TBODY></TABLE></TD></TR>
+                          <TR height=20>
+                            <TD class=level2 id=19 
+                            style="BORDER-RIGHT: medium none" vAlign=center>
+                              <TABLE onmouseover="window.status = '/marketing';" 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              onmouseout="window.status = '';" cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR class=level2Out 
+                                onmouseover="this.className='level2Over'" 
+                                onmouseout="this.className='level2Out'">
+                                <TD 
+                                style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                                onclick="openMenuItem(19,1); cancelBBL(event);" 
+                                vAlign=center><IMG id=icon_table19 alt="" 
+                                src="intranetFlashAdTestPage_files/nav_level2.gif" 
+                                align=left border=0></TD>
+                                <TD class=level2TextOut 
+                                onmouseover="this.className='level2TextOver'" 
+                                style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                                onclick="openMenuItem(19,1); cancelBBL(event);window.location='/marketing';" 
+                                onmouseout="this.className='level2TextOut'">Communications 
+                                &amp; Marketing</TD></TR></TBODY></TABLE></TD></TR>
+                          <TR height=20>
+                            <TD class=level2 id=30 
+                            style="BORDER-RIGHT: medium none" vAlign=center>
+                              <TABLE onmouseover="window.status = '/technical';" 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              onmouseout="window.status = '';" cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR class=level2Out 
+                                onmouseover="this.className='level2Over'" 
+                                onmouseout="this.className='level2Out'">
+                                <TD 
+                                style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                                onclick="openMenuItem(30,1); cancelBBL(event);" 
+                                vAlign=center><IMG id=icon_table30 alt="" 
+                                src="intranetFlashAdTestPage_files/nav_level2.gif" 
+                                align=left border=0></TD>
+                                <TD class=level2TextOut 
+                                onmouseover="this.className='level2TextOver'" 
+                                style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                                onclick="openMenuItem(30,1); cancelBBL(event);window.location='/technical';" 
+                                onmouseout="this.className='level2TextOut'">Technical 
+                                Services</TD></TR></TBODY></TABLE></TD></TR>
+                          <TR height=20>
+                            <TD class=level2 id=31 
+                            style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none" 
+                            vAlign=center>
+                              <TABLE 
+                              onmouseover="window.status = '/Technology';" 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              onmouseout="window.status = '';" cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR class=level2Out 
+                                onmouseover="this.className='level2Over'" 
+                                onmouseout="this.className='level2Out'">
+                                <TD 
+                                style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                                onclick="openMenuItem(31,1); cancelBBL(event);" 
+                                vAlign=center><IMG id=icon_table31 alt="" 
+                                src="intranetFlashAdTestPage_files/nav_level2.gif" 
+                                align=left border=0></TD>
+                                <TD class=level2TextOut 
+                                onmouseover="this.className='level2TextOver'" 
+                                style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                                onclick="openMenuItem(31,1); cancelBBL(event);window.location='/Technology';" 
+                                onmouseout="this.className='level2TextOut'">Technology</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR height=20>
+                      <TD class=level1 id=35 
+                      style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none" 
+                      vAlign=center>
+                        <TABLE onmouseover="window.status = 'http://intranet/';" 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        onmouseout="window.status = '';" cellSpacing=0 
+                        cellPadding=0 border=0>
+                          <TBODY>
+                          <TR class=level1Out 
+                          onmouseover="this.className='level1Over'" 
+                          onmouseout="this.className='level1Out'">
+                            <TD 
+                            style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; WIDTH: 1px; PADDING-TOP: 2px; HEIGHT: 23px" 
+                            onclick="openMenuItem(35,1); cancelBBL(event);" 
+                            vAlign=center><IMG id=icon_table35 alt="" 
+                              src="intranetFlashAdTestPage_files/nav_level1.gif" 
+                              align=left border=0></TD>
+                            <TD class=level1TextOut 
+                            onmouseover="this.className='level1TextOver'" 
+                            style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 23px" 
+                            onclick="openMenuItem(35,1); cancelBBL(event);window.location='http://intranet/';" 
+                            onmouseout="this.className='level1TextOut'">Home 
+                              Inside 
+                VACC</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=6 src="intranetFlashAdTestPage_files/spacer.gif" 
+          ?></TD></TR></TBODY></TABLE>
+      <SCRIPT language=javascript type=text/javascript>
+initNav();
+</SCRIPT>
+
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=148></TD></TR></TBODY></TABLE>
+      <SCRIPT language=JavaScript type=text/javascript>
+function OpenPage(linktype,link,jsproperties)
+{	
+	if(linktype == 'BL') {			
+		window.open(link, 'BL', '')
+	}
+	else if(linktype == 'MF') {
+		window.location.href= link;
+	}
+	else if(linktype == 'JS') {
+		window.open(link, "QL",  "'" + jsproperties+ "'");
+	}
+	else if(linktype == 'TP') {
+		window.top.location.href=link;
+	}
+}
+
+function RedirectClick(buttonFullName,dropDownName,buttonName,isExternal)
+{
+	var dropDownID = buttonFullName.replace('_' + buttonName, '_' + dropDownName);
+	var dropDown = document.getElementById(dropDownID);
+	var selection = dropDown.options[dropDown.selectedIndex].value;
+	
+	if (selection != 0)
+	{
+		var optionsArray = selection.split('@');
+		var linkType = optionsArray[1];
+		var link = optionsArray[2];
+		
+		if (linkType == 'BL')
+		{
+            window.open(link);
+        }
+        else if (linkType == 'MF')
+        {
+            window.location.href = link;
+        }
+        else if (linkType == 'JS')
+        {
+			window.open(link);
+        }            
+        else if (linkType == 'TP')
+        {
+			if (isExternal == 1)
+			{
+				window.parent.location.href = link;
+			}
+			else
+			{
+				window.top.location.href = link;
+			}
+        }
+	}
+}
+</SCRIPT>
+<!--Layout Top (1) --><!--End Layout Top (1)--><!--Layout left Hand Side (2)-->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=controlHeaderP2 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_left.gif"></TD>
+          <TD class=controlHeaderP2 width="100%"><SPAN 
+            id=LayoutControl7_3_headingLbl_2>VACC Links</SPAN></TD>
+          <TD class=controlHeaderP2 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP2 id=LayoutControl7_3_QLDataGrid2 
+      style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: 0px" 
+      cellSpacing=1 cellPadding=3 rules=all border=0>
+        <TBODY>
+        <TR>
+          <TD class=controlItemP2 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD style="PADDING-RIGHT: 3px" vAlign=center width="1%"><IMG 
+                  src="intranetFlashAdTestPage_files/bullet.gif"></TD>
+                <TD width="100%"><A class=P2 href="http://www.google.com.au/" 
+                  target=_blank>Google</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP2 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD style="PADDING-RIGHT: 3px" vAlign=center width="1%"><IMG 
+                  src="intranetFlashAdTestPage_files/bullet.gif"></TD>
+                <TD width="100%"><A class=P2 href="http://www.vacc.com.au/" 
+                  target=_blank>VACC</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP2 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD style="PADDING-RIGHT: 3px" vAlign=center width="1%"><IMG 
+                  src="intranetFlashAdTestPage_files/bullet.gif"></TD>
+                <TD width="100%"><A class=P2 
+                  href="http://www.motor.net.au/tacc/" 
+              target=_blank>TACC</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><ASP:DATALIST></ASP:DATALIST><!--End Layout left Hand (2) Side -- 
+Layout Middle (3)-- BorderStyle="Solid">--><!--End Layout Middle (3)--><!--Layout right HandSide (4)--><!--End Layout right Hand Side(4)--><!--Layout bottom left (5)--><!--End Layout bottom left (5)-->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_left.gif"></TD>
+          <TD class=controlHeaderP2 width="100%">People Search</TD>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP2 cellSpacing=1 cellPadding=3 
+        width="100%"><TBODY>
+        <TR>
+          <TD class=controlItemP2>
+            <DIV id=LayoutControl29_peopleSearchPanel_2>
+            <TABLE id=LayoutControl29_tblSearch_2 
+            style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+            cellPadding=3 border=0>
+              <TBODY>
+              <TR>
+                <TD><SPAN class=controlItemP2 
+                  id=LayoutControl29_LabelSearch0>Surname</SPAN><BR><INPUT 
+                  id=LayoutControl29_TextSearch20_sn 
+                  onkeydown="if ((event.keyCode &amp;&amp; event.keyCode == 13)) {document.all.LayoutControl29_ps_searchBtn_2.click();return false;}" 
+                  name=LayoutControl29:TextSearch20_sn></TD></TR>
+              <TR>
+                <TD><SPAN class=controlItemP2 
+                  id=LayoutControl29_LabelSearch1>First Name</SPAN><BR><INPUT 
+                  id=LayoutControl29_TextSearch21_givenname 
+                  onkeydown="if ((event.keyCode &amp;&amp; event.keyCode == 13)) {document.all.LayoutControl29_ps_searchBtn_2.click();return false;}" 
+                  name=LayoutControl29:TextSearch21_givenname></TD></TR>
+              <TR>
+                <TD><SPAN class=controlItemP2 
+                  id=LayoutControl29_LabelSearch2>Department</SPAN><BR><INPUT 
+                  id=LayoutControl29_TextSearch22_department 
+                  onkeydown="if ((event.keyCode &amp;&amp; event.keyCode == 13)) {document.all.LayoutControl29_ps_searchBtn_2.click();return false;}" 
+                  name=LayoutControl29:TextSearch22_department></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%">
+              <TBODY>
+              <TR>
+                <TD class=controlItemP2 align=right><INPUT class=button id=LayoutControl29_ps_searchBtn_2 type=submit value=GO name=LayoutControl29:ps_searchBtn_2></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+      <SCRIPT>
+	function goURL(url)
+	{
+		window.open(url,'PopUp');
+	}
+</SCRIPT>
+
+      <SCRIPT>
+	function goURL(url)
+	{
+		window.open(url,'PopUp');
+	}
+</SCRIPT>
+
+      <TABLE id=LayoutControl13_3__ctl0_Pane2Table 
+      style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 cellPadding=0 
+      border=0>
+        <TBODY>
+        <TR id=LayoutControl13_3__ctl0_Pane2TableTR>
+          <TD id=LayoutControl13_3__ctl0_Pane2TableTD 
+          style="PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; CURSOR: hand; PADDING-TOP: 3px" 
+          vAlign=center align=middle><IMG 
+            id=LayoutControl13_3__ctl0_BannerLink2 
+            style="WIDTH: 120px; CURSOR: hand; HEIGHT: 120px" 
+            onclick="window.open('/apps/bannerMgt/clickThrough.aspx?sid=-1&amp;banID=6&amp;theURL=http://weather.ninemsn.com.au/weather/national/VIC.asp?location=Melbourne', 'BL4', '');" 
+            alt=Weather src="intranetFlashAdTestPage_files/bm_image_5_home.jpg" 
+            border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=148></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=148></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=148></TD></TR></TBODY></TABLE>
+      <SCRIPT language=JavaScript type=text/javascript>
+function OpenPage(linktype,link,jsproperties)
+{	
+	if(linktype == 'BL') {			
+		window.open(link, 'BL', '')
+	}
+	else if(linktype == 'MF') {
+		window.location.href= link;
+	}
+	else if(linktype == 'JS') {
+		window.open(link, "QL",  "'" + jsproperties+ "'");
+	}
+	else if(linktype == 'TP') {
+		window.top.location.href=link;
+	}
+}
+
+function RedirectClick(buttonFullName,dropDownName,buttonName,isExternal)
+{
+	var dropDownID = buttonFullName.replace('_' + buttonName, '_' + dropDownName);
+	var dropDown = document.getElementById(dropDownID);
+	var selection = dropDown.options[dropDown.selectedIndex].value;
+	
+	if (selection != 0)
+	{
+		var optionsArray = selection.split('@');
+		var linkType = optionsArray[1];
+		var link = optionsArray[2];
+		
+		if (linkType == 'BL')
+		{
+            window.open(link);
+        }
+        else if (linkType == 'MF')
+        {
+            window.location.href = link;
+        }
+        else if (linkType == 'JS')
+        {
+			window.open(link);
+        }            
+        else if (linkType == 'TP')
+        {
+			if (isExternal == 1)
+			{
+				window.parent.location.href = link;
+			}
+			else
+			{
+				window.top.location.href = link;
+			}
+        }
+	}
+}
+</SCRIPT>
+<!--Layout Top (1) --><!--End Layout Top (1)--><!--Layout left Hand Side (2)-->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=controlHeaderP2 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_left.gif"></TD>
+          <TD class=controlHeaderP2 width="100%"><SPAN 
+            id=LayoutControl7_headingLbl_2>Useful Links</SPAN></TD>
+          <TD class=controlHeaderP2 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP2 id=LayoutControl7_QLDataGrid2 
+      style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: 0px" 
+      cellSpacing=1 cellPadding=3 rules=all border=0>
+        <TBODY></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR class=controlItemP2>
+          <TD class=controlSeparatorP2 width=1><IMG alt="" 
+            src="intranetFlashAdTestPage_files/spacer.gif" width=1></TD>
+          <TD>
+            <TABLE cellPadding=3 width="100%">
+              <TBODY>
+              <TR>
+                <TD class=text><SELECT id=LayoutControl7_QLDropDownList2 
+                  style="WIDTH: 130px" name=LayoutControl7:QLDropDownList2> 
+                    <OPTION value=0 selected>Select a Link</OPTION> <OPTION 
+                    value=11@BL@http://www.choice.com.au>Choice 
+                    Magazine</OPTION> <OPTION 
+                    value=4@BL@http://www.mtaasuper.com.au/>MTAA 
+                    Superannuation</OPTION> <OPTION 
+                    value=3@BL@http://office.microsoft.com/en-au/default.aspx>Microsoft 
+                    Office Online</OPTION> <OPTION 
+                    value=2@BL@http://www.dashboard.net.au>Intranet Dashboard 
+                    Tutorials</OPTION> <OPTION 
+                    value=13@BL@http://www1.auspost.com.au/postcodes/>Post 
+                    Codes</OPTION> <OPTION 
+                    value=14@BL@http://weather.ninemsn.com.au/weather/national/VIC.asp?location=Melbourne>Today's 
+                    Weather</OPTION></SELECT></TD></TR>
+              <TR>
+                <TD align=right><SPAN id=LayoutControl7_lblButton2 
+                  onclick="RedirectClick(this.id,'QLDropDownList2','lblButton2', 0);"><INPUT class=button type=button value=GO ?);?> 
+                  </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=controlSeparatorP2 width=1><IMG alt="" 
+            src="intranetFlashAdTestPage_files/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD class=controlSeparatorP2 width=1 colSpan=3><IMG height=1 alt="" 
+            src="intranetFlashAdTestPage_files/spacer.gif"></TD></TR></TBODY></TABLE><ASP:DATALIST></ASP:DATALIST><!--End Layout left Hand (2) Side -- 
+Layout Middle (3)-- BorderStyle="Solid">--><!--End Layout Middle (3)--><!--Layout right HandSide (4)--><!--End Layout right Hand Side(4)--><!--Layout bottom left (5)--><!--End Layout bottom left (5)-->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=148></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_left.gif"></TD>
+          <TD class=controlHeaderP2 width="100%">Phonebooks</TD>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p2_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP2 cellSpacing=1 cellPadding=3 
+        width="100%"><TBODY>
+        <TR>
+          <TD class=controlItemP2>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%">
+              <TBODY>
+              <TR>
+                <TD width="100%"><SELECT id=LayoutControl5_phoneBookDDL_2 
+                  onchange="if (this.value > 0 ){window.open('/apps/PhoneBooks/redirectPhoneBook.aspx?sid=0&amp;pbid=' + this.value);}" 
+                  name=LayoutControl5:phoneBookDDL_2> <OPTION value=0 
+                    selected>Please Select ...</OPTION> <OPTION value=20>VACC 
+                    Tenants</OPTION> <OPTION value=3>White Pages</OPTION> 
+                    <OPTION value=2>Yellow 
+            Pages</OPTION></SELECT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=148></TD></TR></TBODY></TABLE></TD>
+    <TD style="WIDTH: 100%" vAlign=top>
+      <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+      cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=layoutContentCell style="WIDTH: 99%; HEIGHT: 1px" vAlign=top 
+          colSpan=2>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%">
+              <TBODY>
+              <TR>
+              <TR>
+                <TD width=5><IMG height=22 
+                  src="intranetFlashAdTestPage_files/hdrbg_p3_left.gif"></TD>
+                <TD class=controlHeaderP3 width="100%">What's Happening</TD>
+                <TD width=5><IMG height=22 
+                  src="intranetFlashAdTestPage_files/hdrbg_p3_right.gif"></TD></TR></TBODY></TABLE>
+            <TABLE class=tableMain style="MARGIN-BOTTOM: 6px" cellSpacing=0 
+            cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD align=left width="100%">
+                  <TABLE id=LayoutControl3__ctl0_CACalendar3 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: separate" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2><SPAN class=textBold>This 
+                    Week:</SPAN></TD></TR>
+                    <TR vAlign=top>
+                      <TD class=tableItem title=3/07/2007 
+                        style="WIDTH: 160px"><A 
+                        href="http://intranet/home/calendar/en/calendarFull.aspx?edate=07/03/2007 00:00:00">Tuesday, 
+                        3 July 2007</A></TD>
+                      <TD class=tableItem vAlign=top><IMG 
+                        style="WIDTH: 1px; HEIGHT: 16px" alt="" 
+                        src="intranetFlashAdTestPage_files/spacer.gif" 
+                        border=0><IMG alt="Finace Committee" 
+                        src="intranetFlashAdTestPage_files/icon_meeting2_16.gif" 
+                        border=0><IMG style="WIDTH: 1px; HEIGHT: 16px" alt="" 
+                        src="intranetFlashAdTestPage_files/spacer.gif" 
+                        border=0><A title="Finace Committee: " 
+                        href="http://intranet/apps/calendar/EventInformation.aspx?sid=0&amp;eid=349">Finace 
+                        Committee - </A></TD></TR>
+                    <TR vAlign=top>
+                      <TD class=tableItem title=6/07/2007 
+                        style="WIDTH: 160px"><A 
+                        href="http://intranet/home/calendar/en/calendarFull.aspx?edate=07/06/2007 00:00:00">Friday, 
+                        6 July 2007</A></TD>
+                      <TD class=tableItem vAlign=top><IMG 
+                        style="WIDTH: 1px; HEIGHT: 16px" alt="" 
+                        src="intranetFlashAdTestPage_files/spacer.gif" 
+                        border=0><IMG alt="Past President" 
+                        src="intranetFlashAdTestPage_files/icon_mediarelease_16.gif" 
+                        border=0 12.00? - Lunch s><IMG 
+                        style="WIDTH: 1px; HEIGHT: 16px" alt="" 
+                        src="intranetFlashAdTestPage_files/spacer.gif" 
+                        border=0><A title="Past President's Lunch - 12.00: " 
+                        href="http://intranet/apps/calendar/EventInformation.aspx?sid=0&amp;eid=350">Past 
+                        President's Lunch - 12.00 - </A></TD></TR>
+                    <TR>
+                      <TD colSpan=2><SPAN class=textBold>Next 
+                    Week:</SPAN></TD></TR>
+                    <TR vAlign=top>
+                      <TD class=tableItem style="WIDTH: 120px"><A 
+                        href="http://intranet/home/calendar/en/calendarFull.aspx?edate=07/11/2007 00:00:00">Wed,00 
+                        11,YYYY</A></TD>
+                      <TD class=tableItem vAlign=top><IMG 
+                        style="WIDTH: 1px; HEIGHT: 16px" alt="" 
+                        src="intranetFlashAdTestPage_files/spacer.gif" 
+                        border=0><IMG alt="Executive Board - 8.00am" 
+                        src="intranetFlashAdTestPage_files/icon_standardevent_16.gif" 
+                        border=0><IMG style="WIDTH: 1px; HEIGHT: 16px" alt="" 
+                        src="intranetFlashAdTestPage_files/spacer.gif" 
+                        border=0><A title="Executive Board - 8.00am: " 
+                        href="http://intranet/apps/calendar/EventInformation.aspx?sid=0&amp;eid=351">Executive 
+                        Board - 8.00am - </A></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD class=tableItem colSpan=3>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD align=right width="100%"><A 
+                        id=LayoutControl3__ctl0_CABulletLink3 
+                        href="http://intranet/home/calendar/en/calendarFull.aspx"><IMG 
+                        alt="" src="intranetFlashAdTestPage_files/bullet.gif" 
+                        border=0></A>&nbsp; <A id=LayoutControl3__ctl0_CALink3 
+                        href="http://intranet/home/calendar/en/calendarFull.aspx">Full 
+                        Calendar</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=layoutLowerLeft style="WIDTH: 50%" vAlign=top><TEXTAREA id=holdtext_36 style="DISPLAY: none"></TEXTAREA> 
+
+            <TABLE id=LayoutControl1_36_table_5 
+            style="MARGIN-BOTTOM: 6px; WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+            cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=controlHeaderP5 vAlign=top width=5><IMG 
+                        height=22 
+                        src="intranetFlashAdTestPage_files/hdrbg_p5_left.gif"></TD>
+                      <TD class=controlHeaderP5 width="100%"><SPAN 
+                        id=LayoutControl1_36_headingLbl_5>What's Happening at 
+                        VACC</SPAN></TD>
+                      <TD class=controlHeaderP5 vAlign=top width=5><IMG 
+                        height=22 
+                        src="intranetFlashAdTestPage_files/hdrbg_p5_right.gif"></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=tableMain id=LayoutControl1_36_topNewDataList_5 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: separate" cellSpacing=0 
+                  cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_36_topNewDataList_5__ctl0_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_36_topNewDataList_5__ctl0_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl0_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_36_topNewDataList_5__ctl0_date_Lbl_5>07-Feb-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_36_topNewDataList_5__ctl0_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="Short Courses available during 2007" 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl0_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_36_topNewDataList_5__ctl0_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl0_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_36_topNewDataList_5__ctl0_title_HL_5 
+                                href="http://intranet/home/news/en/36/259/article.aspx" 
+                                target=_top>Short Courses available during 
+                                2007</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl0_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_36_topNewDataList_5__ctl0_Label2>Please 
+                                find attached a list of available short courses 
+                                offered 
+                          </SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_36_topNewDataList_5__ctl1_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_36_topNewDataList_5__ctl1_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl1_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_36_topNewDataList_5__ctl1_date_Lbl_5>02-Feb-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_36_topNewDataList_5__ctl1_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="SAFETY ALERT – get your LPG tank checked " 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl1_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_36_topNewDataList_5__ctl1_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl1_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_36_topNewDataList_5__ctl1_title_HL_5 
+                                href="http://intranet/home/news/en/36/256/article.aspx" 
+                                target=_top>SAFETY ALERT – get your LPG tank 
+                                checked </A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl1_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_36_topNewDataList_5__ctl1_Label2></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_36_topNewDataList_5__ctl2_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_36_topNewDataList_5__ctl2_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl2_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_36_topNewDataList_5__ctl2_date_Lbl_5>16-Jan-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_36_topNewDataList_5__ctl2_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="WATER CONSERVATION PLAN " 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl2_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_36_topNewDataList_5__ctl2_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl2_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_36_topNewDataList_5__ctl2_title_HL_5 
+                                href="http://intranet/home/news/en/36/251/article.aspx" 
+                                target=_top>WATER CONSERVATION PLAN 
+                                </A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl2_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_36_topNewDataList_5__ctl2_Label2>Since 
+                                the last member update sent to you on 11 January 
+                                2007</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_36_topNewDataList_5__ctl3_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_36_topNewDataList_5__ctl3_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl3_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_36_topNewDataList_5__ctl3_date_Lbl_5>12-Jan-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_36_topNewDataList_5__ctl3_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="WATER RESTRICTIONS" 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl3_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_36_topNewDataList_5__ctl3_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl3_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_36_topNewDataList_5__ctl3_title_HL_5 
+                                href="http://intranet/home/news/en/36/245/article.aspx" 
+                                target=_top>WATER RESTRICTIONS</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl3_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_36_topNewDataList_5__ctl3_Label2>Stage 
+                                3 Water Restrictions on Monday, 1 January 2007. 
+                                </SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_36_topNewDataList_5__ctl4_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_36_topNewDataList_5__ctl4_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl4_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_36_topNewDataList_5__ctl4_date_Lbl_5>09-Jan-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_36_topNewDataList_5__ctl4_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="VACC College News for 2007" 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_36_topNewDataList_5__ctl4_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_36_topNewDataList_5__ctl4_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl4_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_36_topNewDataList_5__ctl4_title_HL_5 
+                                href="http://intranet/home/news/en/36/240/article.aspx" 
+                                target=_top>VACC College News for 
+                                2007</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_36_topNewDataList_5__ctl4_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_36_topNewDataList_5__ctl4_Label2>VACC 
+                                College bigger &amp; better in 
+                                2007</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD width="1%"><NOBR><A 
+                        id=LayoutControl1_36_currentNews_HL_5 
+                        href="http://intranet/home/news/36/en/current.aspx" 
+                        target=_top><IMG 
+                        src="intranetFlashAdTestPage_files/icon_news_current.gif" 
+                        border=0> More News</A></NOBR></TD>
+                      <TD width="1%"><NOBR></NOBR></TD>
+                      <TD width="1%"><NOBR><A 
+                        id=LayoutControl1_36_userNews_HL_5 
+                        href="http://intranet/home/news/36/en/userNews.aspx" 
+                        target=_top><IMG 
+                        src="intranetFlashAdTestPage_files/icon_news_submit.gif" 
+                        border=0> Submit Article</A></NOBR></TD>
+                      <TD width="1%"><NOBR></NOBR></TD>
+                      <TD 
+            width="99%">&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%">
+              <TBODY>
+              <TR>
+                <TD width=5><IMG height=22 
+                  src="intranetFlashAdTestPage_files/hdrbg_p5_left.gif"></TD>
+                <TD class=controlHeaderP5 width="100%">Staff Offers</TD>
+                <TD width=5><IMG height=22 
+                  src="intranetFlashAdTestPage_files/hdrbg_p5_right.gif"></TD></TR></TBODY></TABLE>
+            <TABLE class=tableMain style="MARGIN-BOTTOM: 6px" cellSpacing=0 
+            cellPadding=0 width="100%">
+              <TBODY>
+              <TR>
+                <TD class=tableItem width="100%">
+                  <TABLE cellPadding=3 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD width="100%"><SPAN class=textBold>Search:</SPAN> 
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                          <TBODY>
+                          <TR>
+                            <TD>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD width="100%" colSpan=2><SPAN 
+                                id=LayoutControl120_Msdesearch5_lblSearch><B></B></SPAN></TD></TR>
+                                <TR>
+                                <TD width="100%" colSpan=2><IMG 
+                                id=LayoutControl120_Msdesearch5_spacerImg 
+                                style="DISPLAY: none; HEIGHT: 5px" alt="" 
+                                src="intranetFlashAdTestPage_files/spacer.gif" 
+                                border=0></TD></TR>
+                                <TR>
+                                <TD 
+                                style="PADDING-RIGHT: 2px; PADDING-LEFT: 2px" 
+                                width="1%"><INPUT 
+                                id=LayoutControl120_Msdesearch5_searchQuery 
+                                onkeydown="if ((event.keyCode &amp;&amp; event.keyCode == 13)) {document.all.LayoutControl120_Msdesearch5_searchBtn.click();return false;}" 
+                                style="WIDTH: 160px! important" 
+                                name=LayoutControl120:Msdesearch5:searchQuery></TD>
+                                <TD style="PADDING-RIGHT: 2px" vAlign=center 
+                                width="100%"><INPUT class=button id=LayoutControl120_Msdesearch5_searchBtn onclick=Page_ValidationActive=false; type=submit value=GO name=LayoutControl120:Msdesearch5:searchBtn> 
+                                </TD></TR></TBODY></TABLE></TD></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=text vAlign=top width="100%" colSpan=2>Find 
+                        postings of items for offer arranged by category. 
+                        <BR><BR></TD></TR>
+                    <TR>
+                      <TD class=textBold width="100%">Latest Posts Added: 
+                    </TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD width="100%">
+                  <TABLE id=LayoutControl120_cdgItems5 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 100%" 
+                  cellSpacing=0 cellPadding=3 border=0>
+                    <TBODY>
+                    <TR class=tableHeader style="HEIGHT: 22px">
+                      <TD class=tableHeader>Title</TD>
+                      <TD class=tableHeader align=middle>Expiration</TD>
+                      <TD class=tableHeader align=middle>Locality</TD>
+                      <TD class=tableHeader 
+                  align=right>Price</TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD class=tableItem 
+                style="PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px" 
+                width="100%"><IMG 
+                  src="intranetFlashAdTestPage_files/bullet.gif"> <A 
+                  class=linkBold id=LayoutControl120_fullStaffOffersHLP5 
+                  href="http://intranet/home/staffoffers/listcategories.aspx">View 
+                  All Postings</A> </TD></TR></TBODY></TABLE></TD>
+          <TD class=layoutLowerRight style="WIDTH: 50%" vAlign=top><TEXTAREA id=holdtext_34 style="DISPLAY: none"></TEXTAREA> 
+
+            <TABLE id=LayoutControl1_34_table_5 
+            style="MARGIN-BOTTOM: 6px; WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+            cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=controlHeaderP5 vAlign=top width=5><IMG 
+                        height=22 
+                        src="intranetFlashAdTestPage_files/hdrbg_p5_left.gif"></TD>
+                      <TD class=controlHeaderP5 width="100%"><SPAN 
+                        id=LayoutControl1_34_headingLbl_5>VACC Staff 
+                        Information</SPAN></TD>
+                      <TD class=controlHeaderP5 vAlign=top width=5><IMG 
+                        height=22 
+                        src="intranetFlashAdTestPage_files/hdrbg_p5_right.gif"></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=tableMain id=LayoutControl1_34_topNewDataList_5 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: separate" cellSpacing=0 
+                  cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_34_topNewDataList_5__ctl0_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_34_topNewDataList_5__ctl0_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl0_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_34_topNewDataList_5__ctl0_date_Lbl_5>08-Jun-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_34_topNewDataList_5__ctl0_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="WARNING FROM THE NRMA - PLEASE PASS ON TO EVERYONE YOU KNOW" 
+                              src="intranetFlashAdTestPage_files/thumb-272.png" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl0_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_34_topNewDataList_5__ctl0_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl0_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_34_topNewDataList_5__ctl0_title_HL_5 
+                                href="http://intranet/home/news/en/34/272/article.aspx" 
+                                target=_top>WARNING FROM THE NRMA - PLEASE PASS 
+                                ON TO EVERYONE YOU KNOW</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl0_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_34_topNewDataList_5__ctl0_Label2>You 
+                                walk across the car park, unlock your car and 
+                                get inside. Then you lock all your doors, start 
+                                the engine and shift into REVERSE, and you look 
+                                into the rear-view mirror to back out of your 
+                                parking space and you notice a piece of paper 
+                                stuck to the middle of the rear window. 
+                                </SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_34_topNewDataList_5__ctl1_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_34_topNewDataList_5__ctl1_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl1_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_34_topNewDataList_5__ctl1_date_Lbl_5>04-Jun-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_34_topNewDataList_5__ctl1_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="2007-2008 Membership Fees Increase" 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl1_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_34_topNewDataList_5__ctl1_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl1_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_34_topNewDataList_5__ctl1_title_HL_5 
+                                href="http://intranet/home/news/en/34/271/article.aspx" 
+                                target=_top>2007-2008 Membership Fees 
+                                Increase</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl1_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_34_topNewDataList_5__ctl1_Label2>The 
+                                BOM have approved the 3% increase for the 
+                                2007/08 membership subscription 
+                                rates.</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_34_topNewDataList_5__ctl2_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_34_topNewDataList_5__ctl2_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl2_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_34_topNewDataList_5__ctl2_date_Lbl_5>09-May-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_34_topNewDataList_5__ctl2_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="NEW CAR STAMP DUTY – 1 MAY, 2007" 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl2_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_34_topNewDataList_5__ctl2_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl2_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_34_topNewDataList_5__ctl2_title_HL_5 
+                                href="http://intranet/home/news/en/34/269/article.aspx" 
+                                target=_top>NEW CAR STAMP DUTY – 1 MAY, 
+                                2007</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl2_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_34_topNewDataList_5__ctl2_Label2>John 
+                                Brumby and the Minister for Roads and Ports, Tim 
+                                Pallas, announced changes to Victoria’s stamp 
+                                duty regime that will see the value for duty for 
+                                new cars in the “luxury” upper range, lifted 
+                                from $35,000 to 
+                              $57,009.</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_34_topNewDataList_5__ctl3_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_34_topNewDataList_5__ctl3_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl3_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_34_topNewDataList_5__ctl3_date_Lbl_5>15-Mar-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_34_topNewDataList_5__ctl3_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="2007 VACC Staff Christmas Party" 
+                              src="intranetFlashAdTestPage_files/thumb-264.png" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl3_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_34_topNewDataList_5__ctl3_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl3_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_34_topNewDataList_5__ctl3_title_HL_5 
+                                href="http://intranet/home/news/en/34/264/article.aspx" 
+                                target=_top>2007 VACC Staff Christmas 
+                                Party</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl3_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_34_topNewDataList_5__ctl3_Label2>Keep 
+                                your December 2007 calendar 
+                                free</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_34_topNewDataList_5__ctl4_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_34_topNewDataList_5__ctl4_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl4_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_34_topNewDataList_5__ctl4_date_Lbl_5>05-Mar-2007 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_34_topNewDataList_5__ctl4_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="Cavalcade of Cars" 
+                              src="intranetFlashAdTestPage_files/thumb-263.png" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_34_topNewDataList_5__ctl4_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_34_topNewDataList_5__ctl4_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl4_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_34_topNewDataList_5__ctl4_title_HL_5 
+                                href="http://intranet/home/news/en/34/263/article.aspx" 
+                                target=_top>Cavalcade of Cars</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_34_topNewDataList_5__ctl4_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_34_topNewDataList_5__ctl4_Label2></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD width="1%"><NOBR><A 
+                        id=LayoutControl1_34_currentNews_HL_5 
+                        href="http://intranet/home/news/34/en/current.aspx" 
+                        target=_top><IMG 
+                        src="intranetFlashAdTestPage_files/icon_news_current.gif" 
+                        border=0> More News</A></NOBR></TD>
+                      <TD width="1%"><NOBR></NOBR></TD>
+                      <TD width="1%"><NOBR><A 
+                        id=LayoutControl1_34_userNews_HL_5 
+                        href="http://intranet/home/news/34/en/userNews.aspx" 
+                        target=_top><IMG 
+                        src="intranetFlashAdTestPage_files/icon_news_submit.gif" 
+                        border=0> Submit Article</A></NOBR></TD>
+                      <TD width="1%"><NOBR></NOBR></TD>
+                      <TD 
+            width="99%">&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><TEXTAREA id=holdtext_41 style="DISPLAY: none"></TEXTAREA> 
+
+            <TABLE id=LayoutControl1_41_table_5 
+            style="MARGIN-BOTTOM: 6px; WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+            cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=controlHeaderP5 vAlign=top width=5><IMG 
+                        height=22 
+                        src="intranetFlashAdTestPage_files/hdrbg_p5_left.gif"></TD>
+                      <TD class=controlHeaderP5 width="100%"><SPAN 
+                        id=LayoutControl1_41_headingLbl_5>Information FROM 
+                        Staff</SPAN></TD>
+                      <TD class=controlHeaderP5 vAlign=top width=5><IMG 
+                        height=22 
+                        src="intranetFlashAdTestPage_files/hdrbg_p5_right.gif"></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=tableMain id=LayoutControl1_41_topNewDataList_5 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: separate" cellSpacing=0 
+                  cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=tableItem>
+                        <TABLE 
+                        id=LayoutControl1_41_topNewDataList_5__ctl0_NewTable_5 
+                        style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=3 border=0>
+                          <TBODY>
+                          <TR 
+                          id=LayoutControl1_41_topNewDataList_5__ctl0_NewsTable_5_r1>
+                            <TD class=tableItem 
+                            id=LayoutControl1_41_topNewDataList_5__ctl0_NewsTable_5_ThumbNail 
+                            style="WIDTH: 75px" vAlign=top 
+                              align=middle><NOBR><SPAN class=newsDate 
+                              id=LayoutControl1_41_topNewDataList_5__ctl0_date_Lbl_5>17-Nov-2006 
+                              <BR></SPAN></NOBR><IMG 
+                              id=LayoutControl1_41_topNewDataList_5__ctl0_Image2 
+                              style="MARGIN-TOP: 6px; WIDTH: 71px" 
+                              alt="Would you like to share information with all VACC staff?" 
+                              src="intranetFlashAdTestPage_files/icon_news_spacer.gif" 
+                              border=0></TD>
+                            <TD class=tableItem 
+                            id=LayoutControl1_41_topNewDataList_5__ctl0_NewsTable_5_Content 
+                            style="WIDTH: 99%" vAlign=top>
+                              <TABLE 
+                              id=LayoutControl1_41_topNewDataList_5__ctl0_Table2 
+                              style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+                              cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR 
+                                id=LayoutControl1_41_topNewDataList_5__ctl0_NewsTable_5_Title>
+                                <TD style="WIDTH: 99%" vAlign=top><A 
+                                class=newsHeader 
+                                id=LayoutControl1_41_topNewDataList_5__ctl0_title_HL_5 
+                                href="http://intranet/home/news/en/41/210/article.aspx" 
+                                target=_top>Would you like to share information 
+                                with all VACC staff?</A></TD></TR>
+                                <TR 
+                                id=LayoutControl1_41_topNewDataList_5__ctl0_NewsTable_5_Summary>
+                                <TD style="WIDTH: 99%" vAlign=top><SPAN 
+                                id=LayoutControl1_41_topNewDataList_5__ctl0_Label2>If 
+                                you would like to tell staff about something you 
+                                are selling, doing etc, please let us 
+                                know</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD width="1%"><NOBR><A 
+                        id=LayoutControl1_41_currentNews_HL_5 
+                        href="http://intranet/home/news/41/en/current.aspx" 
+                        target=_top><IMG 
+                        src="intranetFlashAdTestPage_files/icon_news_current.gif" 
+                        border=0> More News</A></NOBR></TD>
+                      <TD width="1%"><NOBR></NOBR></TD>
+                      <TD width="1%"><NOBR><A 
+                        id=LayoutControl1_41_userNews_HL_5 
+                        href="http://intranet/home/news/41/en/userNews.aspx" 
+                        target=_top><IMG 
+                        src="intranetFlashAdTestPage_files/icon_news_submit.gif" 
+                        border=0> Submit Article</A></NOBR></TD>
+                      <TD width="1%"><NOBR></NOBR></TD>
+                      <TD 
+            width="99%">&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD class=layoutRightNav style="WIDTH: 178px" vAlign=top rowSpan=2><TEXTAREA id=holdtext_15 style="DISPLAY: none"></TEXTAREA> 
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=controlHeaderP4 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_left.gif"></TD>
+          <TD class=controlHeaderP4 width="99%"><SPAN 
+            id=LayoutControl1_15_lblCatName_p4>The Age</SPAN></TD>
+          <TD class=controlHeaderP4 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP4 cellSpacing=1 cellPadding=0 
+        width="100%"><TBODY>
+        <TR>
+          <TD width="100%">
+            <TABLE class=controlItemP4 id=LayoutControl1_15_Datalist_4_RSS 
+            style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_15_Datalist_4_RSS__ctl0_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_15_Datalist_4_RSS__ctl0_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl0_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl0_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_15_Datalist_4_RSS__ctl0_TitleLabel><A 
+                        href="http://www.theage.com.au/news/world/five-arrests-over-car-bombs/2007/07/02/1183228993291.html?s_cid=rss_age" 
+                        target=_blank>Five arrests over car 
+                    bombs</A></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_15_Datalist_4_RSS__ctl1_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_15_Datalist_4_RSS__ctl1_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl1_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl1_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_15_Datalist_4_RSS__ctl1_TitleLabel><A 
+                        href="http://www.theage.com.au/news/national/oil-leaks-from-pasha-bulker/2007/07/02/1183228993069.html?s_cid=rss_age" 
+                        target=_blank>Oil leaks from Pasha 
+                    Bulker</A></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_15_Datalist_4_RSS__ctl2_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_15_Datalist_4_RSS__ctl2_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl2_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl2_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_15_Datalist_4_RSS__ctl2_TitleLabel><A 
+                        href="http://www.theage.com.au/news/national/ses-rescues-four-from-floods/2007/07/02/1183228997752.html?s_cid=rss_age" 
+                        target=_blank>SES rescues four from 
+                    floods</A></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_15_Datalist_4_RSS__ctl3_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_15_Datalist_4_RSS__ctl3_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl3_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_15_Datalist_4_RSS__ctl3_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_15_Datalist_4_RSS__ctl3_TitleLabel><A 
+                        href="http://www.theage.com.au/news/world/diana-tribute-packs-wembley/2007/07/02/1183228994302.html?s_cid=rss_age" 
+                        target=_blank>Diana tribute packs 
+                    Wembley</A></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE class=controlSeparatorP4 cellSpacing=0 cellPadding=3 
+            width="100%">
+              <TBODY>
+              <TR>
+                <TD class=controlItemP4 vAlign=center width="100%"><A class=P4 
+                  id=LayoutControl1_15_currentNews_HL_4_RSS 
+                  href="http://intranet/home/news/15/en/current.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_news_current.gif" 
+                  border=0> More News</A></TD></TR>
+              <TR>
+                <TD class=controlItemP4 vAlign=center width="100%"><A class=P4 
+                  id=LayoutControl1_15_archiveNews_HL_4_RSS 
+                  href="http://www.theage.com.au/" target=_blank><IMG 
+                  src="intranetFlashAdTestPage_files/icon_news_archive.gif" 
+                  border=0> News Archive</A></TD></TR>
+              <TR>
+                <TD class=controlItemP4 vAlign=center width="100%"><A class=P4 
+                  id=LayoutControl1_15_RssHyperLink_4 
+                  href="http://feeds.theage.com.au/rssheadlines/top.rss"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_news_rss.gif" 
+                  border=0> &nbsp;RSS</A> 
+      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><TEXTAREA id=holdtext_39 style="DISPLAY: none"></TEXTAREA> 
+
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=controlHeaderP4 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_left.gif"></TD>
+          <TD class=controlHeaderP4 width="99%"><SPAN 
+            id=LayoutControl1_39_lblCatName_p4>BBC News</SPAN></TD>
+          <TD class=controlHeaderP4 vAlign=bottom width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP4 cellSpacing=1 cellPadding=0 
+        width="100%"><TBODY>
+        <TR>
+          <TD width="100%">
+            <TABLE class=controlItemP4 id=LayoutControl1_39_Datalist_4_RSS 
+            style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_39_Datalist_4_RSS__ctl0_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_39_Datalist_4_RSS__ctl0_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl0_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl0_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_39_Datalist_4_RSS__ctl0_TitleLabel><A 
+                        href="http://news.bbc.co.uk/go/rss/-/1/hi/uk/6259354.stm" 
+                        target=_blank>Police confident in bombers 
+                      hunt</A></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_39_Datalist_4_RSS__ctl1_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_39_Datalist_4_RSS__ctl1_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl1_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl1_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_39_Datalist_4_RSS__ctl1_TitleLabel><A 
+                        href="http://news.bbc.co.uk/go/rss/-/1/hi/uk/6258518.stm" 
+                        target=_blank>Flood fears ease as rivers 
+                      fall</A></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_39_Datalist_4_RSS__ctl2_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_39_Datalist_4_RSS__ctl2_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl2_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl2_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_39_Datalist_4_RSS__ctl2_TitleLabel><A 
+                        href="http://news.bbc.co.uk/go/rss/-/1/hi/entertainment/6257986.stm" 
+                        target=_blank>Stars make music at Diana 
+                        concert</A></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE class=controlItemP4 
+                  id=LayoutControl1_39_Datalist_4_RSS__ctl3_Table_4_RSS 
+                  style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+                  cellPadding=3 border=0>
+                    <TBODY>
+                    <TR 
+                    id=LayoutControl1_39_Datalist_4_RSS__ctl3_Table_4_RSS_Row1>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl3_Table_4_RSS_Bullet 
+                      vAlign=top><IMG 
+                        src="intranetFlashAdTestPage_files/bullet.gif"> </TD>
+                      <TD class=controlItemP4 
+                      id=LayoutControl1_39_Datalist_4_RSS__ctl3_Table_4_RSS_Content><SPAN 
+                        class=P4 
+                        id=LayoutControl1_39_Datalist_4_RSS__ctl3_TitleLabel><A 
+                        href="http://news.bbc.co.uk/go/rss/-/1/hi/uk/6259278.stm" 
+                        target=_blank>Soldier killed in 
+                    Afghanistan</A></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE class=controlSeparatorP4 cellSpacing=0 cellPadding=3 
+            width="100%">
+              <TBODY>
+              <TR>
+                <TD class=controlItemP4 vAlign=center width="100%"><A class=P4 
+                  id=LayoutControl1_39_currentNews_HL_4_RSS 
+                  href="http://intranet/home/news/39/en/current.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_news_current.gif" 
+                  border=0> More News</A></TD></TR>
+              <TR>
+                <TD class=controlItemP4 vAlign=center width="100%"><A class=P4 
+                  id=LayoutControl1_39_archiveNews_HL_4_RSS 
+                  href="http://news.bbc.co.uk/go/rss/-/1/hi/default.stm" 
+                  target=_blank><IMG 
+                  src="intranetFlashAdTestPage_files/icon_news_archive.gif" 
+                  border=0> News Archive</A></TD></TR>
+              <TR>
+                <TD class=controlItemP4 vAlign=center width="100%"><A class=P4 
+                  id=LayoutControl1_39_RssHyperLink_4 
+                  href="http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_news_rss.gif" 
+                  border=0> &nbsp;RSS</A> 
+      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!------------------------------------------->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_left.gif"></TD>
+          <TD class=controlHeaderP4 width="100%">Clever Tools</TD>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP4 
+      id=LayoutControl75_cleverTools_p4_showIcons 
+      style="BORDER-RIGHT: #e8e8e8 0px solid; BORDER-TOP: #e8e8e8 0px solid; BORDER-LEFT: #e8e8e8 0px solid; WIDTH: 100%; BORDER-BOTTOM: #e8e8e8 0px solid" 
+      cellSpacing=1 cellPadding=0 rules=all border=0>
+        <TBODY>
+        <TR>
+          <TD class=controlItemP4 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0 
+            onload="javascript:showIcons();">
+              <TBODY>
+              <TR onmouseover="javascript:this.className=''" 
+              onmouseout="javascript:this.className=''">
+                <TD vAlign=center width="1%"><A class=P4 
+                  href="http://intranet/home/DocumentManager/en/default.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_app_documentmanager.gif" 
+                  border=0></A></TD>
+                <TD vAlign=center width="100%"><A class=P4 
+                  href="http://intranet/home/DocumentManager/en/default.aspx">Document 
+                  Manager</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP4 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0 
+            onload="javascript:showIcons();">
+              <TBODY>
+              <TR onmouseover="javascript:this.className=''" 
+              onmouseout="javascript:this.className=''">
+                <TD vAlign=center width="1%"><A class=P4 
+                  href="http://intranet/home/ImageLibrary/en/default.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_app_postcards.gif" 
+                  border=0></A></TD>
+                <TD vAlign=center width="100%"><A class=P4 
+                  href="http://intranet/home/ImageLibrary/en/default.aspx">Image 
+                  Library</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP4 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0 
+            onload="javascript:showIcons();">
+              <TBODY>
+              <TR onmouseover="javascript:this.className=''" 
+              onmouseout="javascript:this.className=''">
+                <TD vAlign=center width="1%"><A class=P4 
+                  href="http://intranet/home/calendar/en/default.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_app_calendar.gif" 
+                  border=0></A></TD>
+                <TD vAlign=center width="100%"><A class=P4 
+                  href="http://intranet/home/calendar/en/default.aspx">VACC 
+                  Corporate Calendar</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP4 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0 
+            onload="javascript:showIcons();">
+              <TBODY>
+              <TR onmouseover="javascript:this.className=''" 
+              onmouseout="javascript:this.className=''">
+                <TD vAlign=center width="1%"><A class=P4 
+                  href="http://intranet/home/FAQ/en/default.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_app_faq.gif" 
+                  border=0></A></TD>
+                <TD vAlign=center width="100%"><A class=P4 
+                  href="http://intranet/home/FAQ/en/default.aspx">FAQ</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP4 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0 
+            onload="javascript:showIcons();">
+              <TBODY>
+              <TR onmouseover="javascript:this.className=''" 
+              onmouseout="javascript:this.className=''">
+                <TD vAlign=center width="1%"><A class=P4 
+                  href="http://intranet/home/postcards/en/default.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_app_postcards.gif" 
+                  border=0></A></TD>
+                <TD vAlign=center width="100%"><A class=P4 
+                  href="http://intranet/home/postcards/en/default.aspx">e-Postcards</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP4 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0 
+            onload="javascript:showIcons();">
+              <TBODY>
+              <TR onmouseover="javascript:this.className=''" 
+              onmouseout="javascript:this.className=''">
+                <TD vAlign=center width="1%"><A class=P4 
+                  href="http://intranet/home/timezone/en/default.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_app_worldtime.gif" 
+                  border=0></A></TD>
+                <TD vAlign=center width="100%"><A class=P4 
+                  href="http://intranet/home/timezone/en/default.aspx">World 
+                  Time</A></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=controlItemP4 style="WIDTH: 100%" vAlign=center>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0 
+            onload="javascript:showIcons();">
+              <TBODY>
+              <TR onmouseover="javascript:this.className=''" 
+              onmouseout="javascript:this.className=''">
+                <TD vAlign=center width="1%"><A class=P4 
+                  href="http://intranet/home/staffOffers/en/default.aspx"><IMG 
+                  src="intranetFlashAdTestPage_files/icon_app_staffoffers.gif" 
+                  border=0></A></TD>
+                <TD vAlign=center width="100%"><A class=P4 
+                  href="http://intranet/home/staffOffers/en/default.aspx">Staff 
+                  Offers</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+      <DIV id=LayoutControl75_DropDownPanel4>
+      <TABLE class=controlSeparatorP4 cellSpacing=0 cellPadding=0 
+        width="100%"><TBODY>
+        <TR>
+          <TD class=controlSeparatorP4 width=1><IMG 
+            src="intranetFlashAdTestPage_files/spacer.gif" width=1></TD>
+          <TD class=controlItemP4 vAlign=top width="100%">
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width="100%"><SPAN class="controlItemP4 textBold">More 
+                  Clever Tools</SPAN> <BR><BR><SELECT 
+                  id=LayoutControl75_ddlMoreTools_p4 
+                  onchange="top.location = this.value" 
+                  name=LayoutControl75:ddlMoreTools_p4> <OPTION value="" 
+                    selected>Select a Tool</OPTION> <OPTION 
+                    value=/home/AcronymMgr/en/default.aspx>Acronym 
+                    Manager</OPTION> <OPTION 
+                    value=/home/ProjectSpace/en/default.aspx>Project 
+                    Space</OPTION> <OPTION 
+                    value=/home/DigitalAssets/en/default.aspx>Digital Assets 
+                    Library</OPTION> <OPTION 
+                    value=/home/feedback/en/default.aspx>Feedback 
+                    Director</OPTION> <OPTION 
+                    value=/home/fileFerry/en/default.aspx>File Express</OPTION> 
+                    <OPTION value=/home/PeopleSearch/en/default.aspx>People 
+                    Search</OPTION> <OPTION 
+                    value=/home/search/en/default.aspx>Search</OPTION> <OPTION 
+                    value=/home/ProcessTool/en/default.aspx>Process 
+                    Tool</OPTION> <OPTION 
+                    value=/home/EmployeeTraining/en/default.aspx>Employee 
+                    Training</OPTION> <OPTION 
+                    value=/home/forum/en/default.aspx>Forum</OPTION> <OPTION 
+                    value=/home/newsletter/en/default.aspx>e-Newsletter</OPTION></SELECT><BR>&nbsp; 
+                </TD></TR></TBODY></TABLE></TD>
+          <TD class=controlSeparatorP4 width=1><IMG 
+            src="intranetFlashAdTestPage_files/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD class=controlSeparatorP4 width="100%" colSpan=3><IMG height=1 
+            src="intranetFlashAdTestPage_files/spacer.gif"></TD></TR></TBODY></TABLE></DIV>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=178></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_left.gif"></TD>
+          <TD class=controlHeaderP4 width="100%">Search</TD>
+          <TD width=5><IMG height=22 
+            src="intranetFlashAdTestPage_files/hdrbg_p4_right.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=controlSeparatorP4 cellSpacing=1 cellPadding=0 
+        width="100%"><SCRIPT type=text/javascript>
+	/* Functions to handle the new menu items expanding and contracting */
+		
+			function showSearchElement(ElementID) 
+			{
+				elem = document.getElementById(ElementID);
+				elem.style.display = 'inline';			
+			}
+			
+			function hideSearchElement(ElementID) 
+			{
+				elem = document.getElementById(ElementID);
+				elem.style.display = 'none';			
+			}
+			
+			function setSearchType(ElementID, SearchType) 
+			{	
+				elem = document.getElementById(ElementID);
+				elem.value = SearchType;
+			}
+			function getItemClass(textBold) 
+			{	
+				if(textBold == 1)
+				{
+					itemClass = 'controlItemP4' + " textBold";
+				}
+				else
+				{
+					itemClass = 'controlItemP4';
+				}
+				return itemClass;
+			}
+			function setClass() 
+			{	
+				document.getElementById('gClass').className = 'controlItemP4';
+				document.getElementById('yClass').className = 'controlItemP4';
+			}
+					
+</SCRIPT>
+
+        <TBODY>
+        <TR>
+          <TD class=controlItemP4 width="100%">
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><INPUT id=LayoutControl55_FilterOption_searchQuery 
+                  onkeydown="if ((event.keyCode &amp;&amp; event.keyCode == 13)) {document.all.LayoutControl55_FilterOption_searchBtn.click();return false;}" 
+                  style="WIDTH: 130px! important" 
+                  name=LayoutControl55:FilterOption:searchQuery> <INPUT 
+                  id=LayoutControl55_FilterOption_searchWhat 
+                  style="DISPLAY: none; WIDTH: 10px" 
+                  name=LayoutControl55:FilterOption:searchWhat> </TD>
+                <TD><INPUT class=button id=LayoutControl55_FilterOption_searchBtn onclick=Page_ValidationActive=false; type=submit value=GO name=LayoutControl55:FilterOption:searchBtn> 
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD width="100%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width="100%" colSpan=2><SPAN class=error 
+                  id=LayoutControl55_FilterOption_lblError></SPAN>
+                  <DIV id=LayoutControl55_FilterOption_IntranetHyperLink 
+                  style="DISPLAY: inline">
+                  <DIV class=controlItemP4 
+                  style="PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px"><IMG 
+                  src="intranetFlashAdTestPage_files/btn_minimise.gif" 
+                  border=0>&nbsp;<SPAN><B>Intranet</B></SPAN> </DIV></DIV><A 
+                  id=LayoutControl55_FilterOption_IntranetHyperLink50 
+                  style="DISPLAY: none; CURSOR: hand" 
+                  onclick="javascript: showSearchElement('LayoutControl55_FilterOption_IntranetAdvancedFilterOptions'); showSearchElement('LayoutControl55_FilterOption_IntranetHyperLink'); hideSearchElement('LayoutControl55_FilterOption_IntranetHyperLink50'); showSearchElement('LayoutControl55_FilterOption_InternetHyperLink50'); hideSearchElement('LayoutControl55_FilterOption_InternetHyperLink'); hideSearchElement('LayoutControl55_FilterOption_InternetAdvancedFilterOptions'); setSearchType('LayoutControl55_FilterOption_searchWhat', 'Intranet'); ">
+                  <DIV class=controlItemP4 
+                  style="PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px"><IMG 
+                  src="intranetFlashAdTestPage_files/btn_expand.gif" 
+                  border=0>&nbsp;<SPAN><B>Intranet</B></SPAN> </DIV></A>
+                  <DIV class=controlItemP4 style="HEIGHT: 1px"><IMG height=1 
+                  src="intranetFlashAdTestPage_files/spacer.gif" border=0></DIV>
+                  <DIV 
+                  id=LayoutControl55_FilterOption_IntranetAdvancedFilterOptions 
+                  style="DISPLAY: inline">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=controlItemP4 
+                      style="PADDING-LEFT: 3px; PADDING-BOTTOM: 3px" 
+                        noWrap>Subsite</TD></TR>
+                    <TR>
+                      <TD class=controlItemP4 
+                      style="PADDING-LEFT: 3px; PADDING-BOTTOM: 3px" 
+                        noWrap><SELECT id=LayoutControl55_FilterOption_SubSiteID 
+                        style="WIDTH: 130px" 
+                        name=LayoutControl55:FilterOption:SubSiteID> <OPTION 
+                          value=-1 selected>All</OPTION> <OPTION value=0>ID 
+                          Home</OPTION> <OPTION value="">--- 
+                          DEPARTMENTS---</OPTION> <OPTION value=5>Communications 
+                          &amp; Marketing</OPTION> <OPTION 
+                          value=12>Finance</OPTION> <OPTION value=13>Government 
+                          &amp; Public Affairs</OPTION> <OPTION 
+                          value=10>Industrial Relations</OPTION> <OPTION 
+                          value=11>Operations</OPTION> <OPTION 
+                          value=14>Technical</OPTION> <OPTION 
+                          value=15>Technology</OPTION></SELECT></TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=controlItemP4 
+                      style="PADDING-LEFT: 3px; PADDING-BOTTOM: 3px" 
+                        noWrap>Application</TD></TR>
+                    <TR>
+                      <TD class=controlItemP4 
+                      style="PADDING-LEFT: 3px; PADDING-BOTTOM: 3px" 
+                        noWrap><SELECT id=LayoutControl55_FilterOption_AppFilter 
+                        style="WIDTH: 130px" 
+                        name=LayoutControl55:FilterOption:AppFilter> <OPTION 
+                          value=ALL selected>All</OPTION> <OPTION 
+                          value=AM>Acronym Manager</OPTION> <OPTION 
+                          value=BR>Brand Manager</OPTION> <OPTION 
+                          value=CA>Company Calendar</OPTION> <OPTION 
+                          value=ContactManager>Contact Manager</OPTION> <OPTION 
+                          value=DC>Content Publisher</OPTION> <OPTION 
+                          value=DA>Digital Assets Library</OPTION> <OPTION 
+                          value=DM>Document Manager</OPTION> <OPTION 
+                          value=ET>Employee Training</OPTION> <OPTION 
+                          value=FQ>FAQ</OPTION> <OPTION value=FM>Forms 
+                          Manager</OPTION> <OPTION value=FORUM>Forum</OPTION> 
+                          <OPTION value=IL>Image Library</OPTION> <OPTION 
+                          value=MR>Meeting Room Booking</OPTION> <OPTION 
+                          value=NW>News</OPTION> <OPTION value=SL>Site 
+                          List</OPTION> <OPTION value=SO>Staff Offers</OPTION> 
+                          <OPTION value=TG>Travel 
+                    Agent</OPTION></SELECT></TD></TR></TBODY></TABLE></DIV>
+                  <DIV id=LayoutControl55_FilterOption_InternetHyperLink 
+                  style="DISPLAY: none">
+                  <DIV class=controlItemP4 
+                  style="PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px"><IMG 
+                  src="intranetFlashAdTestPage_files/btn_minimise.gif" 
+                  border=0>&nbsp;<SPAN><B>Internet</B></SPAN> </DIV></DIV><A 
+                  id=LayoutControl55_FilterOption_InternetHyperLink50 
+                  style="DISPLAY: inline; CURSOR: hand" 
+                  onclick="javascript: showSearchElement('LayoutControl55_FilterOption_InternetAdvancedFilterOptions'); hideSearchElement('LayoutControl55_FilterOption_IntranetHyperLink'); showSearchElement('LayoutControl55_FilterOption_IntranetHyperLink50'); hideSearchElement('LayoutControl55_FilterOption_InternetHyperLink50'); showSearchElement('LayoutControl55_FilterOption_InternetHyperLink'); hideSearchElement('LayoutControl55_FilterOption_IntranetAdvancedFilterOptions'); setSearchType('LayoutControl55_FilterOption_searchWhat', 'Internet'); ">
+                  <DIV class=controlItemP4 
+                  style="PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px"><IMG 
+                  src="intranetFlashAdTestPage_files/btn_expand.gif" 
+                  border=0>&nbsp;<SPAN><B>Internet</B></SPAN> </DIV></A>
+                  <DIV class=controlItemP4 style="HEIGHT: 1px"><IMG height=1 
+                  src="intranetFlashAdTestPage_files/spacer.gif" border=0></DIV>
+                  <DIV 
+                  id=LayoutControl55_FilterOption_InternetAdvancedFilterOptions 
+                  style="DISPLAY: none">
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=controlItemP4>
+                        <TABLE id=LayoutControl55_FilterOption_SubsiteToSearch 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD><INPUT 
+                              id=LayoutControl55_FilterOption_SubsiteToSearch_0 
+                              type=radio CHECKED 
+                              value=http://www.google.com/search?hl=en&amp;ie=UTF-8&amp;q= 
+                              name=LayoutControl55:FilterOption:SubsiteToSearch><LABEL 
+                              for=LayoutControl55_FilterOption_SubsiteToSearch_0><SPAN 
+                              id=gClass>Google</SPAN></LABEL></TD></TR>
+                          <TR>
+                            <TD><INPUT 
+                              id=LayoutControl55_FilterOption_SubsiteToSearch_1 
+                              type=radio value=http://search.yahoo.com/search?p= 
+                              name=LayoutControl55:FilterOption:SubsiteToSearch><LABEL 
+                              for=LayoutControl55_FilterOption_SubsiteToSearch_1><SPAN 
+                              id=yClass>Yahoo</SPAN></LABEL></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=178></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=178></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG height=1 src="intranetFlashAdTestPage_files/spacer.gif" 
+            width=178></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 
+cellPadding=4 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=_ctl6_pnlFooter>
+      <SCRIPT type=text/javascript>
+function openTerms()
+{
+window.open("/cfr/system/termsandconditions.aspx?sid=0","tc","toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=500");
+}
+function openPrivacy()
+{
+window.open("/cfr/system/privacypolicy.aspx?sid=0","pp","toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=500");
+}
+</SCRIPT>
+
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD>
+            <HR SIZE=1>
+          </TD></TR>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%">
+              <TBODY>
+              <TR>
+                <TD align=right><A class=dpeLink style="COLOR: #000000" 
+                  href="javascript:openTerms();">Copyright</A> | <A 
+                  class=dpeLink style="COLOR: #000000" 
+                  href="javascript:openPrivacy();">Privacy 
+              Information</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+      <DIV id=_ctl6_custompanel></DIV></TD></TR></TBODY></TABLE></FORM></BODY></HTML>

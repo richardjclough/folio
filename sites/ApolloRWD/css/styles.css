@@ -1,0 +1,241 @@
+
+body {font: 18px/21px "Arvo", "Arial", sans-serif;margin: 0px}
+
+.wrapper, .header, .content, .aboutUs, .services, .operations, .advertisers, .affiliates, .contact {border:0px solid gray}
+
+.wrapper{width:102%;}
+
+.logo {
+  max-width:180px;
+  float:left;
+  margin: 0 0 0 10px;
+  border:0px solid gray;
+  /*height:120px;
+  background:url('../img/ApolloLogoFinal.png');
+  background-repeat: no-repeat;
+  background-position: 0 16px;
+  background-size: 150px;*/
+}
+
+a:hover .logo {opacity:.99 !important}
+
+.nav {margin: 14px 0 0 0px;float:right;font-size: 1em; text-transform: uppercase;}
+
+.nav ul {list-style: none;}
+
+.nav ul li { padding:18px;display: inline-block;}
+
+.nav ul li a {color:#4D1B15;text-decoration: none;font-size: 1.4em; }
+
+.header {
+  width:100%;
+  position: fixed;
+  /*height: 130px;*/
+  background-color: white;
+  z-index:1000;
+  border-bottom: 12px solid #8F191C}
+
+.header img {width: 100%;display: block;}
+
+.hero {width:100%;margin:0 auto;background: url('../img/melbourneRiverfront.jpg');background-position: 0px 70px;background-size:cover;height:460px}
+
+.content, #aboutUs, #portfolio, #services, #operations, #advertisers, #affiliates, #contact {width:90%;margin:0 auto;
+    /*margin: 0 1em;*/
+		box-sizing: border-box;
+    width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.contact {
+		/*display: none;*/
+	}
+.nav {
+		display: none;
+	}
+#advertisers {
+	background-color: #eee;
+    display: inline-block;
+}
+
+#affiliates {background-color: #bbb}
+
+/*.contentBackground {background-color:#777}*/
+
+.content{background-color:#ffffff}
+
+.content-section .heading {
+	width:100%;
+	height:540px;
+	position:relative;
+	text-align:center;
+}
+
+.headerContent {margin:0 auto;max-width: 1120px;}
+
+#portfolio.content-section .heading {
+
+    background:url(../img/fingerPointingAtIcons.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+
+#contact.content-section .heading {
+	background:url(../img/handshake.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+
+.contact {border-top: 12px solid #8F191C;}
+
+.contact-inner {
+    max-width: 1095px !important;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+
+.contactContent {
+    float:left;
+        margin: 0 0 0 20px;
+}
+
+.map {
+  /*float:left;
+      width:60%;
+      width:1400px;
+      height:400px;*/
+	/*margin: 70px 0px 0 144px;*/
+
+   position: relative;
+        padding-bottom: 65%; /* This is the aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    .map iframe {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90% !important;
+        height: 50% !important;
+    }
+
+
+.content-section .heading .subtitle {
+	    display: inline-block;
+    /*text-transform: uppercase;*/
+    font-weight: 700;
+    font-size: 1.8em;
+    line-height: 50px;
+    letter-spacing: .05em;
+    font-style: normal;
+    color: #fff;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section-inner {
+    padding: 16px 30px 2px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 880px;
+}
+
+#advertisers .twoColumns {margin-top: -20px;}
+
+.leftColumn {
+float:left;
+width: 100%;
+/* padding: 3em 0; */
+}
+
+.advertisersForm {max-width: 100%;
+	/*display: none;*/
+}
+
+.formError .formErrorContent{
+
+}
+
+h1, h2 {text-transform: uppercase;font-size:30px !important;line-height: 1.5;}
+
+h3 {text-transform: uppercase;font-size:20px !important;line-height: 1.5em;}
+
+p, ul{line-height: 1.8em;width:96%;}
+
+ul {margin-left:1rem;}
+
+a, a:visited {color:#B72B25;}
+
+a:hover {opacity: .75}
+
+#advertisers .leftColumn ul li {margin: 0px 0 0 13px;}
+
+.bold{font-weight: 700}
+
+.socmedIcon {height:48px;margin:10px 0px 0px 5px}
+
+@media screen and (min-width:45em) {
+.content-section .heading .subtitle {
+	font-size: 2.1em;
+	max-width: 80%;
+
+}
+
+.leftColumn {
+	width: 48%;
+  float: left;
+}
+.advertisersForm {
+  float: right;
+}
+
+}
+
+@media screen and (max-width:45em) {
+  .contactContent {
+    margin: 0 0 0 20px;
+  }
+}
+/*@media screen and (max-width:800px) {
+  .contactContent {
+    margin: 0 0 0 20px;
+  }
+}*/
+
+@media screen and (max-width:45em) {
+  .map {
+    padding: 0 13%;
+    margin-bottom: 5em;
+}
+       .map {
+
+        padding-bottom: 95% !important; /* This is the aspect ratio */
+    }
+
+    .map iframe {
+        height:100% !important;
+      }
+      .terms {
+        font-size: .95em;
+      }
+
+
+.hero{
+  height:230px;
+}
+#contact.content-section .heading {
+
+background-attachment: scroll;
+  height: 350px;
+}
+}

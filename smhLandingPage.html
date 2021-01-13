@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>SMH landing page</title><!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    .dotted-spaced {
+    background-image: linear-gradient(to right, #333 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: top;
+    background-size: 20px 1px;
+    background-repeat: repeat-x;
+    }
+
+    h1 {
+    padding-bottom: 0px;
+    margin: -15px 0;
+    border-bottom: 0px solid #43525a;
+    font-family:Georgia, serif
+    }
+
+    p {
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #43525a !important;
+    }
+
+    a {
+    font-weight: bold !important;
+     color: #43525a !important;
+
+    }
+
+    .col-sm-12 {
+    text-align: center;
+    margin:15px 0 5px;
+    }
+
+    .row {
+    /* padding:0px 20px;*/
+    }
+
+    .img-responsive {
+        margin-bottom: 10px !important;
+    }
+
+    .h2 {
+        font-weight: bold;
+    font-size: 16px;
+    /* display: inline-block; */
+    /* float: left; */
+    margin: 0;
+    }
+
+    #leftShadow {
+        margin-left:0px;height:120px;
+        position:relative;
+        border:0px solid red;
+        background:url('images/leftShadow.png');
+        background-repeat:no-repeat;
+        background-position:100% 0px;
+    }
+
+    #rightShadow {
+        margin-left:0px;height:120px;
+        position:relative;
+        border:0px solid red;
+        background:url('images/leftShadow.png');
+        background-repeat:no-repeat;
+        background-position:100% 0px;
+
+        -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: FlipH;
+    }
+
+    hr{
+        border-top: dashed 1px #bbb;"
+    }
+
+    #subscribe{
+    background-color: #ebeced;
+    border-radius: 4px;
+    padding: 12px 0 6px 12px;
+    display: inline-block;
+    }
+
+    #raisedHeader{
+        margin-top: -40px;
+        padding:14px 34px; 
+        background-color: white;
+        position:relative;
+    }
+
+    #headerBackground {
+        background-color:#384452;padding:26px 0;
+    }
+
+    #button{
+        background-color:#0089d0;
+        color:white !important;
+        padding:8px 60px 8px;
+        display:inline-block;
+        float:right;
+        position:relative;
+        right:8px;
+    }
+
+    @media screen and (max-width: 736px) {
+    .row{
+        padding:0;
+    }
+
+    #leftShadow,  #rightShadow {
+        display:none !important;
+    }
+
+    #button{
+            float: left !important;
+    left: 2px;
+    padding: 6px 50px 6px
+    }
+
+    #raisedHeader {
+    margin-top: 0px;
+}
+
+    }
+    </style>
+</head>
+<body>
+    <!-- Hedear row -->
+    <div class="row">
+        <div class="col-sm-12">
+        <a href="#">
+        <img src="images/smhLogo.jpg" width="280" alt="logo" >
+        </a>
+        </div>
+        <div class="col-sm-12" id="headerBackground"></div>
+    </div><!-- /.row -->
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page intro -->
+        <div class="row">
+            <div class="col-sm-2" id="leftShadow"></div>
+            <div class="col-sm-8" id="raisedHeader">
+                <hr>
+                <h1>Today's paper</h1>
+                <hr>
+                <p>Discover new ways to enjoy our daily newspaper with Today’s
+                Paper. The SMH Today’s Paper is a digital replica of The Sydney
+                Morning Herald newspaper available on your iPad and your
+                desktop computer.</p>
+                <p>It’s the newspaper you know and love, in an easy-to-use,
+                searchable format, and it’s FREE for existing subscribers.</p>
+                <hr>
+            </div>
+            <div class="col-sm-2" id="rightShadow"></div>
+        </div><!-- /.row -->
+        <!-- cta Row -->
+        <div class="row" style="padding: 0px 30px;">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <a href="#"><img alt="ipad signup" class="img-responsive" src=
+                "images/discoveripad.jpg"></a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#"><img alt="desktop signup" class="img-responsive"
+                src="images/discoverDesktop.jpg"></a>
+            </div>
+            <div class="col-sm-2"></div>
+        </div><!-- /.row -->
+        <!-- Links Row -->
+        <div class="row" style="padding: 0px 50px;">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8" id="subscribe">
+                <div class="subscribeText" style="float:left">
+                     <p class="h2">Not a subscriber?</p> 
+                     <p>Subscribe today and access the journalism
+                you love - anytime, anywhere.</p>
+                </div>
+                <a class="btn pull-right" href="#"
+                id="button">Find out more</a>
+            </div>
+            <div class="col-sm-2"></div>
+        </div><!-- /.row -->
+        <!-- Footer -->
+        <footer>
+            <div class="row" style="padding: 0px 30px;text-align:center">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <hr>
+                    <p>Education subscribers <a href="#">login here</a></p>
+                </div>
+                <div class="col-sm-2"></div>
+            </div><!-- /.row -->
+        </footer>
+    </div><!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js">
+    </script> <!-- Bootstrap Core JavaScript -->
+     
+    <script src="js/bootstrap.min.js">
+    </script>
+</body>
+</html>

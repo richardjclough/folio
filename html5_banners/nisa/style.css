@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+
+button:hover, button:active {
+  color: #FAF000;
+}
+
+button:active {
+  font-size: 11px;
+}
+.label {
+
+  position: absolute;
+  margin-left: 10px;
+  top: 35px;
+}
+
+body{
+  margin:0px;
+}
+
+#ad{
+   display: block;
+   overflow:hidden;
+   width: 300px;
+   height: 250px;
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+#banner{
+  position:absolute;
+  display: block;
+  width: 300px;
+  height: 250px;
+  background-position: 0px 0px;
+  background-repeat:no-repeat;
+  overflow: hidden;
+}
+
+.button {
+	position: absolute;
+	 width: 300px;
+     height: 250px;
+	top: 0px;
+	left:0px;
+	 z-index:26;
+	 cursor:pointer;
+}
+
+.cta {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/cta.svg);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:27;
+  opacity:0;
+  cursor:pointer;
+}
+
+.cta:hover {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/ctaHover.svg);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:28;
+  opacity:0;
+  cursor:pointer;
+}
+
+.background {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/background.jpg);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:1;
+}
+
+
+.copyOne {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/copyOne.png);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:12;
+  opacity:0;
+}
+
+.copyTwo {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/copyTwo.png);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:12;
+  opacity:0;
+}
+
+.copyThree {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/copyThree.png);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:12;
+  opacity:0;
+}
+
+.icon {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/icon.png);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:12;
+  opacity:0;
+}
+
+.logoandbg {
+  position:absolute;
+  width: 300px;
+  height: 250px;
+  background-image:url(images/logoanddisclaimer.png);
+  left: 0px;
+  top: 0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  z-index:2;
+  opacity:0;
+}
