@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.mjs" ></script> -->
+
+    <script type="module">
+        import Cookies from 'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.mjs'
+
+
+            $('#siteModal').on('shown.bs.modal', function () {
+                // bootstrap modal callback function
+                // set cookie
+                Cookies.set('popup', 'valid'); // need to set the path to fix a FF bug
+            })
+
+            if (!Cookies.get('popup')) {
+                $("#modal-fired-wording").hide();
+                setTimeout(function () {
+                    $('#siteModal').modal().on('shown.bs.modal', function () {
+                        Cookies.set('popup', 'true', {
+                            // expires: 3, path: "/"
+                        });
+                    });
+                },
+                    6);
+            }
+
+    </script>
+
+
+
+    <title>Display a popup only once per user</title>
+</head>
+
+<body>
+
+    <div class="modal fade" id="siteModal" tabindex="-1" role="dialog" aria-labelledby="siteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content section">
+                <div class="close-container" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-header"><div class="modal-close">X</div>
+                    </div>
+
+                </div>
+                <div class="modal-body">
+                    <div class="p-3 mb-2 bg-warning text-dark">You are in a healthcare specific area of the website</div>
+                    This modal will fire once on first page load but if you click this <a href="popup-already-fired.html">link</a> which will mimic going to another area in the Healthcare area the popup won't fire. 
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="modal-fired-wording">You are still on the heathcare section but the modal didn't fire. If you want to mimic
+    coming to this page in a new session press cmd-shift-delete and clear your cache which will delete any cookies and
+    then refresh the page the popup will fire again.</div>
+</body>
+
+</html>

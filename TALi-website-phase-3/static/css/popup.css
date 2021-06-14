@@ -1,0 +1,30 @@
+ form#applicationForm fieldset:not(:first-of-type),
+ #plotTable {
+   display: none;
+ }
+
+  .btn-primary-grey {
+    background-color: #222222 !important;
+    border-radius: 0px !important;
+    color: #ffffff;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  padding: 10px 45px !important;
+  }
+
+  #add-a-new-client-yes-form, #next-add-client, #add-a-dummy-client-yes-form {
+      display: none;    
+  }
+
+
+.btn-group-gender {
+    width: 100%;
+}
+
+.grey-bg-panel {
+    font-size: 10px;
+    color: #222222;
+    background-color: #D8D8D8;
+    padding: 4px 8px;
+}
+ 

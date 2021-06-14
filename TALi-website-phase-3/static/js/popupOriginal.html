@@ -1,0 +1,129 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"> -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script src="/static/js/popup.js"></script>
+<link rel="stylesheet" href="/static/css/popup.css">
+
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>Application form</h2>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <!--<div class="progress">
+		    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+		  </div>-->
+            <form id="applicationForm" class="needs-validation" novalidate>
+                <fieldset>
+                    <h4 class="mb-3">Site Details</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="clientName">Name</label>
+                            <input type="text" class="form-control" id="clientName" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Valid Name is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 mt-4">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                        <div class="invalid-feedback">
+                            Please enter site address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address2">Address <span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="address2">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="town">Town</label>
+                            <input type="text" class="form-control" id="town" required>
+                            <div class="invalid-feedback">
+                                Town is required.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="county">County</label>
+                            <input type="text" class="form-control" id="county" required>
+                            <div class="invalid-feedback">
+                                County is required.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="postcode">Post Code</label>
+                            <input type="text" class="form-control" id="postcode" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Post Code is required.
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <input type="button" name="password" class="next btn btn-primary" value="Next" />
+                </fieldset>
+                <fieldset>
+                    <h4 class="mb-3">Description</h4>
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="localAuthority">Description </label>
+                            <textarea maxlength="100" class="form-control" id="localAuthoirty"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <input type="button" name="step3" class=" btn btn-default step-3" value="Step 3" />
+                        <input type="button" name="step4" class=" btn btn-primary step-4" value="Step 4" />
+
+                    </div>
+                    <hr class="mb-4">
+                    <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+                    <input type="button" name="next" class="next btn btn-primary" value="Next" />
+                </fieldset>
+
+                <fieldset id="step3">
+                    <h4 class="mb-3">Step 3</h4>
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+
+                            This is step 3
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+                    <input type="button" name="next" class="next btn btn-primary" value="Next" />
+                </fieldset>
+
+                <fieldset id="step4">
+                    <h4 class="mb-3">Step 4</h4>
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+
+                            This is step 4
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+                    <input type="button" name="next" class="next btn btn-primary" value="Next" />
+                </fieldset>
+
+                <fieldset id="terms">
+                    <h4 class="mb-3">Final Step of the form</h4>
+                    <p>All routes lead to this final step</p>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+</div>
