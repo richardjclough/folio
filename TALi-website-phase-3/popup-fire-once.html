@@ -48,14 +48,12 @@
                 </div>
                 <div class="modal-body">
                     <div><strong>Set a cookie only once per session</strong></div>
-                    This modal will fire once on first page load and set a cookie, but if you go to this <a href="popup-already-fired.html">page</a>, which also references the sanme cookie just set, the same type of popup won't fire. 
+                    This modal will appear on first page load and set a cookie to prohibit this popup from firing again in the same session. For example if you go to this <a href="popup-already-fired.html">page</a>, which also references the sanme cookie just set, the same type of popup won't fire. 
                 </div>
             </div>
         </div>
     </div>
-<div id="modal-fired-wording">You are still on the same page as before but the modal didn't fire. If you want to mimic
-    coming to this page in a new session, clear your cache which will delete any cookies and
-    then refresh the page and the popup will then fire again.</div>
+    <div id="modal-fired-wording">A cookie has been set to block popups if you've already encountered one so the popup didn't fire. If you want to mimic coming to this page in a new session clear your cache which will delete any cookies and then refresh the page the popup will fire again.</div>
 </body>
 
 </html>
