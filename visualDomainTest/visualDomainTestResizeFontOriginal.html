@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Visual Domain</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet">
+      <style>
+         .titleBox {
+         width: 400px; height: 150px; border: 3px solid darkblue; margin: 100px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-family: 'Roboto Slab', serif;  		
+         }
+      </style>
+   </head>
+   <body>
+      <div>
+         <label for="companyName">Company name</label>
+         <input id="companyNameInput" type="text" name="companyName" maxlength="38" placeholder="Cosmin Inc.">
+      </div>
+      <hr>
+      <div id="thebox" class="titleBox">
+         <span id="companyNameOutput"></span>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function (){
+         	$('#companyNameInput').keyup(function () {
+         		$('#companyNameOutput').text($(this).val());
+         	});
+         });
+      </script>
+      <script src="fitty.min.js"></script>
+      <script>
+         fitty('#companyNameOutput', {
+          	minSize: 12,
+          	maxSize: 140
+         });
+      </script>
+   </body>

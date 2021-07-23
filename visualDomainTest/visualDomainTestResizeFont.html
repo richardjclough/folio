@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic text resizer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet">
+<style>
+html, body {
+	font-family: 'Roboto Slab', serif;
+		background-color: #745F5F;
+}
+.container {
+	width: 100%;
+	display: flex;
+}
+.border {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+	
+#companyNameInput {
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	margin: 20px 0px;
+		text-align: center;
+	outline: 0;
+	}
+	
+	
+.titleBox {
+	width: 300px;
+	height: 120px;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Roboto Slab', serif;
+	display: flex;
+	margin: 0 auto;
+	background-color: white;
+	margin-top: 20px;
+	padding-bottom: 8px;
+	
+}
+	@media (max-width:420px){
+		.mobileHide {
+			display: none;
+		}
+	}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="border">
+    <div>
+		<span style="color:white;font-size: 24px;">Dynamic text resizer using jQuery.</span> 
+     
+     <br/><br/><span style="color:white;font-size: 16px;">Type some text into the field below.</label>
+      <br>
+      <input id="companyNameInput" type="text" name="companyName" maxlength="38" placeholder="Start typing">
+    </div>
+<br />
+	  <label style="color:white">It will get written into the space below and after 4 letters <span class="mobileHide"><br/></span>have been entered, the text will start to fill the available width.</label>
+    <div id="thebox" class="titleBox"> <span id="companyNameOutput" >Start typing!</span> </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script>
+      $(document).ready(function (){
+        $('#companyNameInput').keyup(function () {
+          $('#companyNameOutput').text($(this).val());
+       });
+     });
+  </script> 
+<script src="fitty.min.js"></script> 
+<script>
+   fitty('#companyNameOutput', {
+    minSize: 12,
+    maxSize: 140
+ });
+</script>
+</body>

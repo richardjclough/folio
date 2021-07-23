@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>folio - cut ups</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('select').change(function(){
+                $('#beforewords').val($(this).val());
+            });
+        });
+        
+        function insertText(text) {
+            document.getElementById('before-words').value = words;
+        }
+        function cutuptext(text) {
+         
+            var beforewords = document.getElementById("beforewords").value;
+            var afterwords = document.getElementById("afterwords").value;
+            var wordscut=document.getElementById("afterwords").value;
+
+            afterwords.value = beforewords;
+            
+            
+            wordscut = afterwords.split(afterwords);
+            
+            //wordscut = beforewords.sort(() => Math.random() - 0.5);
+            
+           // wordscut = wordscut.join(" ");
+            
+            //wordscut = wordscut.charAt(1).toUpperCase() + wordscut.slice(1);
+           // wordscut = wordscut.replace(/([^.])$/, '$1.');
+           document.getElementById('afterwords').value = wordscut;
+            console.log(wordscut);
+    
+        }
+
+    </script>
+</head>
+
+<body>
+    <select id="quotes" >
+        <option value="select-a-quote">Select a quote</option>
+        <option value="The American upper-middle-class citizen is a composite of negatives. He is largely delineated by what he is not. Gains went further. He was not merely negative. He was positively invisible; a vague respectable presence. There is a certain kind of ghost that can only materialize with the aid of a sheet or other piece of cloth to give it outline. Gains was like that. He materialized in someone else’s overcoat.">Quote from article</option>
+        <option value="name002">IAMsam</option>
+    </select>
+    <textarea id="beforewords" name="beforewords" cols="80" rows="10"></textarea>
+    <textarea id="afterwords" cols="80" rows="10"></textarea>
+    <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
+    <button id="btnClick1" onclick="cutuptext()">Cut it up</button>
+</body>
+
+</html>

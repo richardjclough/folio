@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>folio - cut ups</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+        $(document).ready(function () {
+            $('select').change(function () {
+                $('#afterwords').val($(this).val());
+            });
+
+            $('[id="afterwords"]').animate({ height: "30vh" });
+            
+        });
+       
+            // function insertText(text) {
+            //     document.getElementById('before-words').value = words;
+            // }
+        function cutuptext(text) {
+                var words = document.getElementById('afterwords').value;
+                words = words.split(" ");
+                words = words.sort(() => Math.random() - 0.5);
+                words = words.join(" ");
+                words = words.charAt(0).toUpperCase() + words.slice(1);
+                words = words.replace(/([^.])$/, '$1.');
+                document.getElementById('afterwords').value = words;
+                // console.log(words);
+            }
+    </script>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        .rotate {
+            transform: rotate(-10deg);
+        }
+
+        .backdrop {
+            background: url("img/burroughs.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .text {
+            font: bolder 6vw "Alfa Slab One";
+            text-align: center;
+            margin: 0;
+            border: 4px solid;
+        }
+
+        .multiply {
+            color: white;
+            mix-blend-mode: multiply;
+            background-color: rgba(59, 2, 6, 1);
+        }
+
+        /* Knockout text within a bright area */
+        .screen {
+            color: red;
+            mix-blend-mode: hard-light;
+            background-color: rgb(244, 220, 211);
+        }
+
+        .textarea {
+            width: 90vw;
+            height: fit-content;
+            opacity: .8;
+            font-size: 1.3rem;
+            font-family: 'Special Elite', cursive;
+            padding: 5px;
+        }
+
+        .btn {
+            background: green; 
+            
+            font-size: 1.9rem;
+            border: 5px solid white;
+        } 
+
+        .btn:active, .btn:hover {
+            background: blue; 
+        }
+
+    </style>
+</head>
+
+<body class="backdrop">
+    <div class="container ">
+        <div class="row">
+            <div class="col-8 mt-5 backdrop">
+                <div class="">
+                    <p class="text screen mb-5">The cut up machine</p>
+                </div>
+
+                <!-- <form> -->
+                <!-- <select id="usernames" name="usernames">
+                <option value=""></option>
+                <option value="name001">JeffCool</option>
+                <option value="name002">IAMsam</option>
+            </select>
+            <textarea name="befo" cols="15" rows="1" class="class"></textarea> -->
+                <textarea id="afterwords" class="textarea" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up method made famous by the writer William S Burroughs. If you click the "Cut it up" button, the text will be cut up. If you keep clicking the button the text will continually be cut up. You can type or paste your own text in here too.</textarea>
+                <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
+                <button class="btn mt-3 backdrop text screen multiply" id="btnClick1" onclick="cutuptext()">CUT IT UP</button>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
