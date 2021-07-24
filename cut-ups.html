@@ -1,42 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html class="h-100" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>folio - cut ups</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Sticky Footer Navbar Template · Bootstrap</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <script>
         $(document).ready(function () {
             $('select').change(function () {
                 $('#afterwords').val($(this).val());
             });
-
-            $('[id="afterwords"]').animate({ height: "30vh" });
-            
+          //  $('#afterwords').animate({ opacity: 1 }, 'slow');
+           $('[id="afterwords"]').animate({ height: "350", opacity: 0.9  }, 'slow');
+         
         });
-       
-            // function insertText(text) {
-            //     document.getElementById('before-words').value = words;
-            // }
-        function cutuptext(text) {
-                var words = document.getElementById('afterwords').value;
-                words = words.split(" ");
-                words = words.sort(() => Math.random() - 0.5);
-                words = words.join(" ");
-                words = words.charAt(0).toUpperCase() + words.slice(1);
-                words = words.replace(/([^.])$/, '$1.');
-                document.getElementById('afterwords').value = words;
-                // console.log(words);
-            }
-    </script>
 
-   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+        // function insertText(text) {
+        //     document.getElementById('before-words').value = words;
+        // }
+        function cutuptext(text) {
+            var words = document.getElementById('afterwords').value;
+            words = words.split(" ");
+            words = words.sort(() => Math.random() - 0.5);
+            words = words.join(" ");
+            words = words.charAt(0).toUpperCase() + words.slice(1);
+            words = words.replace(/([^.])$/, '$1.');
+            document.getElementById('afterwords').value = words;
+            // console.log(words);
+        }
+    </script>
     <style>
         .rotate {
             transform: rotate(-10deg);
@@ -68,50 +65,78 @@
         }
 
         .textarea {
-            width: 90vw;
+            width: 100%;
             height: fit-content;
-            opacity: .8;
             font-size: 1.3rem;
             font-family: 'Special Elite', cursive;
-            padding: 5px;
+            padding: 15px;
+            line-height: 2.5rem;
+            opacity: 0;
+        }
+
+        .footer {
+            opacity: .7;
         }
 
         .btn {
-            background: green; 
-            
+            background: #32a932;
             font-size: 1.9rem;
             border: 5px solid white;
-        } 
-
-        .btn:active, .btn:hover {
-            background: blue; 
+            border-radius: 19px;
+            mix-blend-mode: normal;
+            opacity: .9;
+            color: white;
         }
 
+        .btn:active,
+        .btn:hover {
+            background: blue;
+            color: white;
+        }
     </style>
 </head>
+<body class="backdrop d-flex flex-column h-100">
 
-<body class="backdrop">
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
     <div class="container ">
         <div class="row">
-            <div class="col-8 mt-5 backdrop">
-                <div class="">
-                    <p class="text screen mb-5">The cut up machine</p>
-                </div>
+            <div class="col-1">
+
+            </div>
+            <div class="col-10 mt-5 backdrop">
+
+                <p class="text screen mb-5">The Cut-Up machine</p>
 
                 <!-- <form> -->
                 <!-- <select id="usernames" name="usernames">
-                <option value=""></option>
-                <option value="name001">JeffCool</option>
-                <option value="name002">IAMsam</option>
-            </select>
-            <textarea name="befo" cols="15" rows="1" class="class"></textarea> -->
-                <textarea id="afterwords" class="textarea" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up method made famous by the writer William S. Burroughs. If you click the "CUT IT UP" button, this text will be randomnly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
+            <option value=""></option>
+            <option value="name001">JeffCool</option>
+            <option value="name002">IAMsam</option>
+        </select>
+        <textarea name="befo" cols="15" rows="1" class="class"></textarea> -->
+                <textarea id="afterwords" class="textarea"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the Cut-Up writing technique made famous by the writer William S. Burroughs. If you click the "CUT IT UP" button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
                 <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
-                <button class="btn mt-3 backdrop text screen multiply" id="btnClick1" onclick="cutuptext()">CUT IT UP</button>
-                <!-- </form> -->
+                <button class="btn mt-3 backdrop text screen multiply" id="btnClick1" onclick="cutuptext()">CUT IT
+                    UP</button>
+            </div>
+            <div class="col-1">
+
             </div>
         </div>
     </div>
-</body>
+</main>
 
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="row">
+        <div class="col-12 text-black text-center">
+            Image credit: Extract from invitation to William S. Burroughs Centenary Exhibition, the "Cut-Up"
+            Technique / Boo Hurray – Emory University
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
+</body>
 </html>
