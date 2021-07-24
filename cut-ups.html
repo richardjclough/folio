@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Sticky Footer Navbar Template · Bootstrap</title>
+    <title>The Cut-Up Machine</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css" />
     
@@ -29,6 +29,7 @@
             words = words.sort(() => Math.random() - 0.5);
             words = words.join(" ");
             words = words.charAt(0).toUpperCase() + words.slice(1);
+            words = words.replace(/\./g,' ');
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
             // console.log(words);
