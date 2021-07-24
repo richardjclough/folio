@@ -1,12 +1,14 @@
 <!doctype html>
 <html class="h-100" lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>The Cut-Up Machine</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css" />
-    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
@@ -15,9 +17,9 @@
             $('select').change(function () {
                 $('#afterwords').val($(this).val());
             });
-          //  $('#afterwords').animate({ opacity: 1 }, 'slow');
-           $('[id="afterwords"]').animate({ height: "350", opacity: 0.9  }, 'slow');
-         
+            //  $('#afterwords').animate({ opacity: 1 }, 'slow');
+            $('[id="afterwords"]').animate({ height: "350", opacity: 0.9 }, 'slow');
+
         });
 
         // function insertText(text) {
@@ -30,7 +32,7 @@
             words = words.join(" ");
             words = words.charAt(0).toUpperCase() + words.slice(1);
             words = words.replace(/\s+/g, " ");
-            words = words.replace(/\./g,' ');
+            words = words.replace(/\./g, ' ');
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
             // console.log(words);
@@ -74,6 +76,23 @@
             padding: 15px;
             line-height: 2.5rem;
             opacity: 0;
+            height: 0px;
+        }
+
+        @keyframes flickerAnimation {
+            0% {
+                transform: translateY(-2rem);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .animate-flicker {
+            position: relative;
+            animation: flickerAnimation .7s;
+    
         }
 
         .footer {
@@ -97,47 +116,50 @@
         }
     </style>
 </head>
+
 <body class="backdrop d-flex flex-column h-100">
 
 
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-    <div class="container ">
-        <div class="row">
-            <div class="col-1">
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container ">
+            <div class="row">
+                <div class="col-1">
 
-            </div>
-            <div class="col-10 mt-5 backdrop">
+                </div>
+                <div class="col-10 mt-5 backdrop">
 
-                <p class="text screen mb-5">The Cut-Up Machine</p>
+                    <p class="text screen mb-5">The Cut-Up Machine</p>
 
-                <!-- <form> -->
-                <!-- <select id="usernames" name="usernames">
+                    <!-- <form> -->
+                    <!-- <select id="usernames" name="usernames">
             <option value=""></option>
             <option value="name001">JeffCool</option>
             <option value="name002">IAMsam</option>
         </select>
         <textarea name="befo" cols="15" rows="1" class="class"></textarea> -->
-                <textarea id="afterwords" class="textarea"
-                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the Cut-Up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
-                <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
-                <button class="btn mt-3 backdrop text screen multiply" id="btnClick1" onclick="cutuptext()">Cut it up</button>
-            </div>
-            <div class="col-1">
+                    <textarea id="afterwords" class="textarea animate-flicker"
+                        oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the Cut-Up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and more recently used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
+                    <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
+                    <button class="btn mt-3 backdrop text screen multiply" id="btnClick1" onclick="cutuptext()">Cut it
+                        up</button>
+                </div>
+                <div class="col-1">
 
+                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="row">
-        <div class="col-12 text-black text-center">
-            Image credit: Extract from invitation to William S. Burroughs Centenary Exhibition, the "Cut-Up"
-            Technique / Boo Hurray – Emory University
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="row">
+            <div class="col-12 text-black text-center">
+                Image credit: Extract from invitation to William S. Burroughs Centenary Exhibition, the "Cut-Up"
+                Technique / Boo Hurray – Emory University
+            </div>
         </div>
-    </div>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
 </body>
+
 </html>
