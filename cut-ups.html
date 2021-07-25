@@ -18,7 +18,8 @@
                 $('#afterwords').val($(this).val());
             });
             //  $('#afterwords').animate({ opacity: 1 }, 'slow');
-            $('[id="afterwords"]').animate({ height: "350", opacity: 0.9 }, 'slow');
+            $('[id="afterwords"]').animate({ height: '370px', opacity: 0.9  }, 1000 );
+            $('[id="btnClick"]').animate({ opacity: 0.9 }, 1200);
 
         });
 
@@ -39,9 +40,6 @@
         }
     </script>
     <style>
-        .rotate {
-            transform: rotate(-10deg);
-        }
 
         .backdrop {
             background: url("img/burroughs.jpg") no-repeat center center fixed;
@@ -70,7 +68,7 @@
 
         .textarea {
             width: 100%;
-            height: fit-content;
+            height: 100%;
             font-size: 1.3rem;
             font-family: 'Special Elite', cursive;
             padding: 15px;
@@ -79,7 +77,7 @@
             height: 0px;
         }
 
-        @keyframes flickerAnimation {
+        @keyframes moveDown {
             0% {
                 transform: translateY(-2rem);
             }
@@ -89,9 +87,9 @@
             }
         }
 
-        .animate-flicker {
+        .animate {
             position: relative;
-            animation: flickerAnimation .7s;
+            animation: moveDown .7s;
     
         }
 
@@ -105,7 +103,7 @@
             border: 5px solid white;
             border-radius: 19px;
             mix-blend-mode: normal;
-            opacity: .9;
+            opacity: 0;
             color: white;
         }
 
@@ -138,10 +136,10 @@
             <option value="name002">IAMsam</option>
         </select>
         <textarea name="befo" cols="15" rows="1" class="class"></textarea> -->
-                    <textarea id="afterwords" class="textarea animate-flicker"
+                    <textarea id="afterwords" class="textarea animate"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
                     <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
-                    <button class="btn mt-3 backdrop text screen multiply" id="btnClick1" onclick="cutuptext()">Cut it
+                    <button class="btn mt-3 backdrop text screen multiply" id="btnClick" onclick="cutuptext()">Cut it
                         up</button>
                 </div>
                 <div class="col-1">
