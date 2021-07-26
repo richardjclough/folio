@@ -26,7 +26,7 @@
         //     document.getElementById('before-words').value = words;
         // }
         function cutuptext(text) {
-            var words = document.getElementById('afterwords').value;
+            let words = document.getElementById('afterwords').value;
             words = words.split(" ");
             words = words.sort(() => Math.random() - 0.5);
             words = words.join(" ");
