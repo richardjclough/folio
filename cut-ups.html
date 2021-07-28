@@ -35,6 +35,7 @@
             words = words.replace(/\./g, ' ');
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
+            document.getElementById('restart').style.display = 'inline'; 
             // console.log(words);
         }
         function restart() {
@@ -94,9 +95,27 @@
             }
         }
 
-        .animate {
+        .moveY {
             position: relative;
             animation: moveDown 1.2s;
+    
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+        
+            }
+
+            100% {
+                opacity: .9;
+                      
+            }
+        }
+
+        .fadeInBtn {
+        
+            animation: fadeIn .7s;
     
         }
 
@@ -119,6 +138,10 @@
         .btn:hover {
             background: blue;
             color: white;
+        }
+
+        .fadeInBtn {
+            display: none;
         }
     </style>
 </head>
@@ -147,10 +170,10 @@
                     <textarea id="afterwords" class="textarea animate"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
                     <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
-                    <button class="btn mt-3 mr-3 backdrop text screen multiply animate btnClick" onclick="cutuptext()">
+                    <button class="btn mt-3 mr-3 backdrop text screen multiply moveY btnClick" onclick="cutuptext()">
                         Cut it up
                     </button>
-                    <button class="btn mt-3 backdrop text screen multiply animate btnClick" onclick="restart()">
+                    <button class="btn mt-3 backdrop text screen multiply fadeInBtn" id="restart" onclick="restart()">
                         Restart
                     </button>
                 </div>
