@@ -18,14 +18,14 @@
             //     $('#afterwords').val($(this).val());
             // });
             $('[id="afterwords"]').animate({ height: '370px'  } );
-            $('[id="btnClick"]').animate({ height: '60px' }, 800);
+            $('.btnClick').animate({ height: '60px' }, 800);
 
         });
 
         // function insertText(text) {
         //     document.getElementById('before-words').value = words;
         // }
-        function cutuptext(text) {
+        function cutuptext() {
             let words = document.getElementById('afterwords').value;
             words = words.split(" ");
             words = words.sort(() => Math.random() - 0.5);
@@ -35,6 +35,11 @@
             words = words.replace(/\./g, ' ');
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
+            // console.log(words);
+        }
+        function restart() {
+            let wordsRefresh = "This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.";
+            document.getElementById('afterwords').value = wordsRefresh;
             // console.log(words);
         }
     </script>
@@ -91,7 +96,7 @@
 
         .animate {
             position: relative;
-            animation: moveDown .8s;
+            animation: moveDown 1.2s;
     
         }
 
@@ -142,8 +147,12 @@
                     <textarea id="afterwords" class="textarea animate"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
                     <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
-                    <button class="btn mt-3 backdrop text screen multiply animate" id="btnClick" onclick="cutuptext()">Cut it
-                        up</button>
+                    <button class="btn mt-3 mr-3 backdrop text screen multiply animate btnClick" onclick="cutuptext()">
+                        Cut it up
+                    </button>
+                    <button class="btn mt-3 backdrop text screen multiply animate btnClick" onclick="restart()">
+                        Restart
+                    </button>
                 </div>
                 <div class="col-md-1">
 
