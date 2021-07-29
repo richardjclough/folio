@@ -17,7 +17,7 @@
             // $('select').change(function () {
             //     $('#afterwords').val($(this).val());
             // });
-            $('[id="afterwords"]').animate({ height: '370px'  } );
+            $('[id="afterwords"]').animate({ height: '370px' });
             $('.btnClick').animate({ height: '60px' }, 800);
 
         });
@@ -35,7 +35,7 @@
             words = words.replace(/\./g, ' ');
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
-            document.getElementById('restart').style.display = 'inline'; 
+            document.getElementById('restart').style.display = 'inline';
             // console.log(words);
         }
         function restart() {
@@ -45,7 +45,6 @@
         }
     </script>
     <style>
-
         .backdrop {
             background: url("img/burroughs.jpg") no-repeat center center fixed;
             background-size: cover;
@@ -79,7 +78,7 @@
             padding: 15px;
             line-height: 2.5rem;
             /* min-height: 300px; */
-                }
+        }
 
         @keyframes moveDown {
             0% {
@@ -90,33 +89,33 @@
 
             100% {
                 opacity: .9;
-                transform: translateY(0);  
-                max-height: 100%;            
+                transform: translateY(0);
+                max-height: 100%;
             }
         }
 
         .moveY {
             position: relative;
             animation: moveDown 1.2s;
-    
+
         }
 
         @keyframes fadeIn {
             0% {
                 opacity: 0;
-        
+
             }
 
             100% {
                 opacity: .9;
-                      
+
             }
         }
 
         .fadeInBtn {
-        
+
             animation: fadeIn .7s;
-    
+
         }
 
         .footer {
@@ -124,25 +123,74 @@
         }
 
         .btn {
-            background: #32a932;
+            /* background: #32a932;
             font-size: 1.9rem;
             border: 5px solid white;
             border-radius: 19px;
             mix-blend-mode: normal;
             opacity: .9;
-            color: white;
+            color: white; */
 
         }
 
-        .btn:active,
+        /* .btn:active,
         .btn:hover {
-            background: blue;
-            color: white;
-        }
+            background: rgb(4, 77, 19);
+            color: rgb(255, 255, 255);
+        } */
 
         .fadeInBtn {
             display: none;
         }
+
+        .pushable {
+            background: #104410;
+            padding: 0;
+            mix-blend-mode: normal;
+            font-size: 2.3rem;
+            border: 5px solid white;
+            border-radius: 19px;
+            opacity: .9;
+            color: white;
+
+        }
+
+        .pushable:focus {
+            outline: none;
+        }
+
+        .front {
+            display: block;
+            padding: 7px 43px;
+            border-radius: 16px;
+            font-size: 1.7rem;
+            text-shadow: 1px 1px 2px rgb(0, 7, 4);
+            background: rgb(61, 207, 147);
+            color: white;
+            transform: translateY(-12px);
+            border: 3px solid rgb(50, 107, 72);
+        }
+
+        .front:hover {
+            background: rgb(97, 225, 154);
+        }
+
+        .pushable:hover {
+            background: rgb(50, 105, 82);
+        }
+
+        .front:active {
+            outline: none;
+            background: rgb(15, 177, 64);
+        }
+
+    
+        .pushable:active .front {
+            transform: translateY(-6px);
+            
+        }
+
+        
     </style>
 </head>
 
@@ -170,12 +218,18 @@
                     <textarea id="afterwords" class="textarea animate"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
                     <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
-                    <button class="btn mt-3 mr-3 backdrop text screen multiply moveY btnClick" onclick="cutuptext()">
-                        Cut it up
+                    <button class="btn mt-3 mr-3 backdrop text screen multiply pushable moveY btnClick"
+                        onclick="cutuptext()">
+                        <span class="front">
+                            Cut it up
+                        </span>
                     </button>
-                    <button class="btn mt-3 backdrop text screen multiply fadeInBtn" id="restart" onclick="restart()">
-                        Restart
+                    <button class="btn mt-3 backdrop text screen multiply pushable fadeInBtn" id="restart" onclick="restart()">
+                        <span class="front">
+                            Restart
+                        </span>
                     </button>
+
                 </div>
                 <div class="col-md-1">
 
