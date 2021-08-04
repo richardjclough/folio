@@ -35,12 +35,17 @@
             words = words.replace(/\./g, ' ');
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
-            document.getElementById('restart').style.display = 'inline';
+            document.getElementById('restart').style.visibility = 'visible';
+            afterwords.style.background = 'white';
             // console.log(words);
         }
         function restart() {
             let wordsRefresh = "This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.";
             document.getElementById('afterwords').value = wordsRefresh;
+            document.getElementById('restart').classList.add('fadeOutBtn');
+            document.getElementById('restart').style.visibility = 'hidden';
+            afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #4e4c94)';
+            afterwords.style.backgroundSize = '200% 10%';
             // console.log(words);
         }
     </script>
@@ -67,9 +72,10 @@
         .screen {
             color: rgb(241, 33, 33);
             mix-blend-mode: hard-light;
-            background-color: rgb(168, 86, 57);
+            background-color: rgb(155 162 159);
             text-shadow: 1px 1px 2px rgb(0, 7, 4);
             padding: 6px;
+            opacity: .9;
         }
 
         .textarea {
@@ -82,11 +88,28 @@
             box-shadow: 0 0 26px rgb(233, 180, 204);
             border: 8px solid rgb(31, 2, 2);
             border-radius: 16px;
+            animation: fadeBG 4s ease infinite;
+            background: linear-gradient(270deg, #9fbeb2, #4e4c94);
+            background-size: 200% 10%;
             /* border-image: repeating-linear-gradient(60deg, #9f0c24, #440911, #d60b99 60px) 60; */
         }
 
         .textarea:focus {
             outline: none;
+        }
+
+        @keyframes fadeBG {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
         }
 
         @keyframes moveDown {
@@ -122,17 +145,31 @@
         }
 
         .fadeInBtn {
-
+            visibility: hidden;
             animation: fadeIn .7s;
+
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: .9;
+
+            }
+
+            100% {
+                opacity: 0;
+
+            }
+        }
+
+        .fadeOutBtn {
+            animation: fadeOut .7s;
+            visibility: hidden;
 
         }
 
         .footer {
             opacity: .7;
-        }
-
-        .fadeInBtn {
-            display: none;
         }
 
         .pushable {
@@ -176,13 +213,12 @@
             background: rgb(15, 177, 64);
         }
 
-    
+
         .pushable:active .front {
             transform: translateY(-6px);
-            
+
         }
 
-        
     </style>
 </head>
 
@@ -196,7 +232,7 @@
                 <div class="col-md-1">
 
                 </div>
-                <div class="col-md-10 col-sm-12 mt-5 backdrop">
+                <div class="col-md-10 col-sm-12 mt-5">
 
                     <p class="text screen mb-5">The Cut-Up Machine</p>
 
@@ -216,7 +252,8 @@
                             Cut it up
                         </span>
                     </button>
-                    <button class="btn mt-3 backdrop text screen multiply pushable fadeInBtn" id="restart" onclick="restart()">
+                    <button class="btn mt-3 backdrop text screen multiply pushable fadeInBtn" id="restart"
+                        onclick="restart()">
                         <span class="front">
                             Restart
                         </span>
