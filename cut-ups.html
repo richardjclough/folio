@@ -14,40 +14,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <script>
         $(document).ready(function () {
-            // $('select').change(function () {
-            //     $('#afterwords').val($(this).val());
-            // });
             $('[id="afterwords"]').animate({ height: '370px' });
             $('.btnClick').animate({ height: '60px' }, 800);
-
+            
         });
 
-        // function insertText(text) {
-        //     document.getElementById('before-words').value = words;
-        // }
         function cutuptext() {
             let words = document.getElementById('afterwords').value;
+            let captitalizeFirstLetterAfterFullStop = /(^|[.!?]\s+)([a-z])/g;
             words = words.split(" ");
             words = words.sort(() => Math.random() - 0.5);
             words = words.join(" ");
             words = words.charAt(0).toUpperCase() + words.slice(1);
             words = words.replace(/\s+/g, " ");
-            words = words.replace(/\./g, ' ');
+
+            /* Remove internal full stops */
+            //  words = words.replace(/\./g, ' ');
+
+            /* Capitalize first letter after a full stop */
+            words = words.replace(captitalizeFirstLetterAfterFullStop, (m, $1, $2) => $1 + $2.toUpperCase());
+
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
-            document.getElementById('restart').style.visibility = 'visible';
-            afterwords.style.background = 'white';
-            // console.log(words);
+           document.getElementById('restart').classList.add('fadeInBtn');
+        //    document.getElementById('restart').style.visibility = 'visible';
+            document.getElementById('afterwords').style.background = 'white';
+            document.getElementById('afterwords').classList.add('fadeInBtn');
+            document.getElementById('afterwords').style.visibility = 'visible';
+          //  console.log(words);
         }
+
         function restart() {
             let wordsRefresh = "This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.";
-            document.getElementById('afterwords').value = wordsRefresh;
-            document.getElementById('restart').classList.add('fadeOutBtn');
-            document.getElementById('restart').style.visibility = 'hidden';
-            afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #4e4c94)';
+            document.getElementById('afterwords').value = wordsRefresh;                  
+            document.getElementById('afterwords').classList.remove('fadeInBtn');
+            document.getElementById('restart').classList.add('fadeOutBtn');       
+            document.getElementById('restart').classList.remove('fadeOutBtn');
+           // document.getElementById('restart').style.visibility = 'hidden';
+            afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #636286)';
             afterwords.style.backgroundSize = '200% 10%';
+            afterwords.style.animation = 'fadeBG 4s ease infinite';
             // console.log(words);
         }
+
+
     </script>
     <style>
         .backdrop {
@@ -68,13 +78,12 @@
             background-color: rgba(59, 2, 6, 1);
         }
 
-        /* Knockout text within a bright area */
         .screen {
             color: rgb(241, 33, 33);
-    mix-blend-mode: hard-light;
-    background: rgba(168, 86, 57, .3);
-    text-shadow: 1px 1px 2px rgb(0 7 4);
-    padding: 6px;
+            mix-blend-mode: hard-light;
+            background: rgba(168, 86, 57, .3);
+            text-shadow: 1px 1px 2px rgb(0 7 4);
+            padding: 6px;
             opacity: .9;
         }
 
@@ -89,7 +98,7 @@
             border: 8px solid rgb(31, 2, 2);
             border-radius: 16px;
             animation: fadeBG 4s ease infinite;
-            background: linear-gradient(270deg, #9fbeb2, #4e4c94);
+            background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
             background-size: 200% 10%;
             /* border-image: repeating-linear-gradient(60deg, #9f0c24, #440911, #d60b99 60px) 60; */
         }
@@ -140,13 +149,14 @@
 
             100% {
                 opacity: .9;
+                visibility: visible;
 
             }
         }
 
         .fadeInBtn {
-            visibility: hidden;
-            animation: fadeIn .7s;
+            /* visibility: hidden; */
+            animation: fadeIn 1.6s forwards !important;
 
         }
 
@@ -158,14 +168,19 @@
 
             100% {
                 opacity: 0;
+                visibility: hidden;
 
             }
         }
 
         .fadeOutBtn {
-            animation: fadeOut .7s;
-            visibility: hidden;
+            animation: fadeOut 1.6s forwards !important;
+            
 
+        }
+
+        #restart {
+            visibility: hidden;
         }
 
         .footer {
@@ -218,7 +233,6 @@
             transform: translateY(-6px);
 
         }
-
     </style>
 </head>
 
@@ -236,23 +250,15 @@
 
                     <p class="text screen mb-5">The Cut-Up Machine</p>
 
-                    <!-- <form> -->
-                    <!-- <select id="usernames" name="usernames">
-            <option value=""></option>
-            <option value="name001">JeffCool</option>
-            <option value="name002">IAMsam</option>
-        </select>
-        <textarea name="befo" cols="15" rows="1" class="class"></textarea> -->
                     <textarea id="afterwords" class="textarea animate"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
-                    <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
                     <button class="btn mt-3 mr-3 backdrop text screen multiply pushable moveY btnClick"
                         onclick="cutuptext()">
                         <span class="front">
                             Cut it up
                         </span>
                     </button>
-                    <button class="btn mt-3 backdrop text screen multiply pushable fadeInBtn" id="restart"
+                    <button class="btn mt-3 backdrop text screen multiply pushable" id="restart"
                         onclick="restart()">
                         <span class="front">
                             Restart
