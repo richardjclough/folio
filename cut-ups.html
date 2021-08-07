@@ -36,11 +36,12 @@
 
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
-           document.getElementById('restart').classList.add('fadeInBtn');
+           document.getElementById('restartBtn').classList.add('fadeInBtn');
         //    document.getElementById('restart').style.visibility = 'visible';
             document.getElementById('afterwords').style.background = 'white';
             document.getElementById('afterwords').classList.add('fadeInBtn');
             document.getElementById('afterwords').style.visibility = 'visible';
+            restartBtn.style.border = '5px solid white';
             front.style.transform = 'translateY(-12px)';
             front.style.background = 'rgb(61, 207, 147)';
             front.style.cursor = 'pointer';
@@ -59,7 +60,8 @@
             afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #636286)';
             afterwords.style.backgroundSize = '200% 10%';
             afterwords.style.animation = 'fadeBG 4s ease infinite';
-            front.style.transform = 'translateY(-2px)';
+            restartBtn.style.border = '5px solid #9e9a9a';
+            front.style.transform = 'translateY(-8px)';
             front.style.background = 'rgb(67 147 115)';
             front.style.cursor = 'auto';
             front.style.color = '#aaa';
@@ -69,10 +71,23 @@
 
     </script>
     <style>
-        .backdrop {
-            background: url("img/burroughs.jpg") no-repeat center center fixed;
+        body {
+            background: linear-gradient(rgba(255,255,255,.4), rgba(255,0,255,.4)), url("img/burroughs.png") no-repeat center center fixed;
             background-size: cover;
+            /* animation: fadeBG 8s ease infinite; */
+            /* background-size: 400% 400%; */
+          
         }
+
+        /* body {
+            background: linear-gradient(rgba(255,0,255,.4), rgba(255,0,255,.4)), url("images/freeLipPolish.png") no-repeat center center fixed,
+            linear-gradient(rgba(255,255,255,.4), rgba(255,0,255,.4)), url("img/burroughs.png") no-repeat center center fixed;
+            background-size: cover;
+            animation: fadeBG 8s ease infinite;
+            /* background-size: 400% 400%; 
+          
+        } */
+
 
         .text {
             font: bolder 6vw "Alfa Slab One";
@@ -106,7 +121,7 @@
             box-shadow: 0 0 26px rgb(233, 180, 204);
             border: 8px solid rgb(31, 2, 2);
             border-radius: 16px;
-            animation: fadeBG 4s ease infinite;
+            animation: fadeInBG 4s ease infinite;
             background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
             background-size: 200% 10%;
             /* border-image: repeating-linear-gradient(60deg, #9f0c24, #440911, #d60b99 60px) 60; */
@@ -114,6 +129,12 @@
 
         .textarea:focus {
             outline: none;
+        }
+
+        .fadeInBG {
+            /* visibility: hidden; */
+            animation: fadeBG 10.6s forwards !important;
+
         }
 
         @keyframes fadeBG {
@@ -188,7 +209,7 @@
 
         }
 
-        #restart {
+        #restartBtn {
             visibility: hidden;
         }
 
@@ -245,11 +266,11 @@
     </style>
 </head>
 
-<body class="backdrop d-flex flex-column h-100">
+<body class="d-flex flex-column h-100">
 
 
     <!-- Begin page content -->
-    <main class="flex-shrink-0">
+    <main class="background flex-shrink-0">
         <div class="container ">
             <div class="row">
                 <div class="col-md-1">
@@ -261,13 +282,13 @@
 
                     <textarea id="afterwords" class="textarea animate"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
-                    <button class="btn mt-3 mr-3 backdrop text screen multiply pushable moveY btnClick" id="pushable"
+                    <button class="btn mt-3 mr-3 text screen multiply pushable" id="pushable"
                         onclick="cutuptext()">
                         <span class="front">
                             Cut it up
                         </span>
                     </button>
-                    <button class="btn mt-3 backdrop text screen multiply pushable" id="restart"
+                    <button class="btn mt-3 text screen multiply pushable" id="restartBtn"
                         onclick="restart()">
                         <span class="front" id="front">
                             Restart
