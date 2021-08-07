@@ -16,7 +16,7 @@
         $(document).ready(function () {
             $('[id="afterwords"]').animate({ height: '370px' });
             $('.btnClick').animate({ height: '60px' }, 800);
-            
+
         });
 
         function cutuptext() {
@@ -36,8 +36,8 @@
 
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
-           document.getElementById('restartBtn').classList.add('fadeInBtn');
-        //    document.getElementById('restart').style.visibility = 'visible';
+            document.getElementById('restartBtn').classList.add('fadeInBtn');
+            //    document.getElementById('restart').style.visibility = 'visible';
             document.getElementById('afterwords').style.background = 'white';
             document.getElementById('afterwords').classList.add('fadeInBtn');
             document.getElementById('afterwords').style.visibility = 'visible';
@@ -46,17 +46,17 @@
             front.style.background = 'rgb(61, 207, 147)';
             front.style.cursor = 'pointer';
             front.style.color = 'white';
-          //  console.log(words);
+            //  console.log(words);
         }
 
         function restart() {
             let wordsRefresh = "This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.";
-            document.getElementById('afterwords').value = wordsRefresh;                  
+            document.getElementById('afterwords').value = wordsRefresh;
             document.getElementById('afterwords').classList.remove('fadeInBtn');
-         //   document.getElementById('restart').classList.add('fadeOutBtn');       
-         //   document.getElementById('restart').classList.remove('fadeOutBtn');
+            //   document.getElementById('restart').classList.add('fadeOutBtn');       
+            //   document.getElementById('restart').classList.remove('fadeOutBtn');
 
-           // document.getElementById('restart').style.visibility = 'hidden';
+            // document.getElementById('restart').style.visibility = 'hidden';
             afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #636286)';
             afterwords.style.backgroundSize = '200% 10%';
             afterwords.style.animation = 'fadeBG 4s ease infinite';
@@ -72,14 +72,14 @@
     </script>
     <style>
         body {
-            background: linear-gradient(rgba(255,0,255,.4), rgba(255,255,255,.4)), url("img/burroughs.png") no-repeat center center fixed;
+            background: linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
             background-size: cover;
             /* animation: fadeBG 8s ease infinite; */
             /* background-size: 400% 400%; */
             height: 100%;
-  width: 100%;
-  margin: 0;
-          
+            margin: 0;
+            background-attachment: fixed;
+
         }
 
         /* body {
@@ -208,7 +208,7 @@
 
         .fadeOutBtn {
             animation: fadeOut 1.6s forwards !important;
-            
+
 
         }
 
@@ -285,14 +285,12 @@
 
                     <textarea id="afterwords" class="textarea animate"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
-                    <button class="btn mt-3 mr-3 text screen multiply pushable" id="pushable"
-                        onclick="cutuptext()">
+                    <button class="btn mt-3 mr-3 text screen multiply pushable" id="pushable" onclick="cutuptext()">
                         <span class="front">
                             Cut it up
                         </span>
                     </button>
-                    <button class="btn mt-3 text screen multiply pushable" id="restartBtn"
-                        onclick="restart()">
+                    <button class="btn mt-3 text screen multiply pushable" id="restartBtn" onclick="restart()">
                         <span class="front" id="front">
                             Restart
                         </span>
