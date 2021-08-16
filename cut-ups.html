@@ -17,7 +17,23 @@
             $('[id="afterwords"]').animate({ height: '370px' });
             $('.btnClick').animate({ height: '60px' });
 
+            $('#changeBGcolour').on('click', function () {
+                var color = 'rgba(255, 0, 0, .4)';
+                var color2 = 'rgba(0, 0, 255, .4)';
+                var img1 = 'url("img/backgroundText.png") no-repeat center center fixed';
+                var img2 = 'url("img/burroughs.png") no-repeat center center fixed';
+                var color3 = 'rgba(200, 0, 100, .4)';
+                var color4 = 'rgba(100, 0, 55, .4)';
+                var str = "linear-gradient(" + color + "," + color2 + ")" + "," + img1 + "," + "linear-gradient(" + color3 + "," + color4 + ")" + "," + img2 + "";
+                $("body").css("background", str);
+                $("body").css({ "background-size": "cover", "backgroundAttachment": "fixed" });
+                $("#changeBGcolour").hide();
+                // console.log('click');
+            })
+
         });
+
+
 
         function cutuptext() {
             let words = document.getElementById('afterwords').value;
@@ -41,11 +57,11 @@
             document.getElementById('afterwords').style.background = 'white';
             document.getElementById('afterwords').classList.add('fadeInBtn');
             document.getElementById('afterwords').style.visibility = 'visible';
-            restartBtn.style.border = '5px solid white';
-            front.style.transform = 'translateY(-12px)';
-            front.style.background = 'rgb(61, 207, 147)';
-            front.style.cursor = 'pointer';
-            front.style.color = 'white';
+            // restartBtn.style.border = '5px solid white';
+            // front.style.transform = 'translateY(-12px)';
+            // front.style.background = 'rgb(61, 207, 147)';
+            // front.style.cursor = 'pointer';
+            // front.style.color = 'white';
             //  console.log(words);
         }
 
@@ -60,13 +76,20 @@
             afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #636286)';
             afterwords.style.backgroundSize = '200% 10%';
             afterwords.style.animation = 'fadeBG 4s ease infinite';
-            restartBtn.style.border = '5px solid #bce5d0';
-            front.style.transform = 'translateY(-8px)';
-            front.style.background = 'rgb(67 147 115)';
-            front.style.cursor = 'auto';
-            front.style.color = '#aaa';
-            // console.log(words);
+            // restartBtn.style.border = '5px solid #bce5d0';
+            // front.style.transform = 'translateY(-8px)';
+            // front.style.background = 'rgb(67 147 115)';
+            // front.style.cursor = 'auto';
+            // front.style.color = '#aaa';
+            window.top.location = window.top.location;
+            console.log('restart');
         }
+
+        // function changeBGcolour() {
+        //     body.style.background = 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;';
+        //     body.style.background = 'linear-gradient(rgba(255, 0, 255, 1)';
+        //     document.getElementById('body').classList.add('fadeOutBtn');
+        // }
 
 
     </script>
@@ -91,7 +114,7 @@
             background-size: cover;
             animation: fadeBG 20s ease 1;
             background-attachment: fixed;
-            
+
         }
 
 
@@ -105,7 +128,7 @@
             border-right-color: rgba(187, 163, 163, 0.6);
             border-bottom-color: rgba(117, 100, 100, 0.9);
             border-left-color:rgba(242, 234, 234, 0.3); */
-           
+
         }
 
         .multiply {
@@ -145,7 +168,7 @@
 
         .fadeInBG {
             /* visibility: hidden; */
-            animation: fadeBG 10.6s forwards !important;
+            animation: fadeBG 1.6s forwards !important;
 
         }
 
@@ -154,9 +177,9 @@
                 background-position: 0% 50%
             }
 
-            50% {
-                background-position: 100% 50%
-            }
+            /* 50% {
+                background-position: 0% 20%
+            } */
 
             100% {
                 background-position: 0% 50%
@@ -170,10 +193,10 @@
                 max-height: 0%;
             }
 
-            60%  {
+            60% {
                 opacity: 0;
                 transform: translateY(-3.6rem);
-                max-height: 0%;
+                max-height: 40%;
             }
 
             100% {
@@ -185,7 +208,7 @@
 
         .moveY {
             position: relative;
-            animation: moveDown 1.6s;
+            animation: moveDown 2s ease 1;
 
         }
 
@@ -290,7 +313,7 @@
     </style>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" id="body">
 
 
     <!-- Begin page content -->
@@ -306,15 +329,29 @@
 
                     <textarea id="afterwords" class="textarea moveY"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
-                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY" id="pushable" onclick="cutuptext()">
+                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY" id="pushable"
+                        onclick="cutuptext()">
                         <span class="front">
                             Cut it up
                         </span>
                     </button>
-                    <button class="btn mt-3 text screen multiply pushable" id="restartBtn" onclick="restart()">
+                    <a href="javascript:history.back();"></a>
+                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY" id="restartBtn"
+                        onclick="restart()">
+
+
                         <span class="front" id="front">
                             Restart
                         </span>
+
+                    </button>
+                    </a>
+                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY float-right" id="changeBGcolour">
+
+                        <span class="front">
+                            Change background colour
+                        </span>
+
                     </button>
 
                 </div>
