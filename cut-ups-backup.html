@@ -1,57 +1,376 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="h-100" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>folio - cut ups</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>The Cut-Up Machine</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <script>
         $(document).ready(function () {
-            $('select').change(function(){
-                $('#beforewords').val($(this).val());
-            });
-        });
-        
-        function insertText(text) {
-            document.getElementById('before-words').value = words;
-        }
-        function cutuptext(text) {
-         
-            var beforewords = document.getElementById("beforewords").value;
-            var afterwords = document.getElementById("afterwords").value;
-            var wordscut=document.getElementById("afterwords").value;
+            $('[id="afterwords"]').animate({ height: '370px' });
+            $('.btnClick').animate({ height: '60px' });
 
-            afterwords.value = beforewords;
-            
-            
-            wordscut = afterwords.split(afterwords);
-            
-            //wordscut = beforewords.sort(() => Math.random() - 0.5);
-            
-           // wordscut = wordscut.join(" ");
-            
-            //wordscut = wordscut.charAt(1).toUpperCase() + wordscut.slice(1);
-           // wordscut = wordscut.replace(/([^.])$/, '$1.');
-           document.getElementById('afterwords').value = wordscut;
-            console.log(wordscut);
-    
+            $('#changeBGcolour').on('click', function () {
+                var color = 'rgba(255, 0, 0, .4)';
+                var color2 = 'rgba(0, 0, 255, .4)';
+                var img1 = 'url("img/backgroundText.png") no-repeat center center fixed';
+                var img2 = 'url("img/burroughs.png") no-repeat center center fixed';
+                var color3 = 'rgba(200, 0, 100, .4)';
+                var color4 = 'rgba(100, 0, 55, .4)';
+                var str = "linear-gradient(" + color + "," + color2 + ")" + "," + img1 + "," + "linear-gradient(" + color3 + "," + color4 + ")" + "," + img2 + "";
+                $("body").css("background", str);
+                $("body").css({ "background-size": "cover", "backgroundAttachment": "fixed" });
+                $("#changeBGcolour").hide();
+                // console.log('click');
+            })
+
+        });
+
+
+
+        function cutuptext() {
+            let words = document.getElementById('afterwords').value;
+            let captitalizeFirstLetterAfterFullStop = /(^|[.!?]\s+)([a-z])/g;
+            words = words.split(" ");
+            words = words.sort(() => Math.random() - 0.5);
+            words = words.join(" ");
+            words = words.charAt(0).toUpperCase() + words.slice(1);
+            words = words.replace(/\s+/g, " ");
+
+            /* Remove internal full stops */
+            //  words = words.replace(/\./g, ' ');
+
+            /* Capitalize first letter after a full stop */
+            words = words.replace(captitalizeFirstLetterAfterFullStop, (m, $1, $2) => $1 + $2.toUpperCase());
+
+            words = words.replace(/([^.])$/, '$1.');
+            document.getElementById('afterwords').value = words;
+            document.getElementById('restartBtn').classList.add('fadeInBtn');
+            //    document.getElementById('restart').style.visibility = 'visible';
+            document.getElementById('afterwords').style.background = 'white';
+            document.getElementById('afterwords').classList.add('fadeInBtn');
+            document.getElementById('afterwords').style.visibility = 'visible';
+            // restartBtn.style.border = '5px solid white';
+            // front.style.transform = 'translateY(-12px)';
+            // front.style.background = 'rgb(61, 207, 147)';
+            // front.style.cursor = 'pointer';
+            // front.style.color = 'white';
+            //  console.log(words);
         }
+
+        function restart() {
+            let wordsRefresh = "This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.";
+            document.getElementById('afterwords').value = wordsRefresh;
+            document.getElementById('afterwords').classList.remove('fadeInBtn');
+            //   document.getElementById('restart').classList.add('fadeOutBtn');       
+            //   document.getElementById('restart').classList.remove('fadeOutBtn');
+
+            // document.getElementById('restart').style.visibility = 'hidden';
+            afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #636286)';
+            afterwords.style.backgroundSize = '200% 10%';
+            afterwords.style.animation = 'fadeBG 4s ease infinite';
+            // restartBtn.style.border = '5px solid #bce5d0';
+            // front.style.transform = 'translateY(-8px)';
+            // front.style.background = 'rgb(67 147 115)';
+            // front.style.cursor = 'auto';
+            // front.style.color = '#aaa';
+            window.top.location = window.top.location;
+            console.log('restart');
+        }
+
+        // function changeBGcolour() {
+        //     body.style.background = 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;';
+        //     body.style.background = 'linear-gradient(rgba(255, 0, 255, 1)';
+        //     document.getElementById('body').classList.add('fadeOutBtn');
+        // }
+
 
     </script>
+    <style>
+        /* body {
+            background: linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            margin: 0;
+            background-attachment: fixed;
+
+        } */
+
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background: linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed,
+                linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
+            background-size: cover;
+            animation: fadeBG 20s ease 1;
+            background-attachment: fixed;
+
+        }
+
+
+        .text {
+            font: bolder 3rem "Alfa Slab One";
+            text-align: center;
+            margin: 0;
+            border: 8px solid rgba(29, 2, 15, .5);
+            /* border-radius: 20px;
+            border-top-color:  rgba(255,255,255, .6);
+            border-right-color: rgba(187, 163, 163, 0.6);
+            border-bottom-color: rgba(117, 100, 100, 0.9);
+            border-left-color:rgba(242, 234, 234, 0.3); */
+
+        }
+
+        .multiply {
+            color: white;
+            mix-blend-mode: multiply;
+            background-color: rgba(59, 2, 6, 1);
+        }
+
+        .screen {
+            color: rgb(241, 33, 33);
+            mix-blend-mode: hard-light;
+            background: rgba(168, 86, 57, .3);
+            text-shadow: 1px 1px 2px rgb(0 7 4);
+            padding: 1rem;
+            opacity: .9;
+        }
+
+        .textarea {
+            width: 100%;
+            opacity: .9;
+            font-size: 1.3rem;
+            font-family: 'Special Elite', cursive;
+            padding: 15px;
+            line-height: 2.5rem;
+            box-shadow: 0 0 26px rgb(233, 180, 204);
+            border: 8px solid rgb(31, 2, 2);
+            border-radius: 16px;
+            /* animation: fadeBG 4s ease infinite; */
+            background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
+            background-size: 200% 10%;
+            /* border-image: repeating-linear-gradient(60deg, #9f0c24, #440911, #d60b99 60px) 60; */
+        }
+
+        .textarea:focus {
+            outline: none;
+        }
+
+        .fadeInBG {
+            /* visibility: hidden; */
+            animation: fadeBG 1.6s forwards !important;
+
+        }
+
+        @keyframes fadeBG {
+            0% {
+                background-position: 0% 50%
+            }
+
+            /* 50% {
+                background-position: 0% 20%
+            } */
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes moveDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-3.6rem);
+                max-height: 0%;
+            }
+
+            60% {
+                opacity: 0;
+                transform: translateY(-3.6rem);
+                max-height: 40%;
+            }
+
+            100% {
+                opacity: .9;
+                transform: translateY(0);
+                max-height: 100%;
+            }
+        }
+
+        .moveY {
+            position: relative;
+            animation: moveDown 2s ease 1;
+
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+
+            }
+
+            100% {
+                opacity: .9;
+                visibility: visible;
+
+            }
+        }
+
+        .fadeInBtn {
+            /* visibility: hidden; */
+            animation: fadeIn 1.6s forwards !important;
+
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: .9;
+
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden;
+
+            }
+        }
+
+        .fadeOutBtn {
+            animation: fadeOut 1.6s forwards !important;
+
+
+        }
+
+        #restartBtn {
+            visibility: hidden;
+        }
+
+        .footer {
+            opacity: .7;
+        }
+
+        .pushable {
+            background: #104410;
+            padding: 0;
+            mix-blend-mode: normal;
+            font-size: 2.3rem;
+            border: 5px solid white;
+            border-radius: 19px;
+            opacity: .9;
+            color: white;
+
+        }
+
+        .pushable:focus {
+            outline: none;
+        }
+
+        .front {
+            display: block;
+            padding: 7px 26px;
+            border-radius: 16px;
+            font-size: 1.7rem;
+            text-shadow: 1px 1px 2px rgb(0, 7, 4);
+            background: rgb(61, 207, 147);
+            color: white;
+            transform: translateY(-12px);
+            border: 3px solid rgb(50, 107, 72);
+        }
+
+        .front:hover {
+            background: rgb(97, 225, 154);
+        }
+
+        .pushable:hover {
+            background: rgb(50, 105, 82);
+        }
+
+        .front:active {
+            outline: none;
+            background: rgb(15, 177, 64);
+        }
+
+
+        .pushable:active .front:active {
+            transform: translateY(-6px);
+
+        }
+
+        @media screen and (max-width: 414px) {
+            .text {
+                font: bolder 2rem "Alfa Slab One";
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <select id="quotes" >
-        <option value="select-a-quote">Select a quote</option>
-        <option value="The American upper-middle-class citizen is a composite of negatives. He is largely delineated by what he is not. Gains went further. He was not merely negative. He was positively invisible; a vague respectable presence. There is a certain kind of ghost that can only materialize with the aid of a sheet or other piece of cloth to give it outline. Gains was like that. He materialized in someone else’s overcoat.">Quote from article</option>
-        <option value="name002">IAMsam</option>
-    </select>
-    <textarea id="beforewords" name="beforewords" cols="80" rows="10"></textarea>
-    <textarea id="afterwords" cols="80" rows="10"></textarea>
-    <!-- <button id="btnClick" onclick="insertText()">Populate text</button> -->
-    <button id="btnClick1" onclick="cutuptext()">Cut it up</button>
+<body class="d-flex flex-column h-100" id="body">
+
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-10 col-sm-12 mt-5">
+
+                    <p class="text screen mb-5">The Cut-Up Machine</p>
+
+                    <textarea id="afterwords" class="textarea moveY"
+                        oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
+                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY" id="pushable"
+                        onclick="cutuptext()">
+                        <span class="front">
+                            Cut it up
+                        </span>
+                    </button>
+                    
+                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY" id="restartBtn"
+                        onclick="restart()">
+
+
+                        <span class="front" id="front">
+                            Restart
+                        </span>
+
+                    </button>
+                   
+                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY float-right" id="changeBGcolour">
+
+                        <span class="front">
+                            Change background
+                        </span>
+
+                    </button>
+
+                </div>
+                <div class="col-md-1">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="row">
+            <div class="col-12 text-black text-center">
+                Image credit: Extract from invitation to William S. Burroughs Centenary Exhibition, the "Cut-Up"
+                Technique / Boo Hurray – Emory University
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
 </body>
 
 </html>

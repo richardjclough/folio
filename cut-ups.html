@@ -17,19 +17,17 @@
             $('[id="afterwords"]').animate({ height: '370px' });
             $('.btnClick').animate({ height: '60px' });
 
-            $('#changeBGcolour').on('click', function () {
-                var color = 'rgba(255, 0, 0, .4)';
-                var color2 = 'rgba(0, 0, 255, .4)';
-                var img1 = 'url("img/backgroundText.png") no-repeat center center fixed';
-                var img2 = 'url("img/burroughs.png") no-repeat center center fixed';
-                var color3 = 'rgba(200, 0, 100, .4)';
-                var color4 = 'rgba(100, 0, 55, .4)';
-                var str = "linear-gradient(" + color + "," + color2 + ")" + "," + img1 + "," + "linear-gradient(" + color3 + "," + color4 + ")" + "," + img2 + "";
-                $("body").css("background", str);
-                $("body").css({ "background-size": "cover", "backgroundAttachment": "fixed", "animation": "fadeBG 20s ease 1"});
-                $("#changeBGcolour").hide();
-                // console.log('click');
-            })
+            // $('#changeBGcolourBtn').on('click', function () {
+            //     var color = 'rgba(255, 0, 0, .4)';
+            //     var color2 = 'rgba(0, 0, 255, .4)';
+            //     var img1 = 'url("img/backgroundText.png") no-repeat center center fixed';
+            //     var img2 = 'url("img/burroughs.png") no-repeat center center fixed';
+            //     var color3 = 'rgba(200, 0, 100, .4)';
+            //     var color4 = 'rgba(100, 0, 55, .4)';
+            //     var str = "linear-gradient(" + color + "," + color2 + ")" + "," + img1 + "," + "linear-gradient(" + color3 + "," + color4 + ")" + "," + img2 + "";
+            //     $("body").css("background", str);
+            //     $("body").css({ "background-size": "cover", "backgroundAttachment": "fixed", "animation": "fadeBG 20s ease 1" });
+            // })
 
         });
 
@@ -91,6 +89,10 @@
         //     document.getElementById('body').classList.add('fadeOutBtn');
         // }
 
+        function changeBGcolourBtn() {
+            $("body").toggleClass("dark");
+        }
+
 
     </script>
     <style>
@@ -110,6 +112,14 @@
 
         body {
             background: linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed, linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
+            background-size: cover;
+            animation: fadeBG 20s ease 1;
+            background-attachment: fixed;
+
+        }
+
+        body.dark {
+            background: linear-gradient(rgba(255, 0, 0, .4), rgba(0, 0, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed, linear-gradient(rgba(200, 0, 255, 0), rgba(100, 0, 55, .4)), url("img/burroughs.png") no-repeat center center fixed;
             background-size: cover;
             animation: fadeBG 20s ease 1;
             background-attachment: fixed;
@@ -155,7 +165,6 @@
             box-shadow: 0 0 26px rgb(233, 180, 204);
             border: 8px solid rgb(31, 2, 2);
             border-radius: 16px;
-            /* animation: fadeBG 4s ease infinite; */
             background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
             background-size: 200% 10%;
             /* border-image: repeating-linear-gradient(60deg, #9f0c24, #440911, #d60b99 60px) 60; */
@@ -250,7 +259,7 @@
         }
 
         #restartBtn {
-            visibility: hidden;
+            /* visibility: hidden; */
         }
 
         .footer {
@@ -277,7 +286,7 @@
             display: block;
             padding: 7px 26px;
             border-radius: 16px;
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             text-shadow: 1px 1px 2px rgb(0, 7, 4);
             background: rgb(61, 207, 147);
             color: white;
@@ -304,9 +313,31 @@
 
         }
 
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 480px) {
             .text {
                 font: bolder 2rem "Alfa Slab One";
+            }
+
+            #changeBGcolourBtn {
+                margin: .9rem 0;
+                
+            }
+
+            .text-right {
+                text-align: center!important;
+            }
+
+            #restartBtn {
+                float: right;
+            }
+
+            .front {
+                font-size: 1rem;
+            }
+
+            .textarea {
+                font-size: 1rem;
+                line-height: 1.7rem;
             }
         }
     </style>
@@ -316,47 +347,40 @@
 
 
     <!-- Begin page content -->
-    <main class="flex-shrink-0">
-        <div class="container ">
+    <main>
+        <div class="container">
             <div class="row">
-                <div class="col-md-1">
-
-                </div>
-                <div class="col-md-10 col-sm-12 mt-5">
-
-                    <p class="text screen mb-5">The Cut-Up Machine</p>
-
+                <!-- <div class="d-flex justify-content-start mb-3"> -->
+                <div class="col-12">
+                    <p class="text screen my-3">The Cut-Up Machine</p>
                     <textarea id="afterwords" class="textarea moveY"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique made famous by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, this text will be randomly cut up. If you keep clicking the button the text will continually be cut up. You can add your own text by typing or pasting text in here too.</textarea>
-                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY" id="pushable"
-                        onclick="cutuptext()">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <button class="btn mr-3 text screen multiply pushable moveY" id="pushable" onclick="cutuptext()">
                         <span class="front">
                             Cut it up
                         </span>
                     </button>
-                    
-                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY" id="restartBtn"
-                        onclick="restart()">
-
-
+                </div>
+                <div class="col">
+                    <button class="btn text screen multiply pushable moveY" id="restartBtn" onclick="restart()">
                         <span class="front" id="front">
                             Restart
                         </span>
-
                     </button>
-                   
-                    <button class="btn mt-3 mr-3 text screen multiply pushable moveY float-right" id="changeBGcolour">
-
+                </div>
+                <div class="col text-right">
+                    <button class="btn text screen multiply pushable moveY" id="changeBGcolourBtn"
+                        onclick="changeBGcolourBtn()">
                         <span class="front">
                             Change background
                         </span>
-
                     </button>
-
                 </div>
-                <div class="col-md-1">
-
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </main>
