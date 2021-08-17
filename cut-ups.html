@@ -166,7 +166,8 @@
             border: 8px solid rgb(31, 2, 2);
             border-radius: 16px;
             background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
-            background-size: 200% 10%;
+            animation: fadeBG 5s ease infinite!important;
+            background-size:200% 400%;
             /* border-image: repeating-linear-gradient(60deg, #9f0c24, #440911, #d60b99 60px) 60; */
         }
 
@@ -258,9 +259,9 @@
 
         }
 
-        #restartBtn {
-            /* visibility: hidden; */
-        }
+        /* #restartBtn {
+            visibility: hidden;
+        } */
 
         .footer {
             opacity: .7;
@@ -284,7 +285,7 @@
 
         .front {
             display: block;
-            padding: 7px 26px;
+            padding: .6rem 1.2rem;
             border-radius: 16px;
             font-size: 1.5rem;
             text-shadow: 1px 1px 2px rgb(0, 7, 4);
@@ -313,15 +314,15 @@
 
         }
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 767px) {
             .text {
                 font: bolder 2rem "Alfa Slab One";
             }
 
-            #changeBGcolourBtn {
+            /* #changeBGcolourBtn {
                 margin: .9rem 0;
                 
-            }
+            } */
 
             .text-right {
                 text-align: center!important;
@@ -332,7 +333,8 @@
             }
 
             .front {
-                font-size: 1rem;
+                font-size: .7rem;
+            
             }
 
             .textarea {
@@ -348,7 +350,7 @@
 
     <!-- Begin page content -->
     <main>
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <!-- <div class="d-flex justify-content-start mb-3"> -->
                 <div class="col-12">
@@ -358,21 +360,22 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col">
-                    <button class="btn mr-3 text screen multiply pushable moveY" id="pushable" onclick="cutuptext()">
+                <div class="d-flex">
+                <div class="flex-fill text-left">
+                    <button class="btn text screen multiply pushable moveY" id="pushable" onclick="cutuptext()">
                         <span class="front">
                             Cut it up
                         </span>
                     </button>
                 </div>
-                <div class="col">
+                <div class="flex-fill text-left">
                     <button class="btn text screen multiply pushable moveY" id="restartBtn" onclick="restart()">
                         <span class="front" id="front">
                             Restart
                         </span>
                     </button>
                 </div>
-                <div class="col text-right">
+                <div class="flex-fill text-right">
                     <button class="btn text screen multiply pushable moveY" id="changeBGcolourBtn"
                         onclick="changeBGcolourBtn()">
                         <span class="front">
@@ -380,7 +383,7 @@
                         </span>
                     </button>
                 </div>
-                <!-- </div> -->
+                </div>
             </div>
         </div>
     </main>
