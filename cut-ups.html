@@ -32,7 +32,6 @@
         });
 
 
-
         function cutuptext() {
             let words = document.getElementById('afterwords').value;
             let captitalizeFirstLetterAfterFullStop = /(^|[.!?]\s+)([a-z])/g;
@@ -50,11 +49,15 @@
 
             words = words.replace(/([^.])$/, '$1.');
             document.getElementById('afterwords').value = words;
-            document.getElementById('restartBtn').classList.add('fadeInBtn');
-            //    document.getElementById('restart').style.visibility = 'visible';
+            // document.getElementById('restartBtn').classList.add('fadeInBtn');
+
+            // document.getElementById('restart').style.visibility = 'visible';
             document.getElementById('afterwords').style.background = 'white';
             document.getElementById('afterwords').classList.add('fadeInBtn');
             document.getElementById('afterwords').style.visibility = 'visible';
+            document.getElementById('frontRestart').style.transform = 'translateY(-12px)';
+            document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
+            document.getElementById('restartBtn').classList.remove('disabled');
             // restartBtn.style.border = '5px solid white';
             // front.style.transform = 'translateY(-12px)';
             // front.style.background = 'rgb(61, 207, 147)';
@@ -79,7 +82,10 @@
             // front.style.background = 'rgb(67 147 115)';
             // front.style.cursor = 'auto';
             // front.style.color = '#aaa';
-            window.top.location = window.top.location;
+            document.getElementById('frontRestart').style.transform = 'translateY(-6px)';
+            document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
+            document.getElementById('restartBtn').classList.add('disabled');
+            // window.top.location = window.top.location;
             console.log('restart');
         }
 
@@ -255,13 +261,8 @@
 
         .fadeOutBtn {
             animation: fadeOut 1.6s forwards !important;
-
-
         }
 
-        /* #restartBtn {
-            visibility: hidden;
-        } */
 
         .footer {
             opacity: .7;
@@ -299,6 +300,13 @@
             background: rgb(97, 225, 154);
         }
 
+        #restartBtn > .front {
+            
+            transform: translateY(-6px);
+            background: rgb(61, 207, 147);
+            
+        }
+
         .pushable:hover {
             background: rgb(50, 105, 82);
         }
@@ -333,12 +341,13 @@
             }
 
             .front {
-                font-size: .7rem;
+                font-size: 1.1rem;
+                padding: .4rem .6rem;
             
             }
 
             .textarea {
-                font-size: 1rem;
+                font-size: 1.1rem;
                 line-height: 1.7rem;
             }
         }
@@ -369,8 +378,8 @@
                     </button>
                 </div>
                 <div class="flex-fill text-left">
-                    <button class="btn text screen multiply pushable moveY" id="restartBtn" onclick="restart()">
-                        <span class="front" id="front">
+                    <button class="btn text screen multiply pushable moveY disabled" id="restartBtn" onclick="restart()">
+                        <span class="front" id="frontRestart">
                             Restart
                         </span>
                     </button>
