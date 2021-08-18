@@ -57,7 +57,11 @@
             document.getElementById('afterwords').style.visibility = 'visible';
             document.getElementById('frontRestart').style.transform = 'translateY(-12px)';
             document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
+            document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
+            // document.getElementById('frontRestart').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
+            // document.getElementById('restartBtn').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
             document.getElementById('restartBtn').classList.remove('disabled');
+            document.getElementById('frontRestart').classList.add('addTextShadow');
             // restartBtn.style.border = '5px solid white';
             // front.style.transform = 'translateY(-12px)';
             // front.style.background = 'rgb(61, 207, 147)';
@@ -84,9 +88,10 @@
             // front.style.color = '#aaa';
             document.getElementById('frontRestart').style.transform = 'translateY(-6px)';
             document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
+            document.getElementById('frontRestart').classList.remove('addTextShadow');
             document.getElementById('restartBtn').classList.add('disabled');
             // window.top.location = window.top.location;
-            console.log('restart');
+            // console.log('restart');
         }
 
         // function changeBGcolour() {
@@ -300,10 +305,21 @@
             background: rgb(97, 225, 154);
         }
 
-        #restartBtn > .front {
+        .restart {
             
             transform: translateY(-6px);
             background: rgb(61, 207, 147);
+            text-shadow: 0px 0px 0px rgb(0, 0, 0);
+            
+        }
+
+        .removeTextShadow {
+            text-shadow: 0px 0px 0px rgb(0, 0, 0);
+            
+        }
+
+        .addTextShadow {
+            text-shadow: 1px 1px 2px rgb(0, 7, 4);
             
         }
 
@@ -319,6 +335,7 @@
 
         .pushable:active .front:active {
             transform: translateY(-6px);
+            text-shadow: 0px 0px 0px rgb(0 0 0);
 
         }
 
@@ -371,7 +388,7 @@
             <div class="row mt-3">
                 <div class="d-flex">
                 <div class="flex-fill text-left">
-                    <button class="btn text screen multiply pushable moveY" id="pushable" onclick="cutuptext()">
+                    <button class="btn text screen multiply pushable moveY" id="cutItUpBtn" onclick="cutuptext()">
                         <span class="front">
                             Cut it up
                         </span>
@@ -379,7 +396,7 @@
                 </div>
                 <div class="flex-fill text-left">
                     <button class="btn text screen multiply pushable moveY disabled" id="restartBtn" onclick="restart()">
-                        <span class="front" id="frontRestart">
+                        <span class="front restart" id="frontRestart">
                             Restart
                         </span>
                     </button>
