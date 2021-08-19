@@ -89,6 +89,9 @@
             document.getElementById('frontRestart').style.transform = 'translateY(-6px)';
             document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
             document.getElementById('frontRestart').classList.remove('addTextShadow');
+            document.getElementById('frontRestart').classList.add('btnTextDepressed');
+
+            
             document.getElementById('restartBtn').classList.add('disabled');
             // window.top.location = window.top.location;
             // console.log('restart');
@@ -123,9 +126,9 @@
 
         @-webkit-keyframes l_2_r {
             from {
-                background-position: 10% 0;
+                background-position: 10% 100%;
                 background-attachment: fixed;
-                background-size: 380vh, 150vw, 100%;
+                background-size: 380vh, 250vw, 100%;
                 /* background-size: 200% 200% 100%; */
 
             }
@@ -145,7 +148,7 @@
 
             /* animation: fadeBG 20s ease 1; */
             /* background-attachment: fixed; */
-            -webkit-animation: l_2_r 4s ease 1;
+            -webkit-animation: l_2_r 4s ease ;
             background-size: 280vh, 150vw, 100%;
 
 
@@ -327,11 +330,13 @@
             background: rgb(97, 225, 154);
         }
 
-        .restart {
+       .restart {
 
             transform: translateY(-6px);
             background: rgb(61, 207, 147);
             text-shadow: 0px 0px 0px rgb(0, 0, 0);
+            color: rgb(239,239,233);
+            
 
         }
 
@@ -345,14 +350,18 @@
 
         }
 
+        .btnTextDepressed {
+            color: rgb(239,239,233);
+        }
+
         .pushable:hover {
             background: rgb(50, 105, 82);
         }
 
-        .front:active {
+        /* .front:active {
             outline: none;
             background: rgb(15, 177, 64);
-        }
+        } */
 
 
         .pushable:active .front:active {
