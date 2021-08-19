@@ -121,24 +121,41 @@
             width: 100%;
         }
 
+        @-webkit-keyframes l_2_r {
+            from {
+                background-position: 10% 0;
+                background-attachment: fixed;
+                background-size: 380vh, 150vw, 100%;
+                /* background-size: 200% 200% 100%; */
+
+            }
+
+            to {
+                background-position: auto auto;
+                background-size: 280vh, 150vw, 100%;
+                background-attachment: fixed;
+                
+
+            }
+        }
+
         body {
             background: linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed, linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
-            background-size: 280vh, 150vw, 100%;
-            animation: fadeBG 20s ease 1;
+            /* background-size: 280vh, 150vw, 50%; */
+
+            /* animation: fadeBG 20s ease 1; */
             /* background-attachment: fixed; */
+            -webkit-animation: l_2_r 4s ease 1;
+            background-size: 280vh, 150vw, 100%;
+
 
         }
 
-        /* #body {
-           background-size: 50% 50%;
-
-        } */
-
         body.dark {
             background: linear-gradient(rgba(255, 0, 0, .4), rgba(0, 0, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed, linear-gradient(rgba(200, 0, 255, 0), rgba(100, 0, 55, .4)), url("img/burroughs.png") no-repeat center center fixed;
+            -webkit-animation: l_2_r 4s ease 1;
             background-size: 280vh, 150vw, 100%;
-            animation: fadeBG 20s ease 1;
-            background-attachment: fixed;
+
 
         }
 
@@ -381,7 +398,7 @@
     </style>
 </head>
 
-<body class="d-flex flex-column h-100" id="body">
+<body class="d-flex flex-column h-100">
 
 
     <!-- Begin page content -->
@@ -425,7 +442,7 @@
         </div>
     </main>
 
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-3 py-3 bg-light">
         <div class="row">
             <div class="col-12 text-black text-center">
                 Image credit: Extract from invitation to William S. Burroughs Centenary Exhibition, the "Cut-Up"
