@@ -123,15 +123,20 @@
 
         body {
             background: linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed, linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
-            background-size: cover;
+            background-size: 280vh, 150vw, 100%;
             animation: fadeBG 20s ease 1;
-            background-attachment: fixed;
+            /* background-attachment: fixed; */
 
         }
 
+        /* #body {
+           background-size: 50% 50%;
+
+        } */
+
         body.dark {
             background: linear-gradient(rgba(255, 0, 0, .4), rgba(0, 0, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed, linear-gradient(rgba(200, 0, 255, 0), rgba(100, 0, 55, .4)), url("img/burroughs.png") no-repeat center center fixed;
-            background-size: cover;
+            background-size: 280vh, 150vw, 100%;
             animation: fadeBG 20s ease 1;
             background-attachment: fixed;
 
@@ -177,8 +182,8 @@
             border: 8px solid rgb(31, 2, 2);
             border-radius: 16px;
             background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
-            animation: fadeBG 5s ease infinite!important;
-            background-size:200% 400%;
+            animation: fadeBG 5s ease infinite !important;
+            background-size: 200% 400%;
             /* border-image: repeating-linear-gradient(60deg, #9f0c24, #440911, #d60b99 60px) 60; */
         }
 
@@ -282,7 +287,7 @@
             border-radius: 19px;
             opacity: .9;
             color: white;
-
+            box-shadow: 3px 3px 6px rgb(87, 70, 77) !important;
         }
 
         .pushable:focus {
@@ -306,21 +311,21 @@
         }
 
         .restart {
-            
+
             transform: translateY(-6px);
             background: rgb(61, 207, 147);
             text-shadow: 0px 0px 0px rgb(0, 0, 0);
-            
+
         }
 
         .removeTextShadow {
             text-shadow: 0px 0px 0px rgb(0, 0, 0);
-            
+
         }
 
         .addTextShadow {
             text-shadow: 1px 1px 2px rgb(0, 7, 4);
-            
+
         }
 
         .pushable:hover {
@@ -340,6 +345,11 @@
         }
 
         @media screen and (max-width: 767px) {
+
+            /* body {
+                background-size: 200vh, 200%, 100%;
+            } */
+
             .text {
                 font: bolder 2rem "Alfa Slab One";
             }
@@ -350,7 +360,7 @@
             } */
 
             .text-right {
-                text-align: center!important;
+                text-align: center !important;
             }
 
             #restartBtn {
@@ -358,25 +368,25 @@
             }
 
             .front {
-                font-size: 1.1rem;
+                font-size: .94rem;
                 padding: .4rem .6rem;
-            
+
             }
 
             .textarea {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 line-height: 1.7rem;
             }
         }
     </style>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" id="body">
 
 
     <!-- Begin page content -->
     <main>
-        <div class="container" >
+        <div class="container">
             <div class="row">
                 <!-- <div class="d-flex justify-content-start mb-3"> -->
                 <div class="col-12">
@@ -387,28 +397,29 @@
             </div>
             <div class="row mt-3">
                 <div class="d-flex">
-                <div class="flex-fill text-left">
-                    <button class="btn text screen multiply pushable moveY" id="cutItUpBtn" onclick="cutuptext()">
-                        <span class="front">
-                            Cut it up
-                        </span>
-                    </button>
-                </div>
-                <div class="flex-fill text-left">
-                    <button class="btn text screen multiply pushable moveY disabled" id="restartBtn" onclick="restart()">
-                        <span class="front restart" id="frontRestart">
-                            Restart
-                        </span>
-                    </button>
-                </div>
-                <div class="flex-fill text-right">
-                    <button class="btn text screen multiply pushable moveY" id="changeBGcolourBtn"
-                        onclick="changeBGcolourBtn()">
-                        <span class="front">
-                            Change background
-                        </span>
-                    </button>
-                </div>
+                    <div class="flex-fill text-left">
+                        <button class="btn text screen multiply pushable moveY" id="cutItUpBtn" onclick="cutuptext()">
+                            <span class="front">
+                                Cut it up
+                            </span>
+                        </button>
+                    </div>
+                    <div class="flex-fill text-left">
+                        <button class="btn text screen multiply pushable moveY float-left disabled" id="restartBtn"
+                            onclick="restart()">
+                            <span class="front restart" id="frontRestart">
+                                Restart
+                            </span>
+                        </button>
+                    </div>
+                    <div class="flex-fill text-right">
+                        <button class="btn text screen multiply pushable moveY" id="changeBGcolourBtn"
+                            onclick="changeBGcolourBtn()">
+                            <span class="front">
+                                Change background
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
