@@ -29,12 +29,12 @@
             //     $("body").css({ "background-size": "cover", "backgroundAttachment": "fixed", "animation": "fadeBG 20s ease 1" });
             // })
 
-        $(".button").click(function () {
-            console.log('abc');
-            $("body").toggleClass("dark");
-            $(".button span").html($(".button span").html() == 'Background dark' ? 'Background light' : 'Background dark');
+            $(".button").click(function () {
+                console.log('abc');
+                $("body").toggleClass("dark");
+                $(".button span").html($(".button span").html() == 'Background dark' ? 'Background light' : 'Background dark');
 
-        });
+            });
 
         });
 
@@ -117,9 +117,9 @@
 
         } */
 
-        html {
+        html, body {
             height: 100%;
-            
+            min-height: 100vh;
         }
 
         @-webkit-keyframes bgAnimatiom {
@@ -151,7 +151,7 @@
             -webkit-animation: bgAnimatiom 4s ease;
             background-attachment: fixed;
             background-size: 100vw, 100vw, 250vh;
-            overflow: hidden; /* prevents sideways scroll so footer is always 100% browser width */
+
         }
 
         body.dark {
@@ -410,7 +410,7 @@
     </style>
 </head>
 
-<body class="d-flex flex-column h-100" id="body">
+<body class="d-flex flex-column min-vh-100" id="body">
 
 
     <!-- Begin page content -->
@@ -442,7 +442,8 @@
                         </button>
                     </div>
                     <div class="flex-fill col-6 text-right">
-                        <button type="submit" class="btn button text screen multiply pushable moveY float-right" value="True">
+                        <button type="submit" class="btn button text screen multiply pushable moveY float-right"
+                            value="True">
                             <span class="front">Background dark</span>
                         </button>
                     </div>
