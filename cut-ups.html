@@ -119,7 +119,7 @@
 
         html {
             height: 100%;
-            width: 100%;
+            
         }
 
         @-webkit-keyframes bgAnimatiom {
@@ -151,7 +151,7 @@
             -webkit-animation: bgAnimatiom 4s ease;
             background-attachment: fixed;
             background-size: 100vw, 100vw, 250vh;
-
+            overflow: hidden; /* prevents sideways scroll so footer is always 100% browser width */
         }
 
         body.dark {
