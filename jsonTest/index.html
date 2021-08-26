@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <title>Wongdoody test</title>
+    <script>
+        fetch("items.json")
+            .then(function (response) {
+                return response.json();
+
+            })
+            .then(function (myJson) {
+                var text = (JSON.stringify(myJson));
+                //https://stackoverflow.com/questions/9329446/for-each-over-an-array-in-javascript 
+                var index;
+                var items;
+                var obj = JSON.parse(text).items;
+                for (index = 0; index < obj.length; ++index) {
+
+                    var id_number = obj[index]['id'];
+                    var title_text = obj[index]['title'];
+                    var desc_text = obj[index]['description'];
+                    var doc_size = obj[index]['documentSize'];
+
+                    document.getElementById("idNumber").innerHTML += '<br>' + id_number;
+                    document.getElementById("titleText").innerHTML += '<br>' + title_text;
+                    document.getElementById("descText").innerHTML += '<br>' + desc_text;
+                    document.getElementById("docSize").innerHTML += '<br>' + doc_size;
+
+                    if (doc_size != 0) {
+                        console.log(doc_size);
+                    };
+                }
+                // var test = '123456';
+                // document.getElementById("testText").innerHTML += test;
+                console.log(obj);
+
+
+
+            });
+
+        /* Replace all SVG images with inline SVG */
+
+        $(document).ready(function () {
+            $('img[src$=".svg"]').each(function () {
+                var $img = jQuery(this);
+                var imgURL = $img.attr('src');
+                var attributes = $img.prop("attributes");
+
+                $.get(imgURL, function (data) {
+                    // Get the SVG tag, ignore the rest
+                    var $svg = jQuery(data).find('svg');
+
+                    // Remove any invalid XML tags
+                    $svg = $svg.removeAttr('xmlns:a');
+
+                    // Loop through IMG attributes and apply on SVG
+                    $.each(attributes, function () {
+                        $svg.attr(this.name, this.value);
+                    });
+
+                    // Replace IMG with SVG
+                    $img.replaceWith($svg);
+                }, 'xml');
+            });
+        });
+
+    </script>
+</head>
+
+<body class="d-flex">
+    <div class="container">
+        <div class="card div1">
+            <div class="card-body">
+                <h3 class="card-title" id="titleText"></h3>
+                <div class="card-text" id="idNumber">
+                </div>
+                <div class="card-text" id="descText">
+                </div>
+                <div class="card-text" id="docSize">
+                </div>
+            </div>
+            <div class="d-flex card-footer bg-transparent" style="padding: 0;">
+                <div>
+
+                </div>
+                <div class="arrowBG">
+                    <img alt="right arrow" class="arrowIcon white svg" src="svg/arrow-right.svg">
+                </div>
+            </div>
+        </div>
+        <div class="card div2 item-2">
+            <div class="card-body">
+                <div class="card-title" id="titleText"></div>
+                <div class="card-text" id="idNumber">
+                </div>
+                <div class="card-text" id="descText">
+                </div>
+            </div>
+            <div class="d-flex card-footer bg-transparent">
+                <div>
+
+                </div>
+                <div>
+                    <img alt="right arrow" class="svg arrowIcon" src="svg/arrow-right.svg">
+                </div>
+            </div>
+        </div>
+        <div class="card div3 item-3">
+            <div class="card-body">
+                <div class="card-title" id="titleText"></div>
+                <div class="card-text" id="idNumber">
+                </div>
+                <div class="card-text" id="descText">
+                </div>
+            </div>
+            <div class="d-flex card-footer bg-transparent">
+                <div>
+
+                </div>
+                <div>
+                    <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
+                </div>
+            </div>
+        </div>
+        <div class="card div4 item-4">
+            <div class="card-body">
+                <h4>
+                </h4>
+            </div>
+            <div class="d-flex card-footer bg-transparent">
+                <div>
+                    <img alt="document icon" class="docIcon" src="svg/document.svg">
+                    <span class="card-text">PDF (152KB)</span>
+                </div>
+                <div>
+                    <img alt="down arrow" class="arrowIcon" src="svg/arrow-down.svg">
+                </div>
+            </div>
+        </div>
+        <div class="card div5 item-5">
+            <div class="card-body">
+                <h4>
+                </h4>
+            </div>
+            <div class="d-flex card-footer bg-transparent">
+                <div>
+
+                </div>
+                <div>
+                    <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
+                </div>
+            </div>
+        </div>
+        <div class="card div6 item-6">
+            <div class="card-body">
+                <h4>
+                </h4>
+            </div>
+            <div class="d-flex card-footer bg-transparent">
+                <div>
+                    <img alt="document icon"  class="docIcon" src="svg/document.svg">
+                    <span class="card-text">PDF (152KB)</span>
+                </div>
+                <div>
+                    <img alt="down arrow" class="arrowIcon" src="svg/arrow-down.svg">
+                </div>
+            </div>
+        </div>
+        <div class="card div7 item-7">
+            <div class="card-body">
+                <h4>
+                </h4>
+            </div>
+            <div class="d-flex card-footer bg-transparent">
+                <div>
+
+                </div>
+                <div>
+                    <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
