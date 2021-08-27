@@ -1,8 +1,4 @@
-html, body {
-    /* height: 100%; */
-}
-
-/* html, body, div, span, object, iframe,
+html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
@@ -21,7 +17,7 @@ time, mark, audio, video {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
-} */
+}
 
 
 body {
@@ -43,10 +39,9 @@ body {
 .container > .card {
     background: white;
     border: 1px solid #ccc;
-    /* min-height:300px; */
     border-radius: 0;
     padding-top:2rem;
-    min-height: 21rem;
+    min-height: 22rem;
 }
 
 

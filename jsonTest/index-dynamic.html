@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +23,7 @@
             })
             .then(function (myJson) {
                 var text = (JSON.stringify(myJson));
-                //https://stackoverflow.com/questions/9329446/for-each-over-an-array-in-javascript 
                 var index;
-                var items;
                 var obj = JSON.parse(text).items;
                 for (index = 0; index < obj.length; ++index) {
 
@@ -45,9 +44,6 @@
                 // var test = '123456';
                 // document.getElementById("testText").innerHTML += test;
                 console.log(obj);
-
-
-
             });
 
         /* Replace all SVG images with inline SVG */
@@ -110,7 +106,6 @@
             </div>
             <div class="d-flex card-footer bg-transparent">
                 <div>
-
                 </div>
                 <div>
                     <img alt="right arrow" class="svg arrowIcon" src="svg/arrow-right.svg">
@@ -152,13 +147,11 @@
         <div class="card div5 item-5">
             <div class="card-body">
                 <h4 class="card-title" id="titleText">
-                    
                 </h4>
-                
+
             </div>
             <div class="d-flex card-footer bg-transparent">
                 <div>
-
                 </div>
                 <div>
                     <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
@@ -172,7 +165,7 @@
             </div>
             <div class="d-flex card-footer bg-transparent">
                 <div>
-                    <img alt="document icon"  class="docIcon" src="svg/document.svg">
+                    <img alt="document icon" class="docIcon" src="svg/document.svg">
                     <span class="card-text">PDF (152KB)</span>
                 </div>
                 <div>
@@ -187,7 +180,6 @@
             </div>
             <div class="d-flex card-footer bg-transparent">
                 <div>
-
                 </div>
                 <div>
                     <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
@@ -196,5 +188,4 @@
         </div>
     </div>
 </body>
-
 </html>
