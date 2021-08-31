@@ -16,35 +16,6 @@
 
     <title>Wongdoody test - inline</title>
     <script>
-        fetch("items.json")
-            .then(function (response) {
-                return response.json();
-
-            })
-            .then(function (myJson) {
-                var text = (JSON.stringify(myJson));
-                var index;
-                var obj = JSON.parse(text);
-                for (index = 0; index < obj.length; ++index) {
-
-                    var id_number = obj[index]['id'];
-                    var title_text = obj[index]['title'];
-                    var desc_text = obj[index]['description'];
-                    var doc_size = obj[index]['documentSize'];
-
-                    document.getElementById("idNumber").innerHTML += '<br>' + id_number;
-                    document.getElementById("titleText").innerHTML += '<br>' + title_text;
-                    document.getElementById("descText").innerHTML += '<br>' + desc_text;
-                    document.getElementById("docSize").innerHTML += '<br>' + doc_size;
-
-                    if (doc_size != 0) {
-                        console.log(doc_size);
-                    };
-                }
-                // var test = '123456';
-                // document.getElementById("testText").innerHTML += test;
-                console.log(obj);
-            });
 
         /* Replace all SVG images with inline SVG */
 
@@ -78,6 +49,7 @@
 <body class="d-flex">
     <div class="container">
         <div class="card div1">
+           
             <div class="card-body">
                 <h3 class="card-title">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit nam placerat mi eget dolor efficitur
@@ -99,6 +71,7 @@
                     <img alt="right arrow" class="arrowIcon white svg" src="svg/arrow-right.svg">
                 </div>
             </div>
+            <a href="http://www.google.com.au" class="stretched-link"></a>
         </div>
         <div class="card div2 item-2">
             <div class="card-body">
@@ -113,6 +86,7 @@
                     <img alt="right arrow" class="svg arrowIcon" src="svg/arrow-right.svg">
                 </div>
             </div>
+            <a href="http://www.google.com.au" class="stretched-link"></a>
         </div>
         <div class="card div3 item-3">
             <div class="card-body">
@@ -127,6 +101,7 @@
                     <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
                 </div>
             </div>
+            <a href="http://www.google.com.au" class="stretched-link"></a>
         </div>
         <div class="card div4 item-4">
             <div class="card-body">
@@ -143,6 +118,7 @@
                     <img alt="down arrow" class="arrowIcon" src="svg/arrow-down.svg">
                 </div>
             </div>
+            <a href="http://www.google.com.au" class="stretched-link"></a>
         </div>
         <div class="card div5 item-5">
             <div class="card-body">
@@ -158,6 +134,7 @@
                     <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
                 </div>
             </div>
+            <a href="http://www.google.com.au" class="stretched-link"></a>
         </div>
         <div class="card div6 item-6">
             <div class="card-body">
@@ -174,6 +151,7 @@
                     <img alt="down arrow" class="arrowIcon" src="svg/arrow-down.svg">
                 </div>
             </div>
+            <a href="http://www.google.com.au" class="stretched-link"></a>
         </div>
         <div class="card div7 item-7">
             <div class="card-body">
@@ -188,7 +166,9 @@
                     <img alt="right arrow" class="arrowIcon" src="svg/arrow-right.svg">
                 </div>
             </div>
+            <a href="http://www.google.com.au" class="stretched-link"></a>
         </div>
     </div>
 </body>
+
 </html>

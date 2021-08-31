@@ -64,6 +64,11 @@ body {
     animation: fadeIn 1.4s ease 1;
 }
 
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: .3;
@@ -122,7 +127,7 @@ svg.docIcon path {
 
 .arrowBG {
     background-color: rgb(21, 125, 173);
-    padding:.8rem 1.5rem;
+    padding:.6rem 1.2rem;
 }
 
 p, .card-text {
@@ -138,7 +143,7 @@ p, .card-text {
 }
 
 .card-footer {
-    padding-bottom: .9rem !important;
+    padding-bottom: .6rem !important;
 }
 
 .div1 > .card-footer {
