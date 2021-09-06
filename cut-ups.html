@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <script>
         $(document).ready(function () {
             $('[id="afterwords"]').animate({ height: '370px' });
@@ -38,15 +39,15 @@
         });
 
 
-        function cutuptext() {          
+        function cutuptext() {
 
             let words = document.getElementById('afterwords').value;
             let captitalizeFirstLetterAfterFullStop = /(^|[.!?]\s+)([a-z])/g;
             words = words.split(" ");
-            words = words.sort(() => ((Math.random()-0.3*0.6)));
+            words = words.sort(() => ((Math.random() - 0.3 * 0.6)));
             words = words.join(" ");
             words = words.charAt(0).toUpperCase() + words.slice(1);
-            words = words.replace(/\s+/g, " ");        
+            words = words.replace(/\s+/g, " ");
 
             /* Remove internal full stops */
             //  words = words.replace(/\./g, ' ');
@@ -106,16 +107,8 @@
 
     </script>
     <style>
-        /* body {
-            background: linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
-            background-size: cover;
-            height: 100%;
-            margin: 0;
-            background-attachment: fixed;
-
-        } */
-
-        html, body {
+        html,
+        body {
             height: 100%;
             min-height: 100vh;
         }
@@ -161,6 +154,13 @@
             background-size: 100vw, 100vw, 250vh;
 
 
+        }
+
+        h1 {
+            /* background: -webkit-linear-gradient(#f00, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center; */
         }
 
 
@@ -254,7 +254,7 @@
 
         .moveY {
             position: relative;
-            animation: moveDown 1s ease 1;
+            animation: moveDown 1.5s ease 1;
 
         }
 
@@ -371,6 +371,42 @@
 
         }
 
+        svg {
+            height: 6.2em;
+        }
+
+        svg text {
+            font-family: 'Special Elite', cursive;
+            font-size: 5em;
+            font-weight: 900;
+            fill: none;
+            fill-opacity: 1;
+            stroke: #fff;
+            stroke-opacity: 1;
+            stroke-linecap: butt;
+            opacity: 1;
+            text-shadow: 4px 4px 0 #000;
+            stroke-width: 0.5px;
+        }
+
+        .headline {
+            width: 40rem;
+        }
+
+        body::after {
+            content: "";
+
+            opacity: 1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+
+
         @media screen and (max-width: 767px) {
 
             /* body {
@@ -404,6 +440,14 @@
                 font-size: 1rem;
                 line-height: 1.7rem;
             }
+
+            svg {
+                height: 3.2em;
+            }
+
+            svg text {
+                font-size: 2.2em;
+            }
         }
     </style>
 </head>
@@ -417,7 +461,17 @@
             <div class="row">
                 <!-- <div class="d-flex justify-content-start mb-3"> -->
                 <div class="col-12">
-                    <p class="text screen my-3">The Cut Up Machine</p>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="col-12">
+                            <svg width="100%" height="100%" class="moveY mt-3">
+                                <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
+                                    <image width="100%" height="0" xlink:href=""></image>
+                                </pattern>
+                                <text x="0" y="0.8em" textlength="10em" class="headline"
+                                    style="fill:url(#pattern);">The Cut Up Machine</text>
+                            </svg>
+                        </div>
+                    </div>
                     <textarea id="afterwords" class="textarea moveY"
                         oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique popularized by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.</textarea>
                 </div>
@@ -440,7 +494,8 @@
                         </button>
                     </div>
                     <div class="flex-fill col-6 text-right">
-                        <button type="submit" class="btn button text screen multiply pushable moveY float-right change-background"
+                        <button type="submit"
+                            class="btn button text screen multiply pushable moveY float-right change-background"
                             value="True">
                             <span class="front">Background dark</span>
                         </button>
