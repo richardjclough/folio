@@ -59,6 +59,7 @@
 
             document.getElementById('restartBtn').classList.add('fadeInBtn');
             document.getElementById('afterwords').style.background = 'white';
+            document.getElementById('afterwords').style.color = 'black';
             document.getElementById('afterwords').classList.add('fadeInBtn');
             document.getElementById('afterwords').style.visibility = 'visible';
             document.getElementById('frontRestart').style.transform = 'translateY(-12px)';
@@ -67,6 +68,7 @@
             // document.getElementById('frontRestart').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
             // document.getElementById('restartBtn').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
             document.getElementById('restartBtn').classList.remove('disabled');
+            document.getElementById('frontRestart').classList.remove('btnTextDepressed');
             document.getElementById('frontRestart').classList.add('addTextShadow');
             // restartBtn.style.border = '5px solid white';
             // front.style.transform = 'translateY(-12px)';
@@ -80,6 +82,7 @@
             let wordsRefresh = "This idea is based on the cut up writing technique popularized by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.";
             document.getElementById('afterwords').value = wordsRefresh;
             document.getElementById('afterwords').classList.remove('fadeInBtn');
+            document.getElementById('afterwords').style.color = 'white';
             //   document.getElementById('restart').classList.add('fadeOutBtn');       
             //   document.getElementById('restart').classList.remove('fadeOutBtn');
 
@@ -96,8 +99,6 @@
             document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
             document.getElementById('frontRestart').classList.remove('addTextShadow');
             document.getElementById('frontRestart').classList.add('btnTextDepressed');
-
-
             document.getElementById('restartBtn').classList.add('disabled');
             // window.top.location = window.top.location;
             // console.log('restart');
@@ -156,13 +157,6 @@
 
         }
 
-        h1 {
-            /* background: -webkit-linear-gradient(#f00, #333);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center; */
-        }
-
 
         .text {
             font: bolder 3rem "Alfa Slab One";
@@ -194,6 +188,7 @@
 
         .textarea {
             width: 100%;
+            color: white;
             opacity: .9;
             font-size: 1.3rem;
             font-family: 'Special Elite', cursive;
@@ -254,7 +249,7 @@
 
         .moveY {
             position: relative;
-            animation: moveDown 1.5s ease 1;
+            animation: moveDown 1.2s ease 1;
 
         }
 
@@ -324,7 +319,7 @@
             background: rgb(61, 207, 147);
             color: white;
             transform: translateY(-12px);
-            border: 3px solid rgb(50, 107, 72);
+            border: 3px solid rgb(29 145 103);
         }
 
         .front:hover {
@@ -353,6 +348,7 @@
 
         .btnTextDepressed {
             color: rgb(239, 239, 233);
+            background: rgb(33, 104, 63);
         }
 
         .pushable:hover {
@@ -447,6 +443,7 @@
 
             svg text {
                 font-size: 2.2em;
+                text-shadow: 2px 2px 0 #000;
             }
         }
     </style>
@@ -488,7 +485,7 @@
                     <div class="flex-fill text-left">
                         <button class="btn text screen multiply pushable moveY float-left disabled" id="restartBtn"
                             onclick="restart()">
-                            <span class="front restart" id="frontRestart">
+                            <span class="front restart btnTextDepressed" id="frontRestart">
                                 Restart
                             </span>
                         </button>
