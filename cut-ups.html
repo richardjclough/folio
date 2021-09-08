@@ -15,9 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <script>
         $(document).ready(function () {
-            $('[id="afterwords"]').animate({ height: '370px' });
+            // $('[id="afterwords"]').animate({ height: '26rem' });
             $('.btnClick').animate({ height: '60px' });
-
+            // $('#afterwords').css({'height':'auto'});
+            $("textarea").height( $("textarea")[0].scrollHeight +55 );
             // $('#changeBGcolourBtn').on('click', function () {
             //     var color = 'rgba(255, 0, 0, .4)';
             //     var color2 = 'rgba(0, 0, 255, .4)';
@@ -193,7 +194,7 @@
             font-size: 1.3rem;
             font-family: 'Special Elite', cursive;
             padding: 15px;
-            line-height: 2.5rem;
+        /*    line-height: 2.5rem; */
             box-shadow: 0 0 26px rgb(233, 180, 204);
             border: 8px solid rgb(31, 2, 2);
             border-radius: 16px;
@@ -401,9 +402,20 @@
             z-index: -1;
         }
 
+        @media (min-width: 768px) and (max-width: 991px)  { 
 
+            svg {
+                height: 4.2em;
+            }
 
-        @media screen and (max-width: 768px) {
+            svg text {
+                font-size: 3em;
+                text-shadow: 2px 2px 0 #000;
+            }
+
+         }
+
+        @media screen and (max-width: 767px) {
 
             /* body {
                 background-size: 200vh, 200%, 100%;
@@ -442,8 +454,8 @@
             }
 
             svg text {
-                font-size: 2.2em;
-                text-shadow: 2px 2px 0 #000;
+                font-size: 1.8em;
+                text-shadow: 3px 3px 0 #000;
             }
         }
     </style>
@@ -460,7 +472,7 @@
                 <div class="col-12">
                     <div class="col-12 d-flex justify-content-center">
                         <div class="col-12">
-                            <svg width="100%" height="100%" class="moveY mt-3">
+                            <svg width="100%" height="100%" class="moveY mt-4">
                                 <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
                                     <image width="100%" height="0" xlink:href=""></image>
                                 </pattern>
@@ -469,8 +481,8 @@
                             </svg>
                         </div>
                     </div>
-                    <textarea id="afterwords" class="textarea moveY"
-                        oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique popularized by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.</textarea>
+                    <textarea id="afterwords" class="textarea"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>This idea is based on the cut up writing technique popularized by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.</textarea>
                 </div>
             </div>
             <div class="row my-3">
