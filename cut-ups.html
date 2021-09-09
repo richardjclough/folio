@@ -390,23 +390,18 @@
             stroke-linecap: butt;
             opacity: 1;
             text-shadow: 4px 4px 0 #000;
+            -webkit-text-shadow: 4px 4px 0 #000;
             stroke-width: 0.5px;
+            text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 rgb(129,148,205),2px 2px 0 rgb(120,139,196),3px 3px 0 rgb(111,130,187),4px 4px 0 rgb(103,122,179),5px 5px 0 rgb(94,113,170),6px 6px 0 rgb(85,104,161),7px 7px 0 rgb(76,95,152),8px 8px 0 rgb(68,87,144),9px 9px 0 rgb(59,78,135),10px 10px 0 rgb(50,69,126),11px 11px 0 rgb(42,61,118),12px 12px 0 rgb(33,52,109),13px 13px 0 rgb(24,43,100),14px 14px 0 rgb(15,34,91),15px 15px 0 rgb(7,26,83),16px 16px 0 rgb(-2,17,74),17px 17px 0 rgb(-11,8,65),18px 18px 0 rgb(-19,0,57),19px 19px 0 rgb(-28,-9,48), 20px 20px 0 rgb(-37,-18,39),21px 21px 20px rgba(0,0,0,1),21px 21px 1px rgba(0,0,0,0.5),0px 0px 20px rgba(0,0,0,.2);
         }
 
         .headline {
-            width: 40rem;
-        }
-
-        body::after {
-            content: "";
-
-            opacity: 1;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1;
+            color: rgb(221, 213, 213);
+            font-family: 'Special Elite', cursive;
+            font-size: 5em;
+            font-weight: 900;
+            text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 rgb(129,148,205),2px 2px 0 rgb(120,139,196),3px 3px 0 rgb(111,130,187),4px 4px 0 rgb(103,122,179),5px 5px 0 rgb(94,113,170),6px 6px 0 rgb(85,104,161),7px 7px 0 rgb(76,95,152),8px 8px 0 rgb(68,87,144),9px 9px 0 rgb(59,78,135),10px 10px 0 rgb(50,69,126),11px 11px 0 rgb(42,61,118),12px 12px 0 rgb(33,52,109),13px 13px 0 rgb(24,43,100),14px 14px 0 rgb(15,34,91),15px 15px 0 rgb(7,26,83),16px 16px 0 rgb(-2,17,74),17px 17px 0 rgb(-11,8,65),18px 18px 0 rgb(-19,0,57),19px 19px 0 rgb(-28,-9,48), 20px 20px 0 rgb(-37,-18,39),21px 21px 20px rgba(0,0,0,1),21px 21px 1px rgba(0,0,0,0.5),0px 0px 20px rgba(0,0,0,.2);
+        
         }
 
         @media (min-width: 768px) and (max-width: 991px)  { 
@@ -415,9 +410,8 @@
                 height: 4.2em;
             }
 
-            svg text {
+            .headline {
                 font-size: 3em;
-                text-shadow: 2px 2px 0 #000;
             }
 
          }
@@ -461,9 +455,9 @@
                 height: 3.2em;
             }
 
-            svg text {
+            .headline {
                 font-size: 1.8em;
-                text-shadow: 3px 3px 0 #000;
+                height: 2em;
             }
         }
     </style>
@@ -480,13 +474,14 @@
                 <div class="col-12">
                     <div class="col-12 d-flex justify-content-center">
                         <div class="col-12">
-                            <svg width="100%" height="100%" class="moveY mt-4">
+                            <!-- <svg width="100%" height="100%" class="moveY mt-4">
                                 <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
                                     <image width="100%" height="0" xlink:href=""></image>
-                                </pattern>
-                                <text x="0" y="0.8em" textlength="10em" class="headline"
-                                    style="fill:url(#pattern);">The Cut Up Machine</text>
-                            </svg>
+                                </pattern> -->
+                                <!-- <text x="0" y="0.8em" textlength="10em" class="headline moveY mb-3"
+                                style="fill:url(#pattern);">The Cut Up Machine</text> -->
+                                <div class="headline moveY">The Cut Up Machine</div>
+                            <!-- </svg> -->
                         </div>
                     </div>
                     <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
