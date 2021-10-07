@@ -47,7 +47,7 @@ h1 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  padding-top: 9rem;
+  padding-top: 3rem;
 }
 
 h2 {
@@ -76,6 +76,21 @@ a {
   color:black;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
+  text-decoration: underline;
+}
+
+a:hover {
+  animation: fadein .4s ease-in;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .photo {
@@ -229,9 +244,9 @@ display: block;
   filter: drop-shadow(0 3px 8px rgb(136, 136, 136, .5));
 }
 .zoom_img img:hover{
-  -moz-transform:scale(1.6);
-  -webkit-transform:scale(1.6);
-  -o-transform:scale(1.6);
+  -moz-transform:scale(2);
+  -webkit-transform:scale(2);
+  -o-transform:scale(2);
   -webkit-transform-origin: 0 0;
   -ms-transform-origin:0 0;
   transform-origin:0 0;
@@ -241,6 +256,7 @@ display: block;
   position: relative!important;
   cursor:pointer!important;
   margin-bottom: 40%;
+  z-index: 1;
 }
 
 
@@ -369,9 +385,7 @@ display: block;
 
   }
 
-  h1 {
-    padding-top: 3rem;
-  }
+  
 
   .intro-section {
     /* padding-top:8em!important;
