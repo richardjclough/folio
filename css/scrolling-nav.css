@@ -81,6 +81,7 @@ a {
 
 a:hover {
   animation: fadein .4s ease-in;
+  color:black !important;
 }
 
 @keyframes fadein {
