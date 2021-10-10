@@ -9,7 +9,6 @@ body {
   min-height: 100%;
   font-size: 16px;
   background-color: #eee;
-
 }
 
 html {
@@ -17,9 +16,8 @@ html {
   min-height: 100%;
 }
 
-
-.logo{
-  background-image: url('../img/pattern.png');
+.logo {
+  background-image: url("../img/pattern.png");
   background-repeat: no-repeat;
   background-position: 0px 50px;
   background-repeat: no-repeat;
@@ -34,24 +32,23 @@ html {
   display: inline-block;
 }
 
-
-
-p, .text {
-  font-family: 'Lato', sans-serif;
+p,
+.text {
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   text-transform: none;
   margin-top: 4px;
 }
 
 h1 {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   padding-top: 3rem;
 }
 
 h2 {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   font-weight: 300;
   text-transform: none;
   font-size: 1.2em;
@@ -60,28 +57,35 @@ h2 {
 ul {
   list-style-type: none;
   margin-left: -1.6em;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin-top: 6px;
   font-weight: 300;
-  color:black;
+  color: black;
 }
 
 ul > li:before {
   content: "-"; /* en dash */
   position: absolute;
-  margin-left: -.9em;
+  margin-left: -0.9em;
 }
 
 a {
-  color:#777;
-  font-family: 'Lato', sans-serif;
+  color: #777;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   text-decoration: underline;
 }
 
 a:hover {
-  animation: fadein .4s ease-in;
-  color:#000 !important;
+  animation: fadein 0.4s ease-in;
+  color: #000 !important;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -90px;
+  visibility: hidden;
 }
 
 @keyframes fadein {
@@ -95,16 +99,15 @@ a:hover {
 }
 
 .photo {
-  max-width:180px;
-  float:left;
+  max-width: 180px;
+  float: left;
   margin-bottom: 20px;
-  clear:both;
+  clear: both;
 }
 
 .underline {
   text-decoration: underline;
 }
-
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
@@ -123,10 +126,13 @@ of those sections to manage the look and feel of the site. */
   scroll-snap-align: center;
 }
 
-.web-section, .multimedia-section, .design-section, .contact-section  {
+.web-section,
+.multimedia-section,
+.design-section,
+.contact-section {
   height: 100%;
   /* margin-top: 12rem; */
-      /* padding: 10rem 0 0rem 0; */
+  /* padding: 10rem 0 0rem 0; */
   text-align: left;
   /* background: #ee7d19; */
   overflow-y: scroll;
@@ -137,7 +143,10 @@ of those sections to manage the look and feel of the site. */
   background-repeat: no-repeat; */
 }
 
-.web-section > .container, .multimedia-section > .container, .design-section > .container, .contact-section > .container {
+.web-section > .container,
+.multimedia-section > .container,
+.design-section > .container,
+.contact-section > .container {
   /* padding-top: 4rem!important;
   padding-bottom: 4rem !important; */
   /* margin: 8rem 0; */
@@ -171,15 +180,13 @@ padding-bottom: 100%;
 } */
 
 .descriptionOuter {
-
   margin: 10px 0 25px 0px;
   position: relative;
 
-  max-width:500px;
+  max-width: 500px;
   /* opacity: 50%; */
   border: 0px solid #ccc;
   /*     max-height: 120px; */
-
 }
 
 .description {
@@ -194,14 +201,13 @@ padding-bottom: 100%;
 
 .descriptionOuter img {
   height: 120px;
-  border-left:0px solid #eee;
+  border-left: 0px solid #eee;
   top: 0px;
 }
 
 .web-section ul li {
-  margin:0px 0 0px 0px;
+  margin: 0px 0 0px 0px;
 }
-
 
 /*.container {
 min-height: 100%;
@@ -213,54 +219,50 @@ content: "";
 display: block;
 }*/
 
-
 .site-footer {
   background: #697585;
   z-index: 1000;
   position: fixed;
   text-align: right;
-  width:100%;
+  width: 100%;
   bottom: -7rem;
   height: 9rem;
 }
 
 .socmedIcons {
-  margin-left:-6px;
-  width:229px;
-  border:0px;
+  margin-left: -6px;
+  width: 229px;
+  border: 0px;
 }
 
-.zoom_img > img{
-
-  -moz-transition:-moz-transform 0.3s ease-in;
-  -webkit-transition:-webkit-transform .1s ease-in;
-  -o-transition:-o-transform 0.3s ease-in;
+.zoom_img > img {
+  -moz-transition: -moz-transform 0.3s ease-in;
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  -o-transition: -o-transform 0.3s ease-in;
 
   -webkit-transform-origin: 0 0;
-  -ms-transform-origin:0 0;
-  transform-origin:0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
 
-  position: relative!important;
-  max-width:100%!important;
-  filter: drop-shadow(0 3px 8px rgb(136, 136, 136, .5));
+  position: relative !important;
+  max-width: 100% !important;
+  filter: drop-shadow(0 3px 8px rgb(136, 136, 136, 0.5));
 }
-.zoom_img img:hover{
-  -moz-transform:scale(2);
-  -webkit-transform:scale(2);
-  -o-transform:scale(2);
+.zoom_img img:hover {
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
   -webkit-transform-origin: 0 0;
-  -ms-transform-origin:0 0;
-  transform-origin:0 0;
-  -moz-transition:-moz-transform 0.3s ease-in;
-  -webkit-transition:-webkit-transform 0.3s ease-in;
-  -o-transition:-o-transform 0.3s ease-in;
-  position: relative!important;
-  cursor:pointer!important;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -moz-transition: -moz-transform 0.3s ease-in;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  -o-transition: -o-transform 0.3s ease-in;
+  position: relative !important;
+  cursor: pointer !important;
   margin-bottom: 40%;
   z-index: 1;
 }
-
-
 
 /*  bootstrap overides */
 
@@ -270,28 +272,29 @@ display: block;
   font-size: 1.3em;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
   color: #eee;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   text-transform: uppercase;
   outline: none;
 }
 
 .navbar-default .navbar-brand {
   color: #eee;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   font-size: 1em;
   text-transform: uppercase;
-
 }
 
 .navbar-default ul > li:before {
   content: none;
   position: absolute;
-  margin-left: -.9em;
+  margin-left: -0.9em;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
   color: #111;
   background-color: #eee;
 }
@@ -301,11 +304,11 @@ display: block;
   border-color: #eee;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
   border-color: #e7e7e7;
-  width:100%;
+  width: 100%;
 }
-
 
 .btn-primary {
   color: #fff;
@@ -334,14 +337,12 @@ display: block;
   border-radius: 4px;
 }
 
-
-
-@media(min-width:767px) {
+@media (min-width: 768px) {
   .navbar {
     padding: 20px 0;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
 
   .top-nav-collapse {
@@ -352,12 +353,10 @@ display: block;
     margin-right: 16%;
     margin-left: 16%;
     width: 68%;
-
   }
 }
 
-@media (max-width:720px){
-
+@media (max-width: 767px) {
   .logo {
     -o-background-size: 30% auto;
     /* -webkit-background-size: 20% auto; */
@@ -366,36 +365,38 @@ display: block;
     z-index: 0;
   }
 
-
   .container {
     z-index: 1000;
-
   }
 
   .descriptionOuter {
-
     margin: 10px 0 25px 0px;
     position: relative;
-    max-width:90%;
-
+    max-width: 90%;
   }
 
   .descriptionOuter img {
-    height: 120px!important;
-    margin: 0 0 0 0!important;
-
+    height: 120px !important;
+    margin: 0 0 0 0 !important;
   }
-
-  
 
   .intro-section {
     /* padding-top:8em!important;
     padding-bottom: 1em!important; */
   }
 
-  .web-section, .multimedia-section, .design-section, .contact-section  {
-    margin-top: 2rem!important;
-    padding: 2rem 0 2rem 0!important;
+  .web-section,
+  .multimedia-section,
+  .design-section,
+  .contact-section {
+    margin-top: 2rem !important;
+    padding: 2rem 0 2rem 0 !important;
   }
 
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+  }
 }
