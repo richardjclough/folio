@@ -284,6 +284,7 @@ display: block;
   font-family: "Fjalla One", sans-serif;
   font-size: 1em;
   text-transform: uppercase;
+  outline: none;
 }
 
 .navbar-default ul > li:before {
@@ -297,6 +298,19 @@ display: block;
 .navbar-default .navbar-nav > .active > a:hover {
   color: #111;
   background-color: #eee;
+}
+
+.active {
+  animation: fade-in 0.5s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .navbar-default {
