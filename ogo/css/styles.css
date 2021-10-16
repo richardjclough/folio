@@ -1,0 +1,147 @@
+body {
+  /* display: grid;
+  grid: auto-flow min-content / repeat(12, 1fr);
+  grid-gap: 1em;
+  margin: 1em; */
+  font-family: Montserrat;
+  font-size: 26px;
+}
+
+body,
+html {
+  font-family: Montserrat;
+}
+
+p {
+  font-family: Montserrat;
+  font-weight: 300;
+}
+
+header,
+footer {
+  /* grid-column: 1 / -1; */
+
+  /* color: white; */
+}
+
+/* nav {
+  grid-area: 1 / 1 / 1 / 13;
+}
+
+header {
+  grid-area: 2 / 1 / 2 / 13;
+}
+
+main {
+  grid-area: 3 / 1 / 5 / 13;
+} */
+
+.container-fluid {
+  /* display: grid; */
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.intro {
+}
+
+.three-panel {
+  justify-content: space-between;
+  margin: 1em;
+}
+
+footer {
+  grid-area: 6 / 1 / 6 / 13;
+}
+
+.red-bg {
+  background: #e11837;
+}
+
+.grey-bg {
+  background: linear-gradient(225.1deg, #252932 29.16%, #050d1d 91.21%);
+  /* background: red; */
+}
+
+.int-network-panel {
+  /* background: #f3f3f3; */
+  background: #f3f3f3;
+}
+
+.page-heading {
+  font-size: 3rem;
+}
+
+.page-byline {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.accordian-header {
+  font-size: 0.875rem;
+  font-family: Montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.accordian-subheading {
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #424b5a;
+  letter-spacing: 0.1rem;
+  display: block;
+}
+
+ul {
+  padding-left: 0rem !important;
+}
+
+ul > li {
+  list-style-type: none;
+  font-family: Montserrat;
+  font-weight: 300;
+  text-indent: 0rem;
+  /* display: flex;
+  align-items: top; */
+}
+
+ul > li::before {
+  content: "●";
+  display: inline-block;
+  transform: scale(1.5);
+  margin-right: 0.5rem;
+  position: relative;
+  bottom: 0.1rem;
+}
+
+.card-title {
+  display: block;
+  font-size: 2.625rem;
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+}
+
+.card-title-page-name {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+hr {
+  opacity: 1 !important;
+}
+
+@media (max-width: 575.98px) {
+  .album > .container > .row {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .album > .container > .row > .col-xs-8 {
+    display: inline-block;
+  }
+}
