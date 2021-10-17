@@ -42,10 +42,6 @@ p,
   color: white !important;
 }
 
-/* .navbar-nav {
-  flex-direction: row !important;
-} */
-
 h2 {
   font-size: 2.75rem !important;
   text-transform: uppercase;
@@ -66,7 +62,10 @@ footer {
 
 .grey-bg {
   background: linear-gradient(225.1deg, #252932 29.16%, #050d1d 91.21%);
-  /* background: red; */
+}
+
+.grey-bg-monotone {
+  background: #252932;
 }
 
 .red-panel-background {
@@ -74,7 +73,6 @@ footer {
 }
 
 .int-network-panel {
-  /* background: #f3f3f3; */
   background: #f3f3f3;
 }
 
@@ -180,8 +178,8 @@ hr {
   display: block;
   font-size: 2.625rem;
   font-weight: 100;
-  letter-spacing: 0.1rem;
-  line-height: 3rem;
+  letter-spacing: 0.05rem;
+  line-height: 2.5rem;
   min-height: 5rem;
 }
 
@@ -194,6 +192,77 @@ hr {
 .twitter-feed {
   font-size: 0.875rem;
 }
+
+.footer-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.red-text {
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  color: #e11837;
+}
+
+/* Checkbox START */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  height: 3rem;
+}
+
+.switch input {
+  display: none;
+}
+
+.check-box {
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: none;
+  border: 1px solid white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  height: 40px;
+  width: 40px;
+}
+
+.check-box:before {
+  position: absolute;
+  text-align: left;
+  content: "";
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .check-box {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.check-box:after {
+  content: "";
+  color: white;
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: -0.6rem;
+  left: 0.4rem;
+  font-size: 38px;
+  font-family: Montserrat;
+  font-weight: 100;
+}
+
+input:checked + .check-box:after {
+  content: "X";
+}
+
+/* Checkbox END */
 
 @media (max-width: 575.98px) {
   .album > .container > .row {
