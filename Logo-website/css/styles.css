@@ -271,9 +271,19 @@ input:checked + .check-box:after {
     white-space: nowrap;
   }
 
-  .album > .container > .row > .col-xs-8 {
+  .album > .container > .row > .col-xs-10 {
     display: inline-block;
   }
+
+  .album > .container > .row > .col-xs-10 {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .card-text {
+    white-space: initial;
+  }
+
   .mobile-bold {
     font-weight: 700;
   }
