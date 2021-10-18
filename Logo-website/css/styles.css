@@ -252,10 +252,10 @@ input:checked + .check-box {
   display: block;
   position: absolute;
   top: -0.6rem;
-  left: 0.4rem;
+  left: 0.45rem;
   font-size: 38px;
   font-family: Montserrat;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 input:checked + .check-box:after {
