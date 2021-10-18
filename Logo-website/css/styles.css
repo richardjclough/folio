@@ -224,7 +224,7 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: none;
+  background-color: transparent;
   border: 1px solid white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
