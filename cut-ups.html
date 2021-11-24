@@ -1,559 +1,591 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="h-100" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>The Cut Up Machine</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css" />
-    <link rel="icon" href="data:,">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker"
+      rel="stylesheet"
+    />
     <script>
-        $(document).ready(function () {
-            // $('[id="afterwords"]').animate({ height: '26rem' });
-            $('.btnClick').animate({ height: '60px' });
-            // $('#afterwords').css({'height':'auto'});
-            $("textarea").height( $("textarea")[0].scrollHeight);
-            // $('#changeBGcolourBtn').on('click', function () {
-            //     var color = 'rgba(255, 0, 0, .4)';
-            //     var color2 = 'rgba(0, 0, 255, .4)';
-            //     var img1 = 'url("img/backgroundText.png") no-repeat center center fixed';
-            //     var img2 = 'url("img/burroughs.png") no-repeat center center fixed';
-            //     var color3 = 'rgba(200, 0, 100, .4)';
-            //     var color4 = 'rgba(100, 0, 55, .4)';
-            //     var str = "linear-gradient(" + color + "," + color2 + ")" + "," + img1 + "," + "linear-gradient(" + color3 + "," + color4 + ")" + "," + img2 + "";
-            //     $("body").css("background", str);
-            //     $("body").css({ "background-size": "cover", "backgroundAttachment": "fixed", "animation": "fadeBG 20s ease 1" });
-            // })
+      $(document).ready(function () {
+        // $('[id="afterwords"]').animate({ height: '26rem' });
+        $(".btnClick").animate({ height: "60px" });
+        // $('#afterwords').css({'height':'auto'});
+        $("textarea").height($("textarea")[0].scrollHeight);
+        // $('#changeBGcolourBtn').on('click', function () {
+        //     var color = 'rgba(255, 0, 0, .4)';
+        //     var color2 = 'rgba(0, 0, 255, .4)';
+        //     var img1 = 'url("img/backgroundText.png") no-repeat center center fixed';
+        //     var img2 = 'url("img/burroughs.png") no-repeat center center fixed';
+        //     var color3 = 'rgba(200, 0, 100, .4)';
+        //     var color4 = 'rgba(100, 0, 55, .4)';
+        //     var str = "linear-gradient(" + color + "," + color2 + ")" + "," + img1 + "," + "linear-gradient(" + color3 + "," + color4 + ")" + "," + img2 + "";
+        //     $("body").css("background", str);
+        //     $("body").css({ "background-size": "cover", "backgroundAttachment": "fixed", "animation": "fadeBG 20s ease 1" });
+        // })
 
-            $(".change-background").click(function () {
-                $("body").toggleClass("dark");
-                $(".button span").html($(".button span").html() == 'Background dark' ? 'Background light' : 'Background dark');
-
-            });
-
+        $(".change-background").click(function () {
+          $("body").toggleClass("dark");
+          $(".button span").html(
+            $(".button span").html() == "Background dark"
+              ? "Background light"
+              : "Background dark"
+          );
         });
+      });
 
+      function cutuptext() {
+        let words = document.getElementById("afterwords").value;
+        let captitalizeFirstLetterAfterFullStop = /(^|[.!?]\s+)([a-z])/g;
+        words = words.split(" ");
+        words = words.sort(() => Math.random() - 0.1);
+        words = words.join(" ");
 
-        function cutuptext() {
+        /* Capitalize first letter of string */
+        // words = words.charAt(0).toUpperCase() + words.slice(1);
 
-            let words = document.getElementById('afterwords').value;
-            let captitalizeFirstLetterAfterFullStop = /(^|[.!?]\s+)([a-z])/g;
-            words = words.split(" ");
-            words = words.sort(() => ((Math.random() - 0.3 * 0.6)));
-            words = words.join(" ");
-            words = words.charAt(0).toUpperCase() + words.slice(1);
-            words = words.replace(/\s+/g, " ");
+        /* replace more than a single space with a single space */
+        words = words.replace(/\s+/g, " ");
 
-            /* Remove internal full stops */
-            //  words = words.replace(/\./g, ' ');
+        /* Remove internal full stops */
+        // words = words.replace(/\./g, " ");
 
-            /* Capitalize first letter after a full stop */
-            words = words.replace(captitalizeFirstLetterAfterFullStop, (m, $1, $2) => $1 + $2.toUpperCase());
-            words = words.replace(/([^.])$/, '$1.');
-            document.getElementById('afterwords').value = words;
+        /* Capitalize first letter after a full stop */
+        // words = words.replace(
+        //   captitalizeFirstLetterAfterFullStop,
+        //   (m, $1, $2) => $1 + $2.toUpperCase()
+        // );
 
-            document.getElementById('restartBtn').classList.add('fadeInBtn');
-            document.getElementById('afterwords').style.background = 'white';
-            document.getElementById('afterwords').style.color = 'black';
-            document.getElementById('afterwords').classList.add('fadeInBtn');
-            document.getElementById('afterwords').style.visibility = 'visible';
-            document.getElementById('frontRestart').style.transform = 'translateY(-12px)';
-            document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
-            document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
-            // document.getElementById('frontRestart').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
-            // document.getElementById('restartBtn').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
-            document.getElementById('restartBtn').classList.remove('disabled');
-            document.getElementById('frontRestart').classList.remove('btnTextDepressed');
-            document.getElementById('frontRestart').classList.add('addTextShadow');
-            // restartBtn.style.border = '5px solid white';
-            // front.style.transform = 'translateY(-12px)';
-            // front.style.background = 'rgb(61, 207, 147)';
-            // front.style.cursor = 'pointer';
-            // front.style.color = 'white';
-            //  console.log(words);
-        }
+        /* Add a full stop after a space and if next character is capitalized */
+        // words = words.replace(/([^.])$/, "$1.");
 
-        function restart() {
-            let wordsRefresh = "This idea is based on the cut up writing technique popularised by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.";
-            document.getElementById('afterwords').value = wordsRefresh;
-            // document.getElementById('afterwords').classList.remove('fadeInBtn');
-            document.getElementById('afterwords').style.color = 'white';
-            //   document.getElementById('restart').classList.add('fadeOutBtn');       
-            //   document.getElementById('restart').classList.remove('fadeOutBtn');
+        document.getElementById("afterwords").value = words;
+        document.getElementById("restartBtn").classList.add("fadeInBtn");
+        document.getElementById("afterwords").style.background = "white";
+        document.getElementById("afterwords").style.color = "black";
+        document.getElementById("afterwords").classList.add("fadeInBtn");
+        document.getElementById("afterwords").style.visibility = "visible";
+        document.getElementById("frontRestart").style.transform =
+          "translateY(-12px)";
+        document.getElementById("frontRestart").style.background =
+          "rgb(61, 207, 147))";
+        document.getElementById("frontRestart").style.background =
+          "rgb(61, 207, 147))";
+        // document.getElementById('frontRestart').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
+        // document.getElementById('restartBtn').style.textShadow = '1px 1px 2px rgb(255, 7, 4);';
+        document.getElementById("restartBtn").classList.remove("disabled");
+        document
+          .getElementById("frontRestart")
+          .classList.remove("btnTextDepressed");
+        document.getElementById("frontRestart").classList.add("addTextShadow");
+        // restartBtn.style.border = '5px solid white';
+        // front.style.transform = 'translateY(-12px)';
+        // front.style.background = 'rgb(61, 207, 147)';
+        // front.style.cursor = 'pointer';
+        // front.style.color = 'white';
+        //  console.log(words);
+      }
 
-            // document.getElementById('restart').style.visibility = 'hidden';
-            afterwords.style.background = 'linear-gradient(270deg, #9fbeb2, #636286)';
-            // afterwords.style.backgroundSize = '200% 10%';
-            // afterwords.style.animation = 'fadeBG 4s ease infinite';
-            // restartBtn.style.border = '5px solid #bce5d0';
-            // front.style.transform = 'translateY(-8px)';
-            // front.style.background = 'rgb(67 147 115)';
-            // front.style.cursor = 'auto';
-            // front.style.color = '#aaa';
-            document.getElementById('frontRestart').style.transform = 'translateY(-6px)';
-            document.getElementById('frontRestart').style.background = 'rgb(61, 207, 147))';
-            document.getElementById('frontRestart').classList.remove('addTextShadow');
-            document.getElementById('frontRestart').classList.add('btnTextDepressed');
-            document.getElementById('restartBtn').classList.add('disabled');
-            // window.top.location = window.top.location;
-            // console.log('restart');
-        }
+      function restart() {
+        let wordsRefresh =
+          "This idea is based on the cut up writing technique popularised by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.";
+        document.getElementById("afterwords").value = wordsRefresh;
+        // document.getElementById('afterwords').classList.remove('fadeInBtn');
+        document.getElementById("afterwords").style.color = "white";
+        //   document.getElementById('restart').classList.add('fadeOutBtn');
+        //   document.getElementById('restart').classList.remove('fadeOutBtn');
 
-
-
+        // document.getElementById('restart').style.visibility = 'hidden';
+        afterwords.style.background =
+          "linear-gradient(270deg, #9fbeb2, #636286)";
+        // afterwords.style.backgroundSize = '200% 10%';
+        // afterwords.style.animation = 'fadeBG 4s ease infinite';
+        // restartBtn.style.border = '5px solid #bce5d0';
+        // front.style.transform = 'translateY(-8px)';
+        // front.style.background = 'rgb(67 147 115)';
+        // front.style.cursor = 'auto';
+        // front.style.color = '#aaa';
+        document.getElementById("frontRestart").style.transform =
+          "translateY(-6px)";
+        document.getElementById("frontRestart").style.background =
+          "rgb(61, 207, 147))";
+        document
+          .getElementById("frontRestart")
+          .classList.remove("addTextShadow");
+        document
+          .getElementById("frontRestart")
+          .classList.add("btnTextDepressed");
+        document.getElementById("restartBtn").classList.add("disabled");
+        // window.top.location = window.top.location;
+        // console.log('restart');
+      }
     </script>
     <style>
-        html,
-        body {
-            height: 100%;
-            min-height: 100vh;
+      html,
+      body {
+        height: 100%;
+        min-height: 100vh;
+      }
+
+      @-webkit-keyframes bgAnimatiom {
+        from {
+          background-position: -50vw 0;
+          background-attachment: fixed;
+          background-size: 100vw, 200vw, 350vh;
+          /* background-size: 200% 200% 100%; */
         }
 
-        @-webkit-keyframes bgAnimatiom {
-            from {
-                background-position: -50vw 0;
-                background-attachment: fixed;
-                background-size: 100vw, 200vw, 350vh;
-                /* background-size: 200% 200% 100%; */
-
-            }
-
-            to {
-                background-position: auto auto;
-                background-size: 100vw, 100vw, 250vh;
-                background-attachment: fixed;
-
-
-            }
+        to {
+          background-position: auto auto;
+          background-size: 100vw, 100vw, 250vh;
+          background-attachment: fixed;
         }
+      }
 
-        body {
-            background:
-                linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed,
-                linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed,
-                linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .4)), url("img/burroughs.png") no-repeat center center fixed;
+      body {
+        background: linear-gradient(
+            rgba(255, 0, 255, 0.4),
+            rgba(255, 255, 255, 0.4)
+          ),
+          url("img/backgroundText.png") no-repeat center center fixed,
+          linear-gradient(rgba(255, 0, 255, 0.4), rgba(255, 255, 255, 0.4)),
+          url("img/backgroundText.png") no-repeat center center fixed,
+          linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4)),
+          url("img/burroughs.png") no-repeat center center fixed;
 
-            /* animation: fadeBG 20s ease 1; */
-            /* background-attachment: fixed; */
-            -webkit-animation: bgAnimatiom 3s ease;
-            background-attachment: fixed;
-            background-size: 100vw, 100vw, 250vh;
+        /* animation: fadeBG 20s ease 1; */
+        /* background-attachment: fixed; */
+        -webkit-animation: bgAnimatiom 3s ease;
+        background-attachment: fixed;
+        background-size: 100vw, 100vw, 250vh;
+      }
 
-        }
+      body.dark {
+        background: linear-gradient(rgba(255, 0, 0, 0.4), rgba(0, 0, 255, 0.4)),
+          url("img/backgroundText.png") no-repeat center center fixed,
+          linear-gradient(rgba(255, 0, 255, 0.4), rgba(255, 255, 255, 0.4)),
+          url("img/backgroundText.png") no-repeat center center fixed,
+          linear-gradient(rgba(200, 0, 255, 0), rgba(100, 0, 55, 0.4)),
+          url("img/burroughs.png") no-repeat center center fixed;
+        -webkit-animation: bgAnimatiom 3s ease 1;
+        background-size: 100vw, 100vw, 250vh;
+      }
 
-        body.dark {
-            background:
-                linear-gradient(rgba(255, 0, 0, .4), rgba(0, 0, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed,
-                linear-gradient(rgba(255, 0, 255, .4), rgba(255, 255, 255, .4)), url("img/backgroundText.png") no-repeat center center fixed,
-                linear-gradient(rgba(200, 0, 255, 0), rgba(100, 0, 55, .4)), url("img/burroughs.png") no-repeat center center fixed;
-            -webkit-animation: bgAnimatiom 3s ease 1;
-            background-size: 100vw, 100vw, 250vh;
-
-
-        }
-
-
-        .text {
-            font: bolder 3rem "Alfa Slab One";
-            text-align: center;
-            margin: 0;
-            border: 8px solid rgba(29, 2, 15, .5);
-            /* border-radius: 20px;
+      .text {
+        font: bolder 3rem "Alfa Slab One";
+        text-align: center;
+        margin: 0;
+        border: 8px solid rgba(29, 2, 15, 0.5);
+        /* border-radius: 20px;
             border-top-color:  rgba(255,255,255, .6);
             border-right-color: rgba(187, 163, 163, 0.6);
             border-bottom-color: rgba(117, 100, 100, 0.9);
             border-left-color:rgba(242, 234, 234, 0.3); */
+      }
 
+      .multiply {
+        color: white;
+        mix-blend-mode: multiply;
+        background-color: rgba(59, 2, 6, 1);
+      }
+
+      .screen {
+        color: rgb(241, 33, 33);
+        mix-blend-mode: hard-light;
+        background: rgba(168, 86, 57, 0.3);
+        text-shadow: 1px 1px 2px rgb(0 7 4);
+        padding: 1rem;
+        opacity: 0.9;
+      }
+
+      .textarea {
+        width: 100%;
+        color: white;
+        opacity: 0.9;
+        font-size: 1.3em;
+        line-height: 2.4rem;
+        font-family: "Special Elite", cursive;
+        padding: 15px;
+        box-shadow: 0 0 26px rgb(58, 27, 40);
+        border: 0px solid rgb(31, 2, 2);
+        border-radius: 12px;
+        background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
+        animation: fadeBG 0.6s ease 1 !important;
+        background-size: 200% 400%;
+      }
+
+      .textarea:focus {
+        outline: none;
+      }
+
+      .fadeInBG {
+        /* visibility: hidden; */
+        animation: fadeBG 0.6s forwards !important;
+      }
+
+      @keyframes fadeBG {
+        0% {
+          background-position: 0% 50%;
+          height: 0%;
+          opacity: 0;
+          transform: translateY(-3.6rem);
         }
 
-        .multiply {
-            color: white;
-            mix-blend-mode: multiply;
-            background-color: rgba(59, 2, 6, 1);
+        50% {
+          background-position: 100% 50%;
+          height: 50%;
+          opacity: 0.5;
+          transform: translateY(-1.6rem);
         }
 
-        .screen {
-            color: rgb(241, 33, 33);
-            mix-blend-mode: hard-light;
-            background: rgba(168, 86, 57, .3);
-            text-shadow: 1px 1px 2px rgb(0 7 4);
-            padding: 1rem;
-            opacity: .9;
+        100% {
+          background-position: 0% 50%;
+          /* height:99%; */
+          opacity: 0.9;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes moveDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-3.6rem);
+          /* height: 0%; */
         }
 
-        .textarea {
-            width: 100%;
-            color: white;
-            opacity: .9;
-            font-size: 1.3em;
-            line-height: 2.4rem;
-            font-family: 'Special Elite', cursive;
-            padding: 15px;
-            box-shadow: 0 0 26px rgb(58, 27, 40);
-            border: 0px solid rgb(31, 2, 2);
-            border-radius:12px;
-            background: linear-gradient(270deg, rgb(159, 190, 178), rgb(99 98 134));
-            animation: fadeBG .6s ease 1 !important;
-            background-size: 200% 400%;
+        20% {
+          opacity: 0;
+          transform: translateY(-3.6rem);
+          /* height: 30%; */
         }
 
-        .textarea:focus {
-            outline: none;
+        100% {
+          opacity: 0.9;
+          transform: translateY(0);
+          /* height: 100%; */
+        }
+      }
+
+      .moveY {
+        position: relative;
+        animation: moveDown 2.2s ease 1;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
         }
 
-        .fadeInBG {
-            /* visibility: hidden; */
-            animation: fadeBG .6s forwards !important;
+        100% {
+          opacity: 0.9;
+          visibility: visible;
+        }
+      }
 
+      .fadeInBtn {
+        /* visibility: hidden; */
+        animation: fadeIn 1.6s forwards !important;
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 0.9;
         }
 
-        @keyframes fadeBG {
-            0% {
-                background-position: 0% 50%;
-                height: 0%;
-                opacity: 0;
-                transform: translateY(-3.6rem);
-            }
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
 
-            50% {
-                background-position: 100% 50%;
-                height: 50%;
-                opacity: .5;
-                transform: translateY(-1.6rem);
-            }
+      .raiseTextAnimation {
+        animation: raiseText 1.5s ease-in 1 forwards;
+      }
 
-            100% {
-                background-position: 0% 50%;
-                /* height:99%; */
-                opacity: .9;
-                transform: translateY(0);
-            }
+      @keyframes raiseText {
+        0% {
+          max-height: 0%;
+          opacity: 0;
+          transform: translateY(-3rem);
+          text-shadow: 0px 0px 0 rgb(137, 156, 213), 1px 1px 0;
         }
 
-        @keyframes moveDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-3.6rem);
-                /* height: 0%; */
-            }
-
-            20% {
-                opacity: 0;
-                transform: translateY(-3.6rem);
-                /* height: 30%; */
-            }
-
-            100% {
-                opacity: .9;
-                transform: translateY(0);
-                /* height: 100%; */
-            }
+        60% {
+          opacity: 1;
+          transform: translateY(0rem);
+          text-shadow: 0px 0px 0 rgb(137, 156, 213), 1px 1px 0;
         }
 
-        .moveY {
-            position: relative;
-            animation: moveDown 2.2s ease 1;
-
+        100% {
+          max-height: 100%;
+          opacity: 1;
+          transform: translateY(0rem);
+          text-shadow: 0px 0px 0 rgb(137, 156, 213),
+            1px 1px 0 rgb(129, 148, 205), 2px 2px 0 rgb(120, 139, 196),
+            3px 3px 0 rgb(111, 130, 187), 4px 4px 0 rgb(103, 122, 179),
+            5px 5px 0 rgb(94, 113, 170), 6px 6px 0 rgb(85, 104, 161),
+            7px 7px 0 rgb(76, 95, 152), 8px 8px 0 rgb(68, 87, 144),
+            9px 9px 0 rgb(59, 78, 135), 10px 10px 0 rgb(50, 69, 126),
+            11px 11px 0 rgb(42, 61, 118), 12px 12px 0 rgb(33, 52, 109),
+            13px 13px 0 rgb(24, 43, 100), 14px 14px 0 rgb(15, 34, 91),
+            15px 15px 0 rgb(7, 26, 83), 16px 16px 0 rgb(-2, 17, 74),
+            17px 17px 0 rgb(-11, 8, 65), 18px 18px 0 rgb(-19, 0, 57),
+            19px 19px 0 rgb(-28, -9, 48), 20px 20px 0 rgb(-37, -18, 39),
+            21px 21px 20px rgba(0, 0, 0, 1), 21px 21px 1px rgba(0, 0, 0, 0.5),
+            0px 0px 20px rgba(0, 0, 0, 0.2);
         }
+      }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
+      .fadeOutBtn {
+        animation: fadeOut 1.6s forwards !important;
+      }
 
-            }
+      .footer {
+        opacity: 0.7;
+      }
 
-            100% {
-                opacity: .9;
-                visibility: visible;
+      .pushable {
+        background: #104410;
+        padding: 0;
+        mix-blend-mode: normal;
+        font-size: 2.3rem;
+        border: 5px solid white;
+        border-radius: 19px;
+        opacity: 0.9;
+        color: white;
+        box-shadow: 3px 3px 6px rgb(87, 70, 77) !important;
+      }
 
-            }
-        }
+      .pushable:focus {
+        outline: none;
+      }
 
-        .fadeInBtn {
-            /* visibility: hidden; */
-            animation: fadeIn 1.6s forwards !important;
+      .front {
+        display: block;
+        padding: 0.6rem 1.2rem;
+        border-radius: 16px;
+        font-size: 1.3rem;
+        text-shadow: 1px 1px 2px rgb(0, 7, 4);
+        background: rgb(61, 207, 147);
+        color: white;
+        transform: translateY(-12px);
+        border: 3px solid rgb(29 145 103);
+      }
 
-        }
+      .front:hover {
+        background: rgb(97, 225, 154);
+      }
 
-        @keyframes fadeOut {
-            0% {
-                opacity: .9;
+      .restart {
+        transform: translateY(-6px);
+        background: rgb(61, 207, 147);
+        text-shadow: 0px 0px 0px rgb(0, 0, 0);
+        color: rgb(239, 239, 233);
+      }
 
-            }
+      .removeTextShadow {
+        text-shadow: 0px 0px 0px rgb(0, 0, 0);
+      }
 
-            100% {
-                opacity: 0;
-                visibility: hidden;
+      .addTextShadow {
+        text-shadow: 1px 1px 2px rgb(0, 7, 4);
+      }
 
-            }
-        }
+      .btnTextDepressed {
+        color: rgb(239, 239, 233);
+        background: rgb(33, 104, 63);
+      }
 
-        .raiseTextAnimation {
-            animation: raiseText 1.5s ease-in 1 forwards;
-        }
+      .pushable:hover {
+        background: rgb(50, 105, 82);
+      }
 
-        @keyframes raiseText {
-            0% {
-                
-                max-height: 0%;
-                opacity: 0;
-                transform: translateY(-3rem);
-                text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 ;
-            } 
-
-            60% {
-                
-                opacity:1;
-                transform: translateY(0rem);
-                text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 ;
-            }      
-
-            100% {
-            
-                max-height: 100%;
-                opacity: 1;
-                transform: translateY(0rem);
-                text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 rgb(129,148,205),2px 2px 0 rgb(120,139,196),3px 3px 0 rgb(111,130,187),4px 4px 0 rgb(103,122,179),5px 5px 0 rgb(94,113,170),6px 6px 0 rgb(85,104,161),7px 7px 0 rgb(76,95,152),8px 8px 0 rgb(68,87,144),9px 9px 0 rgb(59,78,135),10px 10px 0 rgb(50,69,126),11px 11px 0 rgb(42,61,118),12px 12px 0 rgb(33,52,109),13px 13px 0 rgb(24,43,100),14px 14px 0 rgb(15,34,91),15px 15px 0 rgb(7,26,83),16px 16px 0 rgb(-2,17,74),17px 17px 0 rgb(-11,8,65),18px 18px 0 rgb(-19,0,57),19px 19px 0 rgb(-28,-9,48), 20px 20px 0 rgb(-37,-18,39),21px 21px 20px rgba(0,0,0,1),21px 21px 1px rgba(0,0,0,0.5),0px 0px 20px rgba(0,0,0,.2);
-            }
-        }
-
-        .fadeOutBtn {
-            animation: fadeOut 1.6s forwards !important;
-        }
-
-
-        .footer {
-            opacity: .7;
-        }
-
-        .pushable {
-            background: #104410;
-            padding: 0;
-            mix-blend-mode: normal;
-            font-size: 2.3rem;
-            border: 5px solid white;
-            border-radius: 19px;
-            opacity: .9;
-            color: white;
-            box-shadow: 3px 3px 6px rgb(87, 70, 77) !important;
-        }
-
-        .pushable:focus {
-            outline: none;
-        }
-
-        .front {
-            display: block;
-            padding: .6rem 1.2rem;
-            border-radius: 16px;
-            font-size: 1.3rem;
-            text-shadow: 1px 1px 2px rgb(0, 7, 4);
-            background: rgb(61, 207, 147);
-            color: white;
-            transform: translateY(-12px);
-            border: 3px solid rgb(29 145 103);
-        }
-
-        .front:hover {
-            background: rgb(97, 225, 154);
-        }
-
-        .restart {
-
-            transform: translateY(-6px);
-            background: rgb(61, 207, 147);
-            text-shadow: 0px 0px 0px rgb(0, 0, 0);
-            color: rgb(239, 239, 233);
-
-
-        }
-
-        .removeTextShadow {
-            text-shadow: 0px 0px 0px rgb(0, 0, 0);
-
-        }
-
-        .addTextShadow {
-            text-shadow: 1px 1px 2px rgb(0, 7, 4);
-
-        }
-
-        .btnTextDepressed {
-            color: rgb(239, 239, 233);
-            background: rgb(33, 104, 63);
-        }
-
-        .pushable:hover {
-            background: rgb(50, 105, 82);
-        }
-
-        /* .front:active {
+      /* .front:active {
             outline: none;
             background: rgb(15, 177, 64);
         } */
 
+      .pushable:active .front:active {
+        transform: translateY(-6px);
+        text-shadow: 0px 0px 0px rgb(0 0 0);
+      }
 
-        .pushable:active .front:active {
-            transform: translateY(-6px);
-            text-shadow: 0px 0px 0px rgb(0 0 0);
+      svg {
+        height: 6.2em;
+      }
 
-        }
+      svg text {
+        font-family: "Special Elite", cursive;
+        font-size: 5em;
+        font-weight: 900;
+        fill: none;
+        fill-opacity: 1;
+        stroke: #fff;
+        stroke-opacity: 1;
+        stroke-linecap: butt;
+        opacity: 1;
+        text-shadow: 4px 4px 0 #000;
+        -webkit-text-shadow: 4px 4px 0 #000;
+        stroke-width: 0.5px;
+        text-shadow: 0px 0px 0 rgb(137, 156, 213), 1px 1px 0 rgb(129, 148, 205),
+          2px 2px 0 rgb(120, 139, 196), 3px 3px 0 rgb(111, 130, 187),
+          4px 4px 0 rgb(103, 122, 179), 5px 5px 0 rgb(94, 113, 170),
+          6px 6px 0 rgb(85, 104, 161), 7px 7px 0 rgb(76, 95, 152),
+          8px 8px 0 rgb(68, 87, 144), 9px 9px 0 rgb(59, 78, 135),
+          10px 10px 0 rgb(50, 69, 126), 11px 11px 0 rgb(42, 61, 118),
+          12px 12px 0 rgb(33, 52, 109), 13px 13px 0 rgb(24, 43, 100),
+          14px 14px 0 rgb(15, 34, 91), 15px 15px 0 rgb(7, 26, 83),
+          16px 16px 0 rgb(-2, 17, 74), 17px 17px 0 rgb(-11, 8, 65),
+          18px 18px 0 rgb(-19, 0, 57), 19px 19px 0 rgb(-28, -9, 48),
+          20px 20px 0 rgb(-37, -18, 39), 21px 21px 20px rgba(0, 0, 0, 1),
+          21px 21px 1px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.2);
+      }
 
+      .headline {
+        color: rgb(221, 213, 213);
+        font-family: "Special Elite", cursive;
+        font-size: 5em;
+        font-weight: 900;
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
         svg {
-            height: 6.2em;
-        }
-
-        svg text {
-            font-family: 'Special Elite', cursive;
-            font-size: 5em;
-            font-weight: 900;
-            fill: none;
-            fill-opacity: 1;
-            stroke: #fff;
-            stroke-opacity: 1;
-            stroke-linecap: butt;
-            opacity: 1;
-            text-shadow: 4px 4px 0 #000;
-            -webkit-text-shadow: 4px 4px 0 #000;
-            stroke-width: 0.5px;
-            text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 rgb(129,148,205),2px 2px 0 rgb(120,139,196),3px 3px 0 rgb(111,130,187),4px 4px 0 rgb(103,122,179),5px 5px 0 rgb(94,113,170),6px 6px 0 rgb(85,104,161),7px 7px 0 rgb(76,95,152),8px 8px 0 rgb(68,87,144),9px 9px 0 rgb(59,78,135),10px 10px 0 rgb(50,69,126),11px 11px 0 rgb(42,61,118),12px 12px 0 rgb(33,52,109),13px 13px 0 rgb(24,43,100),14px 14px 0 rgb(15,34,91),15px 15px 0 rgb(7,26,83),16px 16px 0 rgb(-2,17,74),17px 17px 0 rgb(-11,8,65),18px 18px 0 rgb(-19,0,57),19px 19px 0 rgb(-28,-9,48), 20px 20px 0 rgb(-37,-18,39),21px 21px 20px rgba(0,0,0,1),21px 21px 1px rgba(0,0,0,0.5),0px 0px 20px rgba(0,0,0,.2);
+          height: 4.2em;
         }
 
         .headline {
-            color: rgb(221, 213, 213);
-            font-family: 'Special Elite', cursive;
-            font-size: 5em;
-            font-weight: 900;
-           
-        
+          font-size: 3em;
         }
+      }
 
-        @media (min-width: 768px) and (max-width: 991px)  { 
-
-            svg {
-                height: 4.2em;
-            }
-
-            .headline {
-                font-size: 3em;
-            }
-
-         }
-
-        @media screen and (max-width: 767px) {
-
-            /* body {
+      @media screen and (max-width: 767px) {
+        /* body {
                 background-size: 200vh, 200%, 100%;
             } */
 
-            .text {
-                font: bolder 2rem "Alfa Slab One";
-            }
+        .text {
+          font: bolder 2rem "Alfa Slab One";
+        }
 
-            /* #changeBGcolourBtn {
+        /* #changeBGcolourBtn {
                 margin: .9rem 0;
                 
             } */
 
-            .text-right {
-                text-align: center !important;
-            }
-
-            #restartBtn {
-                float: right;
-            }
-
-            .front {
-                font-size: .9rem;
-                padding: .4rem .47rem;
-
-            }
-
-            .textarea {
-                font-size: 1rem;
-                line-height: 1.7rem;
-                padding: 15px 15px 0;
-            }
-
-            svg {
-                height: 3.2em;
-            }
-
-            .headline {
-                font-size: 1.8em;
-                height: 2em;
-            }
+        .text-right {
+          text-align: center !important;
         }
+
+        #restartBtn {
+          float: right;
+        }
+
+        .front {
+          font-size: 0.9rem;
+          padding: 0.4rem 0.47rem;
+        }
+
+        .textarea {
+          font-size: 1rem;
+          line-height: 1.7rem;
+          padding: 15px 15px 0;
+        }
+
+        svg {
+          height: 3.2em;
+        }
+
+        .headline {
+          font-size: 1.8em;
+          height: 2em;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body class="d-flex flex-column min-vh-100" id="body">
-
-
+  <body class="d-flex flex-column min-vh-100" id="body">
     <!-- Begin page content -->
     <main>
-        <div class="container-fluid">
-            <div class="row d-flex justify-content-center">
-                <!-- <div class="d-flex justify-content-start mb-3"> -->
-                <div class="col-sm-12 col-md-10 col-lg-10 col-xl-8">
-                        
-                            <!-- <svg width="100%" height="100%" class="moveY mt-4">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <!-- <div class="d-flex justify-content-start mb-3"> -->
+          <div class="col-sm-12 col-md-10 col-lg-10 col-xl-8">
+            <!-- <svg width="100%" height="100%" class="moveY mt-4">
                                 <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
                                     <image width="100%" height="0" xlink:href=""></image>
                                 </pattern> -->
-                                <!-- <text x="0" y="0.8em" textlength="10em" class="headline moveY mb-3"
+            <!-- <text x="0" y="0.8em" textlength="10em" class="headline moveY mb-3"
                                 style="fill:url(#pattern);">The Cut Up Machine</text> -->
-                                <div class="headline raiseTextAnimation my-xs-2 my-sm-3">The Cut Up Machine</div>
-                            <!-- </svg> -->
-                    
-                    <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
-                    <textarea id="afterwords" class="textarea">This idea is based on the cut up writing technique popularised by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.</textarea>
-                </div>
+            <div class="headline raiseTextAnimation my-xs-2 my-sm-3">
+              The Cut Up Machine
             </div>
-            <div class="row d-flex justify-content-center my-4">
-                <div class="col-md-10 col-lg-10 col-xl-8 d-flex">
-                    <div class="flex-fill text-left">
-                        <button class="btn text screen multiply pushable moveY" id="cutItUpBtn" onclick="cutuptext()">
-                            <span class="front">
-                                Cut it up
-                            </span>
-                        </button>
-                    </div>
-                    <div class="flex-fill text-left">
-                        <button class="btn text screen multiply pushable moveY float-left disabled ml-1" id="restartBtn"
-                            onclick="restart()">
-                            <span class="front restart btnTextDepressed" id="frontRestart">
-                                Restart
-                            </span>
-                        </button>
-                    </div>
-                    <div class="flex-fill col-6 text-right">
-                        <button type="submit"
-                            class="btn button text screen multiply pushable moveY float-right change-background"
-                            value="True">
-                            <span class="front">Background dark</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <!-- </svg> -->
+
+            <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
+            <textarea id="afterwords" class="textarea">
+This idea is based on the cut up writing technique popularised by the writer William Burroughs along with the artist Brion Gysin and later used by David Bowie and Thom Yorke. If you click the cut it up button, random groups of words will be cut then randomly re-arranged. If you keep clicking the button the text will continually be cut up. You can also add your own words by typing or pasting words into the Cut Up Machine.</textarea
+            >
+          </div>
         </div>
+        <div class="row d-flex justify-content-center my-4">
+          <div class="col-md-10 col-lg-10 col-xl-8 d-flex">
+            <div class="flex-fill text-left">
+              <button
+                class="btn text screen multiply pushable moveY"
+                id="cutItUpBtn"
+                onclick="cutuptext()"
+              >
+                <span class="front"> Cut it up </span>
+              </button>
+            </div>
+            <div class="flex-fill text-left">
+              <button
+                class="btn text screen multiply pushable moveY float-left disabled ml-1"
+                id="restartBtn"
+                onclick="restart()"
+              >
+                <span class="front restart btnTextDepressed" id="frontRestart">
+                  Restart
+                </span>
+              </button>
+            </div>
+            <div class="flex-fill col-6 text-right">
+              <button
+                type="submit"
+                class="btn button text screen multiply pushable moveY float-right change-background"
+                value="True"
+              >
+                <span class="front">Background dark</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light container-fluid">
-        <div class="row">
-            <div class="col-12 text-black text-center">
-                Image credit: Extract from invitation to William S. Burroughs Centenary Exhibition, the "Cut-Up"
-                Technique / Boo Hurray – Emory University
-            </div>
+      <div class="row">
+        <div class="col-12 text-black text-center">
+          Image credit: Extract from invitation to William S. Burroughs
+          Centenary Exhibition, the "Cut-Up" Technique / Boo Hurray – Emory
+          University
         </div>
+      </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>
