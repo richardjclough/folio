@@ -52,7 +52,12 @@
         let words = document.getElementById("afterwords").value;
         let captitalizeFirstLetterAfterFullStop = /(^|[.!?]\s+)([a-z])/g;
         words = words.split(" ");
-        words = words.sort(() => Math.random() - 0.1);
+
+        /* The higher the number the more severe the cut */
+        /* Need - after Math.random to initiate the randomness */
+        /* Ideally start at 0.5 or even higher to ensure a cut every time on shorter string  */
+        /* Starting on .3 as it ensures first go cut on shorter string but might be too severe for default string */
+        words = words.sort(() => Math.random() - 0.3 * 0.9);
         words = words.join(" ");
 
         /* Capitalize first letter of string */
