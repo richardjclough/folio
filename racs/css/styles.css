@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+h4 {
+  font-size: 20px !important;
+  margin-bottom: 1.8rem !important;
+  /* color: #3131e7 !important; */
+}
+
+h5 {
+  font-size: 16px !important;
+  margin: 1.5rem 0 0.5rem !important;
+}
+
+h6 {
+  font-size: 12px !important;
+  line-height: 160% !important;
+}
+
+p,
+ul {
+  font-size: 12px;
+  line-height: 180%;
+}
+
+hr {
+  border-top: 1px solid #f5f5f5 !important;
+  border-bottom: 1px solid #f5f5f5 !important;
+}
+
+hr.dark {
+  border-top: 1px solid #e3e3e3 !important;
+  border-bottom: 1px solid #e3e3e3 !important;
+}
