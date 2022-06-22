@@ -441,6 +441,26 @@ Blackeyed Susans - back end build for Melbourne based band.
                 >.
               </li>
             </ul>
+            <a class="anchor" id="jquery-pagination-fix"></a>
+            <h2>Fixing persitent tooltip issue with jQuery</h2>
+            <ul>
+              <li>
+                Tooltips were remaining visable after left or right pagination
+                arrows were clicked. The issue was escalated to Microsoft as it
+                was an out of the box feature. So I came up with a clean fix
+                using some jQuery to detect when either arrow was clicked and
+                then hide the parent div of the tooltip that had been displayed
+                on click. The original is
+                <a href="img/pagination-before.png" target="_blank">here</a>
+                and the fixed version is
+                <a href="img/pagination-tooltip-fix.mp4" target="_blank">here</a
+                >. Here is a
+                <a href="img/pagination-jquery.png" target="_blank"
+                  >screenshot</a
+                >
+                of the code.
+              </li>
+            </ul>
 
             <h2>Parallax scrolling</h2>
             <ul>
