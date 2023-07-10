@@ -459,6 +459,7 @@ width: 100%;
 .responsive-iframe {
   height: 380px;
   width: 50%;
+  border: 0px;
 }
 
 .footerLinks h6 {
