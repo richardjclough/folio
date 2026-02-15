@@ -7,7 +7,7 @@
 body {
   width: 100%;
   min-height: 100%;
-  font-size: 19px;
+  font-size: 20px;
   background-color: #f9f9f9;
 }
 
@@ -198,15 +198,16 @@ padding-bottom: 100%;
   background-color: #e5e5e5;
   margin: 0 0px 0 0px;
   padding: 2px 10px 10px 8px;
-  height: 120px;
+  height: 126px;
   position: relative;
 }
 
 .descriptionOuter img {
-  height: 120px;
+  height: 126px;
+  width: 126px;
   border-left: 0px solid #eee;
   top: 0px;
-  width: 120px;
+
   background-color: #FFFFFF;
   padding: 5px;
 }
