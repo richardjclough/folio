@@ -205,15 +205,11 @@ padding-bottom: 100%;
 .descriptionOuter img {
   height: 126px;
   width: 126px;
-  border-left: 0px solid #eee;
-  top: 0px;
-
-  background-color: #FFFFFF;
-  padding: 5px;
+  border: 5px solid #e5e5e5;
 }
 
 .web-section ul li {
-  margin: 0px 0 0px 0px;
+  margin: 0px 0 10px 0px;
 }
 
 /*.container {
@@ -390,10 +386,6 @@ display: block;
   .container {
     z-index: 1000;
   }
-    
-.web-section ul li {
-    margin: 0px 0 0px 0px;
-}
 
   .intro-section {
     /* padding-top:8em!important;
