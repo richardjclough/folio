@@ -7,7 +7,7 @@
 body {
   width: 100%;
   min-height: 100%;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #f9f9f9;
 }
 
@@ -375,6 +375,9 @@ display: block;
 }
 
 @media (max-width: 767px) {
+body {
+  font-size: 20px;
+}
   .logo {
     -o-background-size: 30% auto;
     /* -webkit-background-size: 20% auto; */
