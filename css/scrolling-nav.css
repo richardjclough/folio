@@ -412,4 +412,8 @@ body {
     .photo, .zoom_img img {
         width: 100%;
     }
+    
+    .description p {
+        font-size: 0.8em;
+    }
 }
