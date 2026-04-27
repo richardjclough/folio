@@ -421,8 +421,12 @@ body {
         width: 100%;
     }
     
-    .description p {
+    .description p, .description p a {
         font-size: 0.8em;
         line-height: 1.2em;
+        font-weight: 400 !important;
+    }
+    .description p a {
+        font-size: 1em;
     }
 }
