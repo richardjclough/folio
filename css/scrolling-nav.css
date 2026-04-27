@@ -32,12 +32,15 @@ html {
   display: inline-block;
 }
 
+p {
+    margin: 0px;
+}
+
 p,
 .text {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   text-transform: none;
-  margin-top: 4px;
   color: #000000;
 }
 
@@ -197,9 +200,12 @@ padding-bottom: 100%;
   float: left;
   background-color: #e5e5e5;
   margin: 0 0px 0 0px;
-  padding: 2px 10px 10px 8px;
+  padding: 0px 2px 0px 14px;
   height: 126px;
   position: relative;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
 
 .descriptionOuter img {
@@ -414,6 +420,6 @@ body {
     }
     
     .description p {
-        font-size: 0.8em;
+        font-size: 0.7em !important;
     }
 }
