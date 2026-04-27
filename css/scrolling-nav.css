@@ -32,10 +32,6 @@ html {
   display: inline-block;
 }
 
-p {
-    margin: 0px;
-}
-
 p,
 .text {
   font-family: "Lato", sans-serif;
@@ -47,7 +43,6 @@ p,
 h1 {
   font-family: "Roboto Slab", sans-serif;
   font-weight: 500;
-  text-transform: uppercase;
   padding-top: 3rem;
 }
 
@@ -246,16 +241,16 @@ display: block;
 
 /*  bootstrap overides */
 
-.navbar-default {
-  background-color: #111;
+.navbar-default, .page-scroll {
   border-color: #e7e7e7;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  margin: 0 3px 0 0;
+  text-decoration: none;
 }
 
 .navbar-default .navbar-nav > li > a {
   color: #eee;
   font-family: "Roboto Slab", sans-serif;
-  text-transform: uppercase;
   outline: none;
   font-weight: 700;
 }
@@ -264,7 +259,6 @@ display: block;
   color: #eee;
   font-family: "Roboto Slab", sans-serif;
   font-size: 1em;
-  text-transform: uppercase;
   outline: none;
   font-weight: 700;
 }
@@ -280,6 +274,10 @@ display: block;
 .navbar-default .navbar-nav > .active > a:hover {
   color: #111;
   background-color: #eee;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    background-color: transparent !important;
 }
 
 .active {
@@ -420,6 +418,7 @@ body {
     }
     
     .description p {
-        font-size: 0.7em !important;
+        font-size: 0.8em;
+        line-height: 1.2em;
     }
 }
