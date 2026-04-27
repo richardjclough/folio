@@ -198,9 +198,13 @@ padding-bottom: 100%;
   padding: 0px 2px 0px 14px;
   height: 126px;
   position: relative;
-    display: flex;
-    align-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.description p {
+  margin: auto 0;
 }
 
 .descriptionOuter img {
