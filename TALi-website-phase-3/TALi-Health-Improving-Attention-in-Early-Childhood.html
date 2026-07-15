@@ -43,7 +43,7 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 
 .video_fixed {
     position: fixed;
-    top: 0px;
+    top: 70px;
     transition: .5s ease-in;
     width: 100%;
 }
@@ -51,6 +51,13 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 .video_fixed_scroll {
     transition: .5s ease-out;
     opacity: 0;
+}
+    
+video {
+     width: 100%;
+    opacity: .4;
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
   
   li.single-primary-menu.menu-1.open > a {
@@ -434,9 +441,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </div>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDWMGJZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     
     <div class="body-wrapper   hs-content-id-38192059563 hs-site-page page ">
       
@@ -1447,8 +1451,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="banner_video_background">
 
         <video src="static/videos/banner-slider-video-current-reduced.mp4"
-            type="video/mp4" autoplay playsinline muted loop
-            style="min-width: 100%;opacity: .4;">
+            type="video/mp4" autoplay playsinline muted loop>
         </video>
     </div>
 </div>
