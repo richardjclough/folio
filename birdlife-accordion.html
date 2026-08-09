@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australian Bird Accordion</title>
+  <style>
+    /* Presentation styling */
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 2rem;
+      background-color: #FFF;
+      color: #2d3732;
+    }
+      
+      h4 {
+          margin: 0.5em 0   ;
+      }
+      
+      p {
+          margin-top: 0.5em;
+      }
+
+    .accordion-container {
+      max-width: 550px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    /* --- ACCORDION CONTAINER STYLE --- */
+    .bird-accordion {
+      background: white;
+      border: 6px solid #009DD1;
+      border-radius: 0px 0px 24px 0;
+        
+      overflow: hidden;
+    /*  box-shadow: 0 4px 6px rgba(0,0,0,0.02); */
+    }
+
+    /* --- SUMMARY / HEADER STYLE --- */
+    .bird-accordion summary {
+      padding: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+      background-color: #F2FAFD;
+      display: flex;
+      align-items: center;
+      list-style: none; /* Standard way to hide marker */
+        
+    background: #F2FAFD;
+background: linear-gradient(180deg, rgba(232, 244, 249, 1) 0%, rgba(255, 255, 255, 1) 100%)
+    }
+
+    /* Hide default disclosure triangles across browsers */
+    .bird-accordion::-webkit-details-marker,
+    .bird-accordion::marker {
+      display: none;
+    }
+
+    /* --- AUSTRALIAN BIRD ICON (KOOKABURRA) ANIMATION --- */
+    .bird-accordion .bird-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-right: 14px;
+      fill: #3a5343; /* Dark green/grey tone for the bird */
+      transform: rotate(-10deg); 
+      /* Clean, smooth unwinding transition when a panel closes */
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
+    margin-left: auto;
+    }
+      
+    .bird-icon img {
+    width: 1.5em;
+       
+    }
+
+    /* Trigger a single-run animation ONLY during the opening phase */
+    .bird-accordion[open] .bird-icon {
+      animation: rotateBirdToBottom 0.4s forwards;
+    }
+
+    /* Opening transition keyframe: 0 to 45 degrees */
+    @keyframes rotateBirdToBottom {
+      0% {
+        transform: rotate(-30deg); /* Facing right */
+         
+      }
+      100% {
+        transform: rotate(70deg); /* Pointing down and right */
+    
+      }
+    }
+
+    /* --- CONTENT STYLE --- */
+    .bird-accordion .content {
+      padding: 1.2rem;
+      line-height: 1.6;
+      border-top: 0px solid #005EB8;
+      background-color: #ffffff;
+    overflow-y: scroll;
+    height: 20em;
+    }
+      
+     /* Style for the image when the accordion is closed (default) */
+details summary img {
+  opacity: 0.5;
+  transition: opacity 2s ease;
+}
+
+/* Style for the image when the accordion is open */
+details[open] summary img {
+  opacity: 1;
+    width: 2.5em;
+   /*     margin-right: -1em;
+    margin-top: -1em; */    
+        right: -1em;
+    position: relative;
+        top: -1em;
+    left: 0.5em;
+    
+}
+  </style>
+</head>
+<body>
+
+  <div class="accordion-container">
+
+    <!-- Section 1: Sharing the same 'name' attribute enforces the exclusive behavior -->
+      <h3>Alphabetical list of Australian birds</h3>
+      
+    <details class="bird-accordion" name="fauna-accordion" >
+      <summary>
+        A
+         <div class="bird-icon">
+          <!-- Inline Kookaburra SVG Silhouette facing right -->
+         
+             <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+          <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+
+    <!-- Section 2 -->
+    <details class="bird-accordion" name="fauna-accordion">
+      <summary>
+        B   
+           <div class="bird-icon">
+         
+                <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+          <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+
+    <!-- Section 3 -->
+    <details class="bird-accordion" name="fauna-accordion">
+      <summary>
+        C
+          <div class="bird-icon">
+         
+              <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+         <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+      
+       <!-- Section 3 -->
+    <details class="bird-accordion" name="fauna-accordion">
+      <summary>
+        D
+          <div class="bird-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path d="M2,12 C4,11 5,9 7,9 C8,9 8.5,9.5 9,10 C11,8 14,7 17,7 C17,6 16.5,5 15,4 C19,4 21,6 22,8 C19,8.5 18,9 17,10 C19,10.5 21,11.5 23,13 C19.5,13.5 17.5,12.5 16,12 C15,14 13.5,16 11,17 C11,19 10,21 8,23 C8.5,21 8.5,19.5 8,18 C6.5,17.5 5,16.5 4,15 C3,14.5 2.5,13.5 2,12 Z M15,9.5 C14.45,9.5 14,9.95 14,10.5 C14,11.05 14.45,11.5 15,11.5 C15.55,11.5 16,11.05 16,10.5 C16,9.95 15.55,9.5 15,9.5 Z"/>
+          </svg>
+              <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+         <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+      
+       <!-- Section 3 -->
+    <details class="bird-accordion" name="fauna-accordion">
+      <summary>
+        E
+          <div class="bird-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path d="M2,12 C4,11 5,9 7,9 C8,9 8.5,9.5 9,10 C11,8 14,7 17,7 C17,6 16.5,5 15,4 C19,4 21,6 22,8 C19,8.5 18,9 17,10 C19,10.5 21,11.5 23,13 C19.5,13.5 17.5,12.5 16,12 C15,14 13.5,16 11,17 C11,19 10,21 8,23 C8.5,21 8.5,19.5 8,18 C6.5,17.5 5,16.5 4,15 C3,14.5 2.5,13.5 2,12 Z M15,9.5 C14.45,9.5 14,9.95 14,10.5 C14,11.05 14.45,11.5 15,11.5 C15.55,11.5 16,11.05 16,10.5 C16,9.95 15.55,9.5 15,9.5 Z"/>
+          </svg>
+              <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+         <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+      
+       <!-- Section 3 -->
+    <details class="bird-accordion" name="fauna-accordion">
+      <summary>
+        F
+          <div class="bird-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path d="M2,12 C4,11 5,9 7,9 C8,9 8.5,9.5 9,10 C11,8 14,7 17,7 C17,6 16.5,5 15,4 C19,4 21,6 22,8 C19,8.5 18,9 17,10 C19,10.5 21,11.5 23,13 C19.5,13.5 17.5,12.5 16,12 C15,14 13.5,16 11,17 C11,19 10,21 8,23 C8.5,21 8.5,19.5 8,18 C6.5,17.5 5,16.5 4,15 C3,14.5 2.5,13.5 2,12 Z M15,9.5 C14.45,9.5 14,9.95 14,10.5 C14,11.05 14.45,11.5 15,11.5 C15.55,11.5 16,11.05 16,10.5 C16,9.95 15.55,9.5 15,9.5 Z"/>
+          </svg>
+              <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+         <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+      
+       <!-- Section 3 -->
+    <details class="bird-accordion" name="fauna-accordion" id="G">
+      <summary>
+        G
+          <div class="bird-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path d="M2,12 C4,11 5,9 7,9 C8,9 8.5,9.5 9,10 C11,8 14,7 17,7 C17,6 16.5,5 15,4 C19,4 21,6 22,8 C19,8.5 18,9 17,10 C19,10.5 21,11.5 23,13 C19.5,13.5 17.5,12.5 16,12 C15,14 13.5,16 11,17 C11,19 10,21 8,23 C8.5,21 8.5,19.5 8,18 C6.5,17.5 5,16.5 4,15 C3,14.5 2.5,13.5 2,12 Z M15,9.5 C14.45,9.5 14,9.95 14,10.5 C14,11.05 14.45,11.5 15,11.5 C15.55,11.5 16,11.05 16,10.5 C16,9.95 15.55,9.5 15,9.5 Z"/>
+          </svg>
+              <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+         <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+      
+       <!-- Section 3 -->
+    <details class="bird-accordion" name="fauna-accordion">
+      <summary>
+        H
+          <div class="bird-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path d="M2,12 C4,11 5,9 7,9 C8,9 8.5,9.5 9,10 C11,8 14,7 17,7 C17,6 16.5,5 15,4 C19,4 21,6 22,8 C19,8.5 18,9 17,10 C19,10.5 21,11.5 23,13 C19.5,13.5 17.5,12.5 16,12 C15,14 13.5,16 11,17 C11,19 10,21 8,23 C8.5,21 8.5,19.5 8,18 C6.5,17.5 5,16.5 4,15 C3,14.5 2.5,13.5 2,12 Z M15,9.5 C14.45,9.5 14,9.95 14,10.5 C14,11.05 14.45,11.5 15,11.5 C15.55,11.5 16,11.05 16,10.5 C16,9.95 15.55,9.5 15,9.5 Z"/>
+          </svg>
+              <img src="https://cdn-icons-png.flaticon.com/128/5709/5709754.png" title="dove icons" />
+        </div>
+      </summary>
+      <div class="content">
+         <h4>Bird name</h4>
+        <p>Proin ut laoreet lectus. Duis at malesuada sapien. Vivamus ullamcorper in felis non mattis. Fusce lectus ex, sagittis sed erat sed, semper luctus odio. Pellentesque tristique velit libero, in laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus.</p>
+          
+           <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+          
+            <h4>Bird name</h4>
+        <p>In laoreet felis ornare quis. Sed nisl odio, tincidunt sed tortor eget, feugiat commodo lectus. In ac elementum urna, vitae rutrum turpis. Etiam finibus maximus dolor ut imperdiet. Duis rutrum dictum mollis.</p>
+      </div>
+    </details>
+
+  </div>
+
+</body>
+</html>
